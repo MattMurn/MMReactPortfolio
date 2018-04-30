@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Put all API endpoints under '/api'
-app.get('/', (req, res) => {
-    console.log("this is working properly");
-});
+// app.get('/', (req, res) => {
+//     console.log("this is working properly");
+// });
 
 app.post("/api/connects", (req, res) => {
   let newConnect = {
