@@ -33,7 +33,7 @@ app.post("/api/connects", (req, res) => {
       service: 'gmail',
       auth: {
           user: 'nodemailermurn@gmail.com',
-          pass: "jerrymurn9357218"
+          pass: key
       }
   });
 
@@ -67,6 +67,10 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(PORT);
 
-console.log(`listening on ${PORT}`);
+
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () =>{
+    console.log(`🌎 ==> Server now on port ${PORT}!`);
+  });
+})

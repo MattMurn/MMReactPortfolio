@@ -2,19 +2,13 @@
 module.exports = (sequelize, DataTypes) => {
   var Connects = sequelize.define('Connects', {
     name: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: true,
-        len: [1, 25]
-      }
+      type: DataTypes.STRING
     },
     email: {
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.STRING
     },
     message: {
-      type: DataTypes.STRING, 
-      allowNull: false
+      type: DataTypes.STRING
     }
   }, {});
   Connects.associate = function(models) {
