@@ -89,6 +89,13 @@
     height: 22px;
     width: 22px;
     float: left;
+    margin-right: 20px;
+}
+
+.socialLinks {
+    position: relative;
+    left: 223px;
+    top: 74px;
 }
 /* .mediaQuery {
 position: absolute;
