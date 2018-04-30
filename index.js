@@ -44,18 +44,19 @@ app.post("/api/connects", (req, res) => {
       text: newConnect.message
   };
   
-
+  transporter.sendMail(mailOptions, function(error, info){
+    if(error){ throw error }
+    else{
+        console.log('Email sent: ' + info.response);
+    }
+})
   db.Connects.create(newConnect).then(data => {
       // console.log(data);
-  }).then(
+  })
+//   .then(
 
-      // transporter.sendMail(mailOptions, function(error, info){
-      //     if(error){ throw error }
-      //     else{
-      //         console.log('Email sent: ' + info.response);
-      //     }
-      // })
-)
+
+// )
 
 })
 
