@@ -1,0 +1,109 @@
+
+.connect_show {
+    position: absolute;
+    display: inline-block;
+    height: 250px;
+    width: 500px;
+    top: 0px;
+    right: 175px;
+    font-size: 13px;
+    font-family: "open-sans";
+    background: inherit;
+    animation: connect_show 3s;
+}
+
+.connect_hide {
+    position: absolute;
+    right: -1000;
+    opacity: 0;
+    pointer-events: none;
+    /* animation: connect_hide 2s; */
+
+}
+
+#inq_name {
+    position: relative;
+    display: inherit;
+    text-indent: 5px;
+    left: 40px;
+    width: 175px;
+    height: 25px;
+    border: none;
+    font-family: inherit;
+    margin-top: 35px;
+    font-size: inherit;
+    
+}
+
+
+#inq_email {
+    position: relative;
+    display: inherit;
+    text-indent: 5px;
+    left: 41px;
+    width: 175px;
+    height: 25px;
+    border: none;
+    font-family: "open-sans";
+    margin-top: 15px;
+    font-size: inherit;
+
+
+}
+
+#inq_subject {
+    position: relative;
+    display: inherit;
+    text-indent: 5px;
+    left: 40px;
+    margin-top: 10px;
+    border: none;
+    height: 100px;
+    width: 300px;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    
+}
+.submit {
+    position: relative;
+    display: inherit;
+    left: 40px;
+    border: none;
+    color: inherit;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 0px;
+    background: inherit;
+    font-size: inherit;
+    font-family: "open-sans";
+    
+}
+.connect_text_box{   
+    height: 129px;
+    position: relative;
+    width: 344px;
+    font-family: "open-sans";
+}
+.connectATag {
+    height: 22px;
+    width: 22px;
+    float: left;
+}
+/* .mediaQuery {
+position: absolute;
+height: 196px;
+top: 255px;
+width: 475px;
+left: 82px;
+/* float: right; */
+
+/* font-family: "open-sans";
+background: inherit;} */ 
+
+@keyFrames connect_show {
+
+    from {right: -1000px}
+}
+
+

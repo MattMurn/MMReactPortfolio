@@ -1,0 +1,14 @@
+.skill_name {
+    float: right;
+    margin-right: 10px;
+    position: relative;
+    text-align: left;
+    width: 150px;
+    font-family: inherit;
+}
+
+.skill_list {
+    margin: 0px;
+    padding: 0px;   
+    width: 188px;
+}

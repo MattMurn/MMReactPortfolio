@@ -1,0 +1,53 @@
+.blurb {
+    display: inline-block;
+    width: 740px;
+    height: 300px;
+    position: relative;
+    top: 246px
+}
+.blurb_name {
+    position: relative;
+    margin: 0px;
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Fjalla One', sans-serif; */
+    width: 80px;
+    height: 110px;
+    color: inherit; 
+    float: left;
+    top: 0px;
+    opacity: 1;
+}
+#name_suffix {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    left: 0;
+    color: inherit;
+
+}
+
+#name_suffix_hide {
+    animation: name_suffix 3s;    
+}
+
+@keyframes name_suffix_hide {
+    
+        0% { opacity: 0}
+        100% { opacity: 1}
+    
+}
+
+@keyframes blurb_1 {
+    from { left: -600px}
+    
+  }
+
+  
+
+  @keyframes blurb_3 {
+    from { bottom: -1000px}
+    /* to { left: 0px} */
+  }

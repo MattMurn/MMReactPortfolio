@@ -1,0 +1,64 @@
+.projectOuter {
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    font-size: 13px;
+
+    float: right;
+    margin: 0px;
+}
+
+.infoContainer {
+    position: absolute;
+    color: whitesmoke;   
+    font-family: "Open Sans";
+    font-size: 13px;
+    opacity: 0;
+    transition: 0s;
+    padding: 0;
+    bottom: 0px;
+ 
+}
+.wrapper {
+    position: relative;
+    text-align: center;
+    float: left;
+    height: 240px;
+    width: 215px;
+    margin-right: 10px;
+}
+.wrapper:hover .infoContainer {
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    color: rgb(51, 48, 24);
+    background: white;
+    opacity: 1;
+    transition: .5s;
+    margin: 0px;
+    font-size: 13px;
+    font-family: "open-sans";
+}
+
+
+.github {
+    height: 50px;
+    width: 50px;
+    
+    /* background: blanchedalmond; */
+}
+
+
+/* 
+.project_hide {
+    position: absolute;
+    opacity: 0px;
+}
+
+@keyFrames panel {
+
+    from {right: -1000px}
+} */

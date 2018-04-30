@@ -1,0 +1,63 @@
+.about_show {
+    position: absolute;
+    float: right;
+    background: inherit;
+    font-family: "open-sans";
+    font-size: inherit;
+    height: 300px;
+    width: 700px;
+    right: -45px;
+    top: 0px;
+    margin-top: 30px;
+    animation: about_show 3s;
+}
+.about_hide {
+    position: absolute;
+    float: right;
+    background:whitesmoke;
+    height: 145px;
+    width: 895px;
+    right: -1000;
+    top: 150px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+
+.about_body {
+    position: relative;
+    top: -25px;
+    width: 66%;
+    display: inline-block;
+    font-size: 21px;
+    text-align: left;
+    font-family: "open-sans";
+    color: rgb(53, 53, 53);
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 0px;
+    
+
+}
+.about_skills {
+    
+    display: inline-block;
+    font-family: inherit;
+    position: relative;
+    width: 188px;
+    margin-left: 20px;
+    top: 0px;
+
+}
+
+.skill_icon {
+    height: 25px;
+    width: 25px;
+    color: inherit;
+}
+
+@keyframes about_show {
+    from { right: -1000px}
+    /* to { left: 0px} */
+  }

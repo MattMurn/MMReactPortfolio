@@ -1,0 +1,53 @@
+.first_name_wrapper {
+    width: 100%;
+    position: relative;
+    font-size: 110px;
+    height: 143px;
+    animation: fade 2s linear;
+}
+.last_name_wrapper {
+    width: 100%;
+    position: relative;
+    font-size: 110px;
+    float: right;
+    height: 143px;
+    animation: fade 1s linear;
+
+}
+.name_prefix {
+    position: relative; 
+    float: left;
+    top: 0px;
+    opacity: 1;
+    height: inherit;
+
+}
+.name_suffix {
+    position: relative;
+    float: left;
+    top: 0px;
+    opacity: 1; 
+    height: inherit;
+}
+
+.name_hide {
+    opacity: 0;
+    animation: out 2s linear;
+}
+
+@keyframes fade {
+    0% { opacity: 0}
+    100% { opacity: 1}
+}
+
+@keyframes out {
+    0% { 
+        opacity: 1;
+        color: indigo;
+
+        }
+    25%{}
+    50%{}
+    75%{}
+    100% { opacity: 0}
+}
