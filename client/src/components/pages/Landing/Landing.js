@@ -74,7 +74,9 @@ class Landing extends Component {
         }
 
   }
-
+  componentDidMount(){
+      console.log("component did")
+  }
   nameSuffixHide = currentState => {
 
 

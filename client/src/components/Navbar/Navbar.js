@@ -19,7 +19,7 @@ class Navbar extends Component {
     // dropdown action with toggle behavior
     dropIt = () => {
         //this needs to link with components 
-         this.setState(previous => ({class: true }));   
+         this.setState(previous => ({class: !previous.class }));   
         
     }
     render() {    

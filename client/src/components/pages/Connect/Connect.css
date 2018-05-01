@@ -13,10 +13,11 @@
 }
 
 .connect_hide {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     right: -1000;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; */
     /* animation: connect_hide 2s; */
 
 }
