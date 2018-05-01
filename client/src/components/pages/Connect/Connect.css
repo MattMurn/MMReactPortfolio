@@ -98,17 +98,19 @@
     left: 223px;
     top: 74px;
 }
-/* .mediaQuery {
-position: absolute;
-height: 196px;
-top: 255px;
-width: 475px;
-left: 82px;
-/* float: right; */
+@media only screen and (max-width: 600px) {
 
-/* font-family: "open-sans";
-background: inherit;} */ 
+    .connect_show{
+        position: relative;
+        top: -125px;
+        right: 0px;
+    }
 
+    #inq_subject {
+        width: 260px;
+    }
+
+}
 @keyFrames connect_show {
 
     from {right: -1000px}

@@ -61,3 +61,28 @@
     from { right: -1000px}
     /* to { left: 0px} */
   }
+
+  @media only screen and (max-width: 600px) {
+    .about_show {
+        background: inherit;
+        position: relative;
+        top: -95px;
+        left: 10px;
+    }
+    .about_body {
+        font-size: 10px;
+        width: 100px
+    }
+    .about_skills {
+        font-size: 10px;
+        font-size: 10px;
+        position: relative;
+        top: -30px
+    }
+    .skill_icon {
+        height: 15px;
+        width: 15px;
+        color: inherit;
+    }
+
+}

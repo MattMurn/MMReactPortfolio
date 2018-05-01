@@ -8,13 +8,25 @@
     top: 314px;
     float: left;
     right: 257px;
-    animation: panel 5s;
+    animation: panel 3s;
     
 }
 .panel_hide {
     display: none;
 }
 
+@media only screen and (max-width: 600px) {
+    .panel_show {
+        position: absolute;
+        top: 70px;
+        width:300px;
+        right: 0px;
+
+    }
+    .wrapper {
+        margin-bottom: 10px;
+    }
+}
 @keyFrames panel {
 
     from {right: -1000px}
