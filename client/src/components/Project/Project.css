@@ -26,15 +26,15 @@
     position: relative;
     text-align: center;
     float: left;
-    height: 240px;
-    width: 215px;
+    height: 211px;
+    width: 200px;
     margin-right: 10px;
 }
 .wrapper:hover .infoContainer {
     text-align: center;
     height: 50px;
     width: 100%;
-    color: rgb(51, 48, 24);
+    color: #2F496E;
     background: white;
     opacity: 1;
     transition: .5s;

@@ -27,7 +27,7 @@
 
 .about_body {
     position: relative;
-    top: -26px;
+    top: 0px;
     width: 66%;
     display: inline-block;
     font-size: 21px;
@@ -47,13 +47,13 @@
     position: relative;
     width: 188px;
     margin-left: 20px;
-    top: 0px;
+    top: -13px;
 
 }
 
 .skill_icon {
-    height: 25px;
-    width: 25px;
+    height: 21px;
+    width: 21px;
     color: inherit;
 }
 

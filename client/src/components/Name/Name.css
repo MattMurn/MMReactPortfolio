@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     font-size: 110px;
-    height: 143px;
+    height: 115px;
     font-family: 'Anton', sans-serif;
     animation: fade 2s linear;
 }
@@ -22,6 +22,7 @@
     top: 0px;
     opacity: 1;
     height: inherit;
+    color: inherit;
 
 }
 .name_suffix {
@@ -30,6 +31,7 @@
     top: 0px;
     opacity: 1; 
     height: inherit;
+    color: inherit;
 }
 
 .name_hide {
@@ -45,7 +47,7 @@
 @keyframes out {
     0% { 
         opacity: 1;
-        color: yellow;
+        color: #ED8C72;
 
         }
     25%{}

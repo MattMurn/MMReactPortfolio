@@ -34,20 +34,18 @@ const About = ({aboutClass, photo}) => (
                                 name="Node.js"/>
                         <Skills techLogo={<IoSocialPython size={22}/>}
                                 name="Python"/>
+                        <Skills techLogo={<img className="skill_icon" src="./assets/img/favicon.ico" alt=""/>}
+                                name="React"/>                                
                         <Skills techLogo={<FaCss3 size={22}/>}
                                 name="CSS3"/>                    
-                        <Skills techLogo={<img className="skill_icon" src="./assets/img/favicon.ico" alt=""/>}
-                                name="React"/>                               
                         <Skills techLogo={<FaDatabase size={22}/>}
                                 name="Sql / MongoDB"/>
                         <Skills techLogo={<FaGit size={22}/>}
                                 name="Version Control"/>
-                        {/* <Skills name="REST API"/>   */}
-                        <Skills techLogo={<img className="skill_icon" src="./assets/img/express.png" alt=""/>} 
-                                name="Express.js"/>  
-                        <Skills techLogo={<img className="skill_icon" src="./assets/img/jquery.png" alt=""/>}  
-                                name="JQuery"/>      
-                    
+                            
+                        <Skills techLogo={<img className="skill_icon" src="" alt=""/>} 
+                                name="Express.js"/>                           
+
 
                 </div>
             </div>
