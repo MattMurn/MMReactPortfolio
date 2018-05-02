@@ -15,9 +15,9 @@
     top: 34px;
     right: 0px;
     font-size: 10px;
-
+    font-family: "Open-Sans";
     margin-top: 5px;
-    color: #2988BC;
+    color: #FFEC5C;;
 }
 
 .nav_dropdown_outer {
@@ -27,7 +27,7 @@
     float: right;
     display: inline-block;
     margin-right: 20px;
-    margin-top: 0px;
+    margin-top: 15px;
     top: 0px;
     right: 0px;
     z-index: 10;
@@ -37,8 +37,8 @@
 
 .nav_dropdown_inner {
     width: 40px;
-    height: 5px;
-    background-color:  rgb(53, 53, 53);
+    height: 4px;
+    background-color: #FFEC5C;
     margin: 6px 0;
 }
 

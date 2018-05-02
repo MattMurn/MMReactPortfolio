@@ -1,9 +1,9 @@
 
 body {
-    background: #F4EADE;
-    color: #2f496e;
-    /* font-family: "Open Sans"; */
-    font-family: 'Anton', sans-serif;
+    color: #F4EADE;
+    background: #2f496e;
+    font-family: "Open Sans";
+    /* font-family: 'Anton', sans-serif; */
 }
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
