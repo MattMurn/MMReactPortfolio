@@ -9,11 +9,11 @@
     },
     {
         "id": 1,
-        "title": "Mentorize", 
+        "title": "Mentor Match", 
         "gitHub": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
         "description": "",
         "deployment": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
-        "src": "./assets/img/mentor.png"
+        "src": "./assets/img/MM.png"
     },
     {
         "id": 2, 

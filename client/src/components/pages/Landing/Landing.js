@@ -22,7 +22,7 @@ class Landing extends Component {
         super(props);  
         // need to adjust switch statement so that nameClass update properly.   
         this.state = {
-            projects: projects,
+            projects: [],
             class: false,
             projectClass: false,
             aboutClass: false,
@@ -33,9 +33,9 @@ class Landing extends Component {
         // this.nameSuffixHide = this.nameSuffixHide.bind(this);
 
     }
-    // componentWillMount = () => {
-    //     this.setState({nameClass: true});
-    // }
+    componentDidMount = () => {
+        this.setState({projects: projects});
+    }
     clickHandler = event => {
         // console.log("handleClickEvent is live and well");
         // console.log(event.target.id)
@@ -66,16 +66,16 @@ class Landing extends Component {
                                         }));
                 break;
             default:
-                // this.setState({
-                //                 connectClass: false,
-                //                 projectClass: false,
-                //                 aboutClass: false
-                //             });
+                this.setState({
+                                connectClass: false,
+                                projectClass: false,
+                                aboutClass: false
+                            });
         }
 
   }
   componentDidMount(){
-      console.log("component did")
+     // console.log("component did")
   }
   nameSuffixHide = currentState => {
 
@@ -86,21 +86,7 @@ class Landing extends Component {
     else{
         this.setState({nameClass: false})
     }
-    //   console.log(currentState)
-    //   for (let i in currentState) {
-    //       console.log("touched")
-    //       if(i === false){
-    //         console.log("true") 
-    //         // return true;
-    //       }
-          
-    //   }
   }
-
-
-      // align Ms in the blurb. 
-    // change animation so that other letters come out of the Ms.
-    // figure out the click events and animation for projs etc.
     render() {
 
         // try destrucuring nameClass
