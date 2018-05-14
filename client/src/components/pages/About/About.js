@@ -17,7 +17,7 @@ const About = ({aboutClass, photo}) => (
                                
                 <div className="about_body">
                     Oh hello! Thanks for checking my portfolio.
-                    I'm a passionate developer who enjoys the puzzle of a well run applicationand am actively looking for a 
+                    I'm a passionate developer who enjoys the puzzle of a well run application and am actively looking for a 
                     development job that will allow me to collaborate and help solve some of your company's problems.
                     I have completed many small fullstack projects and am currently working on Mentor Match. 
                     A mobile app built with React-Native that matches mentors and mentees in hopes of 
