@@ -5,7 +5,7 @@
         "gitHub": "https://github.com/MattMurn/Link-Up",
         "description": "",
         "deployment": "https://linkupapp.herokuapp.com/",
-        "src": "./assets/img/LinkUp.jpg"
+        "src": "./assets/img/addLink.png"
     },
     {
         "id": 1,
@@ -13,7 +13,7 @@
         "gitHub": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
         "description": "",
         "deployment": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
-        "src": "./assets/img/MM.png"
+        "src": "./assets/img/mentor2.png"
     },
     {
         "id": 2, 
@@ -21,7 +21,7 @@
         "gitHub": "https://github.com/MattMurn/mongoNews",
         "description": "",
         "deployment": "https://mongonewsapp.herokuapp.com/",
-        "src": "./assets/img/ringerNews2.png"
+        "src": "./assets/img/bringer.png"
     },
     {
         "id": 3,
@@ -29,7 +29,7 @@
         "gitHub": "https://github.com/MattMurn/BamazonNodeApp",
         "description": "",
         "deployment": "https://www.youtube.com/watch?v=kkrofqx5kvU",
-        "src": "./assets/img/nodeapp.gif"
+        "src": "./assets/img/bamazon.png"
     }
     
 ]

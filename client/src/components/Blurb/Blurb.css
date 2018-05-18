@@ -1,9 +1,10 @@
 .blurb {
     display: inline-block;
     width: 740px;
-    height: 300px;
-    position: relative;
-    top: 246px
+    height: 257px;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
 }
 .blurb_name {
     position: relative;

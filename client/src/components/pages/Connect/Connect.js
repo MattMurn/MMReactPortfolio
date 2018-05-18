@@ -77,23 +77,24 @@ class Connect  extends Component{
             return(
 
             <div className={this.props.connectClass}>
-                <div className="socialLinks">
-                    <a className="connectATag" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank"><Skills techLogo={<IoSocialLinkedin size={32}/>}/></a>
-                    <a className="connectATag" href="https://github.com/MattMurn" target="_blank"><Skills techLogo={<IoSocialGithub size={32}/>}/></a>
+                <div className="connection">
+                    <div className="socialLinks">
+                        <a className="connectATag" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank"><Skills techLogo={<IoSocialLinkedin size={32} color={"#2f496e"}/>}/></a>
+                        <a className="connectATag" href="https://github.com/MattMurn" target="_blank"><Skills techLogo={<IoSocialGithub size={32} color={"#2f496e"}/>}/></a>
+                    </div>
+                    <div className="connect_name">
+                        <input type="text" id="inq_name" name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
+                    </div>
+                    
+                    <div className="connect_email">
+                        <input type="email" id="inq_email" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
+                    </div>
+                    
+                    <div className="connect_text_box">
+                        <textarea id="inq_subject" name="message" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
+                        <button type="submit" className="submit" onClick={this.sendConnectEmail}>Send</button>
+                    </div>
                 </div>
-                <div className="connect_name">
-                    <input type="text" id="inq_name" name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
-                </div>
-                
-                <div className="connect_email">
-                    <input type="email" id="inq_email" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
-                </div>
-                
-                <div className="connect_text_box">
-                    <textarea id="inq_subject" name="message" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
-                    <button type="submit" className="submit" onClick={this.sendConnectEmail}>Send</button>
-                </div>
-
                 
 
 

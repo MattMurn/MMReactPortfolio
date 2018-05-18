@@ -31,9 +31,9 @@ class Navbar extends Component {
                     <div className="nav_dropdown_inner"></div>
                     <div className="nav_dropdown_inner"></div>
                     <ul className={this.state.class ? 'show' : 'hide'}>
-                        <Link to="/about"><p className="dropdown_list" id="about" onClick={this.props.clickHandler} > About </p> </Link>
-                        <Link to="/connect"> <p className="dropdown_list" id="connect" onClick={this.props.clickHandler} > Connect </p> </Link> 
-                        <Link to="/project"> <p className="dropdown_list" id="project" onClick={this.props.clickHandler} > Projects </p> </Link>
+                        <Link to="/about"><p className="dropdown_list" id="about" onClick={this.props.clickHandler} > ABOUT </p> </Link>
+                        <Link to="/connect"> <p className="dropdown_list" id="connect" onClick={this.props.clickHandler} > CONNECT </p> </Link> 
+                        <Link to="/project"> <p className="dropdown_list" id="project" onClick={this.props.clickHandler} > PROJECTS </p> </Link>
                     </ul>
                 </div>   
                 

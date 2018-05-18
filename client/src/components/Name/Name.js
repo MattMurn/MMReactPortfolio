@@ -4,8 +4,8 @@ import './Name.css';
 const Name = (props) => (
     <div className={props.wrapper}>
 
-        <div className={props.classPrefix}> {props.prefix}</div>
-        <div className={props.classSuffix}>{props.suffix}</div>
+        <div className={props.name}> {props.first}</div>
+        <div className={props.name}>{props.last}</div>
     </div>
 )
 

@@ -11,29 +11,22 @@
     margin-top: 30px;
     animation: about_show 3s;
 }
-.about_hide {
-    /* position: absolute;
-    float: right;
-    background:whitesmoke;
-    height: 145px;
-    width: 895px;
-    right: -1000;
-    top: 150px;
-    opacity: 0;
-    pointer-events: none; */
-    display: none;
-}
+
 
 
 .about_body {
-    position: relative;
-    top: 0px;
-    width: 66%;
+    position: absolute;
+    bottom: 25px;
+    width: 45%;
     display: inline-block;
+<<<<<<< HEAD
     font-size: 18px;
+=======
+    font-size: 14px;
+>>>>>>> updates
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-    color: #F4EADE;
+    color: #2F496E;
     
     margin-right: 15px;
     margin-left: 15px;
@@ -45,13 +38,20 @@
     
     display: inline-block;
     font-family: inherit;
-    position: relative;
-    width: 188px;
+    position: absolute;
+    width: 30%;
     margin-left: 20px;
+<<<<<<< HEAD
     top: -6px;
+=======
+    bottom: 25px;
+    right: 20%;
+    color: #2F496E;
+>>>>>>> updates
     font-family: 'Open Sans', sans-serif;
 
 }
+/* FFEC5C */
 
 .skill_icon {
     height: 21px;
@@ -64,7 +64,7 @@
     /* to { left: 0px} */
   }
 
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     .about_show {
         background: inherit;
         position: relative;
@@ -87,4 +87,4 @@
         color: inherit;
     }
 
-}
+} */

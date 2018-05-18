@@ -34,7 +34,7 @@ const About = ({aboutClass, photo}) => (
                                 name="Node.js"/>
                         <Skills techLogo={<IoSocialPython size={22}/>}
                                 name="Python"/>
-                        <Skills techLogo={<img className="skill_icon" src="./assets/img/favicon.ico" alt=""/>}
+                        <Skills techLogo={<img className="skill_icon" src="./assets/img/favicon.ico" background={"#FFEC5C"} alt=""/>}
                                 name="React"/>                                
                         <Skills techLogo={<FaCss3 size={22}/>}
                                 name="CSS3"/>                    

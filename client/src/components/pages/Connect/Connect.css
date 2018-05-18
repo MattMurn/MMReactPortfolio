@@ -1,15 +1,15 @@
 
-.connect_show {
+.connection {
     position: absolute;
     display: inline-block;
     height: 250px;
     width: 500px;
-    top: 0px;
-    right: 175px;
-    font-size: 13px;
+    bottom: 0px;
+    
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     background: inherit;
-    animation: connect_show 3s;
+    
 }
 
 .connect_hide {
@@ -27,14 +27,15 @@
     display: inherit;
     text-indent: 5px;
     left: 40px;
-    width: 175px;
+    width: 300px;
     height: 25px;
     border: none;
     font-family: inherit;
     margin-top: 35px;
     font-size: inherit;
-    background: #F4EADE;
-    color: #2f496e;
+    color: #FFEC5C;
+    background: #2f496e;
+    padding: 0px;
     
 }
 
@@ -43,15 +44,16 @@
     position: relative;
     display: inherit;
     text-indent: 5px;
-    left: 41px;
-    width: 175px;
+    left: 40px;
+    width: 300px;
     height: 25px;
     border: none;
     font-family: 'Open Sans', sans-serif;
     margin-top: 15px;
     font-size: inherit;
-    background: #F4EADE;
-    color: #2f496e;
+    color: #FFEC5C;
+    background: #2f496e;
+    padding: 0px;
 
 }
 
@@ -67,8 +69,9 @@
     color: inherit;
     font-size: inherit;
     font-family: 'Open Sans', sans-serif;
-    background: #F4EADE;
-    color: #2f496e;
+    color: #FFEC5C;
+    background: #2f496e;
+    padding: 0px;
     
 }
 .submit {
@@ -78,12 +81,18 @@
     border: none;
     color: inherit;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: px;
     padding: 0px;
-    background: inherit;
+    /* background: inherit;
+    color: #2f496e; */
     font-size: inherit;
     font-family: 'Open Sans', sans-serif;
-    
+    background: #2f496e;
+    color: #FFEC5C;
+}
+::placeholder {
+    color: #FFEC5C;
+    font-size: 14px;
 }
 .connect_text_box{   
     height: 129px;
@@ -96,14 +105,16 @@
     width: 22px;
     float: left;
     margin-right: 20px;
+    color: #2f496e;
+    
 }
 
 .socialLinks {
     position: relative;
-    left: 223px;
-    top: 74px;
+    left: 37px;
+    top: 0px;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 
     .connect_show{
         position: relative;
@@ -115,11 +126,7 @@
         width: 260px;
     }
 
-}
-@keyframes connect_show {
+} */
 
-    from {right: -1000px}
-   
-}
 
 
