@@ -15,7 +15,7 @@
     top: 34px;
     right: 0px;
     font-size: 10px;
-    font-family: "Open-Sans";
+    font-family: 'Open Sans', sans-serif;
     margin-top: 5px;
     color: #FFEC5C;;
 }
@@ -36,8 +36,8 @@
 }
 
 .nav_dropdown_inner {
-    width: 40px;
-    height: 4px;
+    width: 45px;
+    height: 7px;
     background-color: #FFEC5C;
     margin: 6px 0;
 }
@@ -47,7 +47,7 @@
     text-align: right;
     margin: 1px;
     cursor: pointer;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
 }
 
   @keyframes fade {

@@ -2,7 +2,7 @@
     position: absolute;
     float: right;
     background: inherit;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
     font-size: inherit;
     height: 300px;
     width: 700px;
@@ -32,7 +32,7 @@
     display: inline-block;
     font-size: 21px;
     text-align: left;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
     color: #F4EADE;
     
     margin-right: 15px;
@@ -48,7 +48,8 @@
     position: relative;
     width: 188px;
     margin-left: 20px;
-    top: -13px;
+    top: -90px;
+    font-family: 'Open Sans', sans-serif;
 
 }
 

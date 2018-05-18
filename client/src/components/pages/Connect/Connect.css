@@ -7,7 +7,7 @@
     top: 0px;
     right: 175px;
     font-size: 13px;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
     background: inherit;
     animation: connect_show 3s;
 }
@@ -47,7 +47,7 @@
     width: 175px;
     height: 25px;
     border: none;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
     margin-top: 15px;
     font-size: inherit;
     background: #F4EADE;
@@ -66,7 +66,7 @@
     width: 300px;
     color: inherit;
     font-size: inherit;
-    font-family: inherit;
+    font-family: 'Open Sans', sans-serif;
     background: #F4EADE;
     color: #2f496e;
     
@@ -82,14 +82,14 @@
     padding: 0px;
     background: inherit;
     font-size: inherit;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
     
 }
 .connect_text_box{   
     height: 129px;
     position: relative;
     width: 344px;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
 }
 .connectATag {
     height: 22px;
@@ -116,9 +116,10 @@
     }
 
 }
-@keyFrames connect_show {
+@keyframes connect_show {
 
     from {right: -1000px}
+   
 }
 
 
