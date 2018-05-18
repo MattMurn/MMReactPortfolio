@@ -75,20 +75,21 @@
     
 }
 .submit {
+    text-indent: 5px;
     position: relative;
     display: inherit;
     left: 40px;
     border: none;
     color: inherit;
     margin-top: 5px;
-    margin-left: px;
+    margin-left: 0px;
     padding: 0px;
-    /* background: inherit;
-    color: #2f496e; */
+    width: 50px;
+    text-align: left;
     font-size: inherit;
     font-family: 'Open Sans', sans-serif;
-    background: #2f496e;
-    color: #FFEC5C;
+    color: #2f496e;
+    background: #FFEC5C;
 }
 ::placeholder {
     color: #FFEC5C;

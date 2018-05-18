@@ -14,7 +14,7 @@ const Project = (props) => (
             </img>
         </a>  
         <div className="infoContainer">
-            <div className="description"> {props.description} </div>
+            {/* <div className="description"> {props.description} </div> */}
             <a href={props.github} target="_blank" className="github"> {props.logo}</a>
         </div>
     </div>
