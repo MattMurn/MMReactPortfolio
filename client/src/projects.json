@@ -5,7 +5,7 @@
         "gitHub": "https://github.com/MattMurn/Link-Up",
         "description": "",
         "deployment": "https://linkupapp.herokuapp.com/",
-        "src": "./assets/img/linker.png"
+        "src": "./assets/img/addLink.png"
     },
     {
         "id": 1,
