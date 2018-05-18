@@ -1,20 +1,19 @@
 .panel_show {
     position: absolute;
     right: 50px;
-    width: 900px;
-    height: 211px;
+    width: 35%;
+    height: 100%;
     color: white;
     background: inherit;
-    top: 314px;
+    top: 0px;
     float: left;
-    right: 257px;
+    left: 118px;
+    background: #F4EADE;
     animation: panel 3s;
     
 }
-.panel_hide {
-    display: none;
-}
 
+/* 
 @media only screen and (max-width: 600px) {
     .panel_show {
         position: absolute;
@@ -26,9 +25,9 @@
     .wrapper {
         margin-bottom: 10px;
     }
-}
+} */
 @keyFrames panel {
 
-    from {right: -1000px}
+    from {top: -1000px}
 }
 

@@ -11,8 +11,6 @@ import Project from '../../Project'
 import Name from '../../Name'
 import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
-
-// connection icons
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 
 
@@ -23,133 +21,63 @@ class Landing extends Component {
         // need to adjust switch statement so that nameClass update properly.   
         this.state = {
             projects: [],
-            class: false,
-            projectClass: false,
-            aboutClass: false,
-            connectClass: false,
-            nameClass: true
         }
-        // this.clickHandler = this.clickHandler.bind(this);
-        // this.nameSuffixHide = this.nameSuffixHide.bind(this);
-
     }
     componentDidMount = () => {
         this.setState({projects: projects});
-    }
-    clickHandler = event => {
-        // console.log("handleClickEvent is live and well");
-        // console.log(event.target.id)
-        let currentId = event.target.id; 
-        switch(currentId){
-            case "about":
-                this.setState(previous => ({
-                                            aboutClass: !previous.aboutClass,
-                                            projectClass: false,
-                                            connectClass: false,
-                                            nameClass: this.nameSuffixHide(previous.aboutClass)
-                                          }));
-                break;
-            case "project":
-                this.setState(previous => ({
-                                            projectClass: !previous.projectClass,
-                                            aboutClass: false,
-                                            connectClass: false,
-                                            nameClass: this.nameSuffixHide(previous.projectClass)
-                                        }));
-                break;
-            case "connect":
-                this.setState(previous => ({
-                                            connectClass: !previous.connectClass,
-                                            projectClass: false,
-                                            aboutClass: false,
-                                            nameClass: this.nameSuffixHide(previous.connectClass)
-                                        }));
-                break;
-            default:
-                this.setState({
-                                connectClass: false,
-                                projectClass: false,
-                                aboutClass: false
-                            });
-        }
+    }   
 
-  }
-  componentDidMount(){
-     // console.log("component did")
-  }
-  nameSuffixHide = currentState => {
-
-
-    if(currentState) {
-        this.setState({nameClass: true})
-    }
-    else{
-        this.setState({nameClass: false})
-    }
-  }
     render() {
 
         // try destrucuring nameClass
         return(
             <Router>
-                <div>
-                    <div>    
-                        <Navbar clickHandler={this.clickHandler}
-                            
-                                // about={<Link to="/about"> About </Link>}
-                                // connect={<Link to="/connect"> Connect </Link>}
-                                
-                        /> 
-                        <div className="page_wrapper">
-
-                            <Blurb>
+                <div> 
+                    <Navbar clickHandler={this.clickHandler}/> 
+                        <Blurb>
+                            <Link to="/">
                                 <Name   wrapper="first_name_wrapper"
-                                        classPrefix="name_prefix"
-                                        prefix="M"
-                                        classSuffix={this.state.nameClass ? "name_suffix" : "name_hide"}
-                                        suffix="atthew"
-                                        />
-                                
-                                
-                                <Name   wrapper="last_name_wrapper"
-                                        classPrefix="name_prefix"
-                                        prefix="M"
-                                        classSuffix={this.state.nameClass ? "name_suffix" : "name_hide"}
-                                        suffix="urnighan"
+                                        name="name_"
+                                        first="MATTHEW"
+                                        name="name_"
+                                        last="MURNIGHAN"
                                 />
-
-
+                            </Link>
+                        </Blurb>     
                             <Route  path="/about" 
-                                render={ () => <About aboutClass = { this.state.aboutClass ? 'about_show' : 'about_hide'}/>} />
-
+                                render={ () =>  
+                                    <Panel>
+                                        <About aboutClass = "panel_show"/>
+                                    </Panel>
+                                } 
+                            />
                             <Route  path="/connect" 
-                                render={ () => <Connect connectClass = { this.state.connectClass ? 'connect_show' : 'connect_hide'}/>} />     
-                            </Blurb> 
-                            {/* <About aboutClass = { this.state.aboutClass ? 'about_show' : 'about_hide'}
-                                />
-                            <Connect connectClass={this.state.connectClass ? 'connect_show' : 'connect_hide'}/>    */}
+                                render={ () => 
+                                    <Panel>
+                                        <Connect connectClass = "panel_show"/>
+                                    </Panel>
+                                }
+                            />     
+                          
                         <Route exact path="/project" render={() =>  
-                            <Panel projectClass={this.state.projectClass ? 'panel_show' : 'panel_hide'}> 
-                            {projects.map((proj, i)=> (                     
-                                <Project 
-                                    id={proj.id}
-                                    key={proj.id}
-                                    src={proj.src}
-                                    deployment={proj.deployment}
-                                    description={proj.title}
-                                    github={proj.gitHub}
-                                    logo={<IoSocialGithub size={25}/>} 
-                                />
-                            ))}
-                        </Panel>    
+                            <Panel projectClass= 'panel_show'> 
+                                {projects.map((proj, i)=> (                     
+                                    <Project 
+                                        id={proj.id}
+                                        key={proj.id}
+                                        src={proj.src}
+                                        deployment={proj.deployment}
+                                        description={proj.title}
+                                        github={proj.gitHub}
+                                        logo={<IoSocialGithub size={25}/>} 
+                                    />
+                                ))}
+                            </Panel>    
                         }/>
-                        
-                    </div>
                 </div>
-    </div>
-</Router>
-)}
-
+            </Router>
+        )
+    }
 }
 
 export default Landing

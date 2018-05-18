@@ -4,7 +4,7 @@
     font-size: 110px;
     height: 115px;
     font-family: 'Anton', sans-serif;
-    animation: fade 2s linear;
+   
 }
 .last_name_wrapper {
     width: 100%;
@@ -13,11 +13,12 @@
     float: right;
     font-family: 'Anton', sans-serif;
     height: 143px;
-    animation: fade 1s linear;
+    
 
 }
-.name_prefix {
+.name_ {
     position: relative; 
+    letter-spacing: 15px;
     float: left;
     top: 0px;
     opacity: 1;
@@ -25,38 +26,12 @@
     color: inherit;
 
 }
-.name_suffix {
-    position: relative;
-    float: left;
-    top: 0px;
-    opacity: 1; 
-    height: inherit;
-    color: inherit;
-}
-
 .name_hide {
     opacity: 0;
     animation: out 2s linear;
 }
 
-@keyframes fade {
-    0% { opacity: 0}
-    100% { opacity: 1}
-}
-
-@keyframes out {
-    0% { 
-        opacity: 1;
-        color: #ED8C72;
-
-        }
-    25%{}
-    50%{}
-    75%{}
-    100% { opacity: 0}
-}
-
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     body {
         background-color: lightblue;
     }
@@ -68,4 +43,4 @@
         font-size: 40px;
         height: 50px;
     }
-}
+} */
