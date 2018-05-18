@@ -44,7 +44,7 @@
     position: relative;
     display: inherit;
     text-indent: 5px;
-    left: 41px;
+    left: 40px;
     width: 300px;
     height: 25px;
     border: none;
@@ -81,7 +81,7 @@
     border: none;
     color: inherit;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: px;
     padding: 0px;
     /* background: inherit;
     color: #2f496e; */
