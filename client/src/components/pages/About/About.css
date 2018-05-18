@@ -19,11 +19,7 @@
     bottom: 25px;
     width: 45%;
     display: inline-block;
-<<<<<<< HEAD
-    font-size: 18px;
-=======
     font-size: 14px;
->>>>>>> updates
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     color: #2F496E;
@@ -41,13 +37,9 @@
     position: absolute;
     width: 30%;
     margin-left: 20px;
-<<<<<<< HEAD
-    top: -6px;
-=======
     bottom: 25px;
     right: 20%;
     color: #2F496E;
->>>>>>> updates
     font-family: 'Open Sans', sans-serif;
 
 }
