@@ -5,7 +5,7 @@ import Navbar from '../../Navbar'
 import Panel from '../../Panel'
 import Blurb from '../../Blurb'
 import About from '../../pages/About'
-import ReactCSSTransitionGroup from 'react-transition-group';
+
 import Project from '../../Project' 
 import Name from '../../Name'
 import Connect from '../../pages/Connect'
