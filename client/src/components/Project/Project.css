@@ -29,14 +29,24 @@
     transition: .5s;
     margin: 0px;
     font-size: 25px;
-    font-family: "open-sans";
+    font-family: 'Open Sans', sans-serif;
 }
-.a {
+.description {
+    float: left;
+    text-indent: 5px;
+    text-align: left;
+    width: 200px;
+}
+.github {
+    float: right;
+    text-indent: -5px;
+}
+/* .a {
     height: 50px;
     width: 50px;
     position: relative;
     left: 0px;
-}
+} */
   
  
 

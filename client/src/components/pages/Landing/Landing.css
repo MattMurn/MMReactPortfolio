@@ -8,7 +8,7 @@ body {
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
     color: inherit;
-    width: 25px;
+    
 }
 .page_wrapper {
     margin-right: 20px;
