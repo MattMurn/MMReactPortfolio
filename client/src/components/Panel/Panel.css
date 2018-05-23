@@ -12,6 +12,30 @@
     animation: panel 3s;
     
 }
+.panel_hide {
+    animation: panel 3s;
+    position: absolute;
+    top: -1000px;
+    animation: panel_hide 3s;
+}
+@media only screen and (max-width: 600px) {
+    .panel_show {
+        position: absolute;
+       left: 0px;
+       width: 60%;
+    }
+
+
+}
+@media only screen and (max-width: 500px) {
+    .panel_show {
+        position: absolute;
+       left: 0px;
+       width: 80%;
+    }
+
+
+}
 
 /* 
 @media only screen and (max-width: 600px) {
@@ -26,8 +50,15 @@
         margin-bottom: 10px;
     }
 } */
+
+
 @keyFrames panel {
 
     from {top: -1000px}
+}
+
+@keyFrames panel_hide {
+
+    to {top: -1000px}
 }
 

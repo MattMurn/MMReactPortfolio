@@ -1,4 +1,4 @@
-.first_name_wrapper {
+.first_name_wrapper, .last_name_wrapper {
     width: 100%;
     position: relative;
     font-size: 110px;
@@ -6,7 +6,7 @@
     font-family: 'Anton', sans-serif;
    
 }
-.last_name_wrapper {
+/* .last_name_wrapper {
     width: 100%;
     position: relative;
     font-size: 110px;
@@ -15,32 +15,26 @@
     height: 143px;
     
 
-}
+} */
 .name_ {
     position: relative; 
     letter-spacing: 15px;
     float: left;
     top: 0px;
     opacity: 1;
+
     height: inherit;
     color: inherit;
 
 }
-.name_hide {
+/* .name_hide {
     opacity: 0;
     animation: out 2s linear;
-}
-
-/* @media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
-    .last_name_wrapper{
-        font-size: 40px;
-        height: 50px;
-    }
-    .first_name_wrapper{
-        font-size: 40px;
-        height: 50px;
-    }
 } */
+
+@media only screen and (max-width: 600px) {
+  
+    .name_ {
+        color: #2f496e;
+    }
+}

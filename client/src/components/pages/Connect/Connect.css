@@ -1,71 +1,40 @@
-
 .connection {
     position: absolute;
     display: inline-block;
     height: 250px;
-    width: 500px;
+    width: 100%;
     bottom: 0px;
-    
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     background: inherit;
     
 }
-
-.connect_hide {
-    display: none;
-    /* position: absolute;
-    right: -1000;
-    opacity: 0;
-    pointer-events: none; */
-    /* animation: connect_hide 2s; */
-
-}
-
-#inq_name {
+#inq_name, #inq_email {
     position: relative;
     display: inherit;
     text-indent: 5px;
     left: 40px;
-    width: 300px;
+    width: 50%;
     height: 25px;
     border: none;
     font-family: inherit;
-    margin-top: 35px;
+    margin-top: 10px;
     font-size: inherit;
     color: #FFEC5C;
     background: #2f496e;
     padding: 0px;
     
 }
-
-
-#inq_email {
-    position: relative;
-    display: inherit;
-    text-indent: 5px;
-    left: 40px;
-    width: 300px;
-    height: 25px;
-    border: none;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 15px;
-    font-size: inherit;
-    color: #FFEC5C;
-    background: #2f496e;
-    padding: 0px;
-
-}
-
 #inq_subject {
     position: relative;
-    display: inherit;
+    display: inline-block;
     text-indent: 5px;
     left: 40px;
     margin-top: 10px;
+    margin-right: 0px;
     border: none;
     height: 100px;
-    width: 300px;
+    width: 50%;
     color: inherit;
     font-size: inherit;
     font-family: 'Open Sans', sans-serif;
@@ -98,8 +67,9 @@
 .connect_text_box{   
     height: 129px;
     position: relative;
-    width: 344px;
+    width: 50%;
     font-family: 'Open Sans', sans-serif;
+
 }
 .connectATag {
     height: 22px;
@@ -112,10 +82,11 @@
 
 .socialLinks {
     position: relative;
+    display: inline-block;
     left: 37px;
     top: 0px;
 }
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
     .connect_show{
         position: relative;
@@ -127,7 +98,7 @@
         width: 260px;
     }
 
-} */
+}
 
 
 

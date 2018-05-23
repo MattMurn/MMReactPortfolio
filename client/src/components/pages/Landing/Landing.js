@@ -5,8 +5,7 @@ import Navbar from '../../Navbar'
 import Panel from '../../Panel'
 import Blurb from '../../Blurb'
 import About from '../../pages/About'
-// import Skills from '../../Skills'
-// import Atag from '../../Atag'
+import ReactCSSTransitionGroup from 'react-transition-group';
 import Project from '../../Project' 
 import Name from '../../Name'
 import Connect from '../../pages/Connect'
@@ -21,13 +20,19 @@ class Landing extends Component {
         // need to adjust switch statement so that nameClass update properly.   
         this.state = {
             projects: [],
+            class: false 
         }
     }
     componentDidMount = () => {
         this.setState({projects: projects});
     }   
-
+    // dropIt = () => {
+    //     //this needs to link with components 
+    //      this.setState(previous => ({class: !previous.class }));   
+        
+    // }
     render() {
+        
 
         // try destrucuring nameClass
         return(
@@ -38,17 +43,19 @@ class Landing extends Component {
                             <Link to="/">
                                 <Name   wrapper="first_name_wrapper"
                                         name="name_"
-                                        first="MATTHEW"
-                                        name="name_"
-                                        last="MURNIGHAN"
+                                        first="Matthew"
+                                        last="Murnighan"
+                                        clickHandler={this.dropIt}
                                 />
                             </Link>
                         </Blurb>     
                             <Route  path="/about" 
                                 render={ () =>  
-                                    <Panel>
-                                        <About aboutClass = "panel_show"/>
-                                    </Panel>
+                                    
+                                        <Panel>
+                                            <About aboutClass = "panel_show"/>
+                                        </Panel>
+                                    
                                 } 
                             />
                             <Route  path="/connect" 
@@ -60,7 +67,7 @@ class Landing extends Component {
                             />     
                           
                         <Route exact path="/project" render={() =>  
-                            <Panel projectClass= 'panel_show'> 
+                            <Panel class= 'panel_show'> 
                                 {projects.map((proj, i)=> (                     
                                     <Project 
                                         id={proj.id}

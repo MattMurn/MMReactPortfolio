@@ -50,4 +50,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-  
+@media only screen and (max-width: 600px) {
+
+    .dropdown_list{
+        font-size: 10px;
+    }
+
+}

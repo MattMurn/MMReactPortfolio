@@ -24,3 +24,12 @@ a:link, a:hover, a:visited, a:active {
     position: absolute;
     opacity: 0px;
 } */
+
+.slide-enter {
+    left: 100px
+}
+
+.slide-enter-active {
+    left: 0;
+    transition: 1s ease-in all;
+}

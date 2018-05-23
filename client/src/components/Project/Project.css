@@ -1,5 +1,4 @@
 .projectOuter {
-
     position: relative;
     height: 100%;
     width: 100%;
@@ -10,18 +9,6 @@
     float: right;
     margin: 0px;
 }
-
-/* .infoContainer {
-    position: absolute;
-    color: whitesmoke;   
-    font-family: "Open-Sans";
-    font-size: 13px;
-    opacity: 0;
-    transition: 0s;
-    padding: 0;
-    bottom: 0px;
- 
-} */
 .wrapper {
     position: relative;
     text-align: center;
@@ -44,8 +31,6 @@
     font-size: 25px;
     font-family: "open-sans";
 }
-
-
 .a {
     height: 50px;
     width: 50px;
@@ -55,14 +40,3 @@
   
  
 
-
-/*  
-.project_hide {
-    position: absolute;
-    opacity: 0px;
-}
-
-@keyFrames panel {
-
-    from {right: -1000px}
-} */ 

@@ -90,10 +90,10 @@ class Connect  extends Component{
                         <input type="email" id="inq_email" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
                     </div>
                     
-                    <div className="connect_text_box">
+                    
                         <textarea id="inq_subject" name="message" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
                         <button type="submit" className="submit" onClick={this.sendConnectEmail}>Send</button>
-                    </div>
+                   
                 </div>
                 
 
