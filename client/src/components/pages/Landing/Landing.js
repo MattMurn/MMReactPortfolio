@@ -20,17 +20,19 @@ class Landing extends Component {
         // need to adjust switch statement so that nameClass update properly.   
         this.state = {
             projects: [],
-            class: false 
+            class: false,
+            nameHide: false,
         }
     }
     componentDidMount = () => {
         this.setState({projects: projects});
     }   
-    // dropIt = () => {
-    //     //this needs to link with components 
-    //      this.setState(previous => ({class: !previous.class }));   
-        
-    // }
+    showName = () => {
+        this.setState({nameHide: false})
+    }
+    hideName = () => {
+        this.setState({nameHide: true})
+    }
     render() {
         
 
@@ -38,20 +40,22 @@ class Landing extends Component {
         return(
             <Router>
                 <div> 
-                    <Navbar clickHandler={this.clickHandler}/> 
+                    <Navbar clickHandler={this.hideName}/> 
                         <Blurb>
                             <Link to="/">
                                 <Name   wrapper="first_name_wrapper"
-                                        name="name_"
-                                        first="Matthew"
-                                        last="Murnighan"
-                                        clickHandler={this.dropIt}
+                                        name_s={this.state.nameHide ? 'hide' : 'name_s' }
+                                        first="M"
+                                        first_s="atthew"
+                                        last="M"
+                                        last_s="urnighan"
+                                        clickHandler={this.showName}
                                 />
                             </Link>
                         </Blurb>     
                             <Route  path="/about" 
                                 render={ () =>  
-                                    
+                                        
                                         <Panel>
                                             <About aboutClass = "panel_show"/>
                                         </Panel>

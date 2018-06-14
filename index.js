@@ -33,7 +33,7 @@ app.post("/api/connects", (req, res) => {
       service: 'gmail',
       auth: {
           user: 'nodemailermurn@gmail.com',
-          pass: key
+          pass: "Jordan#23"
       }
   });
 

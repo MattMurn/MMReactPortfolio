@@ -1,40 +1,59 @@
-.first_name_wrapper, .last_name_wrapper {
+.name_wrapper {
     width: 100%;
     position: relative;
     font-size: 110px;
-    height: 115px;
+    top: 0px;
+    /* height: 115px; */
+    height: 100%;
     font-family: 'Anton', sans-serif;
    
 }
-/* .last_name_wrapper {
-    width: 100%;
+ .name_container {
     position: relative;
-    font-size: 110px;
-    float: right;
-    font-family: 'Anton', sans-serif;
-    height: 143px;
-    
-
-} */
-.name_ {
-    position: relative; 
-    letter-spacing: 15px;
-    float: left;
-    top: 0px;
-    opacity: 1;
-
-    height: inherit;
-    color: inherit;
-
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    height: 115px;
+    letter-spacing: 10px;
 }
-/* .name_hide {
-    opacity: 0;
-    animation: out 2s linear;
-} */
+.last_name_container {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    height: 115px;
+    letter-spacing: 15px;
+    top: -50px;
+}
 
-@media only screen and (max-width: 600px) {
+.name_ {
+    position: relative;
+    top: 0px;
+    height: inherit;
+    float: left;
+    text-align: justify;
+    height: 115px;
+}
+
+ .name_s {
+    position: relative;
+    height: inherit;
+}
+
+.hide {
+    animation-name: hide;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+@keyframes hide {
+    from {color: inherit;}
+    to {background-color: #2f496e;}
+}
+/* 
+@media only screen and (max-width: 700px) {
   
-    .name_ {
+    
+    .name_s {
         color: #2f496e;
     }
-}
+} */
