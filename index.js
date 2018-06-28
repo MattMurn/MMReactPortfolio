@@ -20,7 +20,6 @@ app.post("/api/connects", (req, res) => {
         email: req.body.email,
         message: req.body.message
     }
-
     const transporter = nodeMailer.createTransport({
         service: 'gmail',
         auth: {
@@ -28,21 +27,18 @@ app.post("/api/connects", (req, res) => {
             pass: key
         }
     });
-
     const mailOptions = {
         from: newConnect.email,
         to: 'mattmurn@gmail.com',
         subject: `You recieved an inquiry from ${newConnect.name}`,
         text: newConnect.message
     };
-
     transporter.sendMail(mailOptions, function(error, info){
         if(error){ throw error }
         else{
             console.log('Email sent: ' + info.response);
         }
     })
-
     db.Connects.create(newConnect).then(data => {
     }).catch(err => console.log(err))
 
