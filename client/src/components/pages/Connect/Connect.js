@@ -79,8 +79,8 @@ class Connect  extends Component{
             <div className={this.props.connectClass}>
                 <div className="connection">
                     <div className="socialLinks">
-                        <a className="connectATag" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank"><Skills techLogo={<IoSocialLinkedin size={32} color={"#2f496e"}/>}/></a>
-                        <a className="connectATag" href="https://github.com/MattMurn" target="_blank"><Skills techLogo={<IoSocialGithub size={32} color={"#2f496e"}/>}/></a>
+                        <a className="connectATag" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank" rel="noopener noreferrer"><Skills techLogo={<IoSocialLinkedin size={32} color={"#2f496e"}/>}/></a>
+                        <a className="connectATag" href="https://github.com/MattMurn" target="_blank" rel="noopener noreferrer"><Skills techLogo={<IoSocialGithub size={32} color={"#2f496e"}/>}/></a>
                     </div>
                     <div className="connect_name">
                         <input type="text" id="inq_name" name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>

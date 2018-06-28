@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import './Landing.css'
 import Navbar from '../../Navbar'
 import Panel from '../../Panel'
 import Blurb from '../../Blurb'
 import About from '../../pages/About'
-
 import Project from '../../Project' 
 import Name from '../../Name'
 import Connect from '../../pages/Connect'
