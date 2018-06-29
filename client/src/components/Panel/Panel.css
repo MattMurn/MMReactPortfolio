@@ -9,14 +9,14 @@
     float: left;
     left: 115px;
     background: #F4EADE;
-    animation: panel 3s;
+    animation: panel .5s;
     
 }
 .panel_hide {
     animation: panel 3s;
     position: absolute;
     top: -1000px;
-    animation: panel_hide 3s;
+    animation: panel_hide .5s;
 }
 @media only screen and (max-width: 600px) {
     .panel_show {

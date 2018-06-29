@@ -7,8 +7,8 @@
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     background: inherit;
-    
 }
+
 #inq_name, #inq_email {
     position: relative;
     display: inherit;
@@ -23,8 +23,8 @@
     color: #FFEC5C;
     background: #2f496e;
     padding: 0px;
-    
 }
+
 #inq_subject {
     position: relative;
     display: inline-block;
@@ -42,6 +42,7 @@
     background: #2f496e;
     padding: 0px;
 }
+
 .submit {
     text-indent: 5px;
     position: relative;
@@ -59,44 +60,42 @@
     color: #2f496e;
     background: #FFEC5C;
 }
+
 ::placeholder {
     color: #FFEC5C;
     font-size: 14px;
 }
+
 .connect_text_box{   
     height: 129px;
     position: relative;
     width: 50%;
     font-family: 'Open Sans', sans-serif;
-
 }
+
 .connectATag {
     height: 22px;
     width: 22px;
     float: left;
     margin-right: 20px;
-    color: #2f496e;
-    
+    color: #2f496e;   
 }
-
 .socialLinks {
     position: relative;
     display: inline-block;
     left: 37px;
     top: 0px;
 }
-@media only screen and (max-width: 600px) {
 
+@media only screen and (max-width: 600px) {
     .connect_show{
         position: relative;
         top: -125px;
         right: 0px;
     }
-
     #inq_subject {
         width: 260px;
     }
-
 }
 
 

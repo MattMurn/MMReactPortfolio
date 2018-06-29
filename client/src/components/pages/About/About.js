@@ -8,6 +8,7 @@ import IoSocialHtml5 from 'react-icons/lib/io/social-html5';
 import FaCss3 from 'react-icons/lib/fa/css3';
 import FaDatabase from 'react-icons/lib/fa/database';
 import FaGit from 'react-icons/lib/fa/git';
+import FaServer from 'react-icons/lib/fa/server';
 
 
 
@@ -43,7 +44,7 @@ const About = ({aboutClass, photo}) => (
                         <Skills techLogo={<FaGit size={22}/>}
                                 name="Version Control"/>
                             
-                        <Skills techLogo={<img className="skill_icon" src="" alt=""/>} 
+                        <Skills techLogo={<FaServer size={22}/>} 
                                 name="Express.js"/>                           
 
 
