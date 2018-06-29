@@ -5,26 +5,22 @@ import Navbar from '../../Navbar'
 import Panel from '../../Panel'
 import Blurb from '../../Blurb'
 import About from '../../pages/About'
-
 import Project from '../../Project' 
 import Name from '../../Name'
 import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 
-
-
 class Landing extends Component {
     constructor(props){
-        super(props);  
-        // need to adjust switch statement so that nameClass update properly.   
+        super(props);   
         this.state = {
             projects: [],
             class: false,
             nameHide: false,
         }
     }
-    componentDidMount = () => {
+    componentWillMount = () => {
         this.setState({projects: projects});
     }   
     showName = () => {
@@ -34,9 +30,6 @@ class Landing extends Component {
         this.setState({nameHide: true})
     }
     render() {
-        
-
-        // try destrucuring nameClass
         return(
             <Router>
                 <div> 
@@ -55,11 +48,9 @@ class Landing extends Component {
                         </Blurb>     
                             <Route  path="/about" 
                                 render={ () =>  
-                                        
-                                        <Panel>
-                                            <About aboutClass = "panel_show"/>
-                                        </Panel>
-                                    
+                                    <Panel>
+                                        <About aboutClass = "panel_show"/>
+                                    </Panel>
                                 } 
                             />
                             <Route  path="/connect" 
@@ -69,7 +60,6 @@ class Landing extends Component {
                                     </Panel>
                                 }
                             />     
-                          
                         <Route exact path="/project" render={() =>  
                             <Panel class= 'panel_show'> 
                                 {projects.map((proj, i)=> (                     
