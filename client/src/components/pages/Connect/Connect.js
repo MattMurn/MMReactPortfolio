@@ -3,9 +3,7 @@ import './Connect.css'
 import Skills from '../../Skills'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 import IoSocialLinkedin from 'react-icons/lib/io/social-linkedin';
-//uncomment when you have express.js serving you.
  import axios from 'axios'
-// look at using the higher oder components in a refactor...
 
 class Connect  extends Component{
     constructor(props){
@@ -19,8 +17,6 @@ class Connect  extends Component{
             placeholderMessage: "Message"
 
         }
-        // this.getConnecData = this.getConnectData.bind(this);
-        // this.sendConnectEmail = this.sendConnectEmail.bind(this);
     }
 
     getConnectData = event =>  {
@@ -29,20 +25,16 @@ class Connect  extends Component{
         this.setState({
             [name]: value
         });
-
-        // console.log(this.state)
-
     }
-    sendConnectEmail = (event) => {
+
+    sendConnectEmail = event => {
         event.preventDefault();
         if ( 1> this.state.name.length > 30 ){
             this.setState({ 
-
                 name:"",
                 placeholderName: "Please enter your name"
             });
             return;
-            
         }
         else if (1 > this.state.message > 5000 ) {
             this.setState({ 
@@ -54,13 +46,10 @@ class Connect  extends Component{
         }
         else{
             axios.post('/api/connects', {
-
                 name: this.state.name,
                 email: this.state.email, 
                 message: this.state.message
-
             }).then(
-
                 this.setState({
                     name: "",
                     email: "",
@@ -68,8 +57,6 @@ class Connect  extends Component{
                 })            
             )
         }
-
-
     }   ;
     render() {
         const { placeholderName, placeholderEmail, placeholderMessage, name, email, message } = this.state;

@@ -34,6 +34,7 @@ class Navbar extends Component {
                         <Link to="/about"><p className="dropdown_list" id="about" onClick={this.props.clickHandler} > ABOUT </p> </Link>
                         <Link to="/connect"> <p className="dropdown_list" id="connect" onClick={this.props.clickHandler} > CONNECT </p> </Link> 
                         <Link to="/project"> <p className="dropdown_list" id="project" onClick={this.props.clickHandler} > PROJECTS </p> </Link>
+                        <Link to="/chat"> <p className="dropdown_list" id="chat" onClick={this.props.clickHandler} > CHAT Live! </p> </Link>
                     </ul>
                 </div>   
                 

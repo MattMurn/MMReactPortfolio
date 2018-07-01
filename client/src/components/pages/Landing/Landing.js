@@ -6,6 +6,7 @@ import Panel from '../../Panel'
 import Blurb from '../../Blurb'
 import About from '../../pages/About'
 import Project from '../../Project' 
+import Chat from '../../Chat'
 import Name from '../../Name'
 import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
@@ -61,7 +62,7 @@ class Landing extends Component {
                                 }
                             />     
                         <Route exact path="/project" render={() =>  
-                            <Panel class= 'panel_show'> 
+                            <Panel className= 'panel_show'> 
                                 {projects.map((proj, i)=> (                     
                                     <Project 
                                         id={proj.id}
@@ -75,6 +76,13 @@ class Landing extends Component {
                                 ))}
                             </Panel>    
                         }/>
+                        <Route  path="/chat" 
+                            render={ () => 
+                                <Panel className='panel_show'>
+                                    <Chat/>
+                                </Panel>
+                            }
+                        /> 
                 </div>
             </Router>
         )
