@@ -5,7 +5,7 @@
         "gitHub": "https://github.com/MattMurn/Widget",
         "description": "",
         "deployment": "https://cryptowidget.herokuapp.com/",
-        "src": "./assets/img/crypto2.png"
+        "src": "./assets/img/cryptoTest.png"
     },
     {
         "id": 2,
