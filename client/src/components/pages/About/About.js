@@ -15,14 +15,14 @@ import FaServer from 'react-icons/lib/fa/server';
 const About = ({aboutClass, photo}) => (
             <div className={aboutClass}>
                 {/* <img className="head_shot" src={photo}/> */}
-                               
                 <div className="about_body">
-                    Hello! Thanks for checking my portfolio.
-                    I'm a full stack developer who enjoys the puzzle of a well run application and am actively looking for a 
-                    development opportunity that will allow me to collaborate and help solve some of your company's problems.
-                    I have completed many small fullstack projects and am currently working on Mentor Match. 
-                    A mobile app built in React-Native that matches mentors and mentees in hopes of 
-                    shaping careers and relationships. 
+                        <img height="200" width="200" alt='chaio' src="./assets/img/MJM.JPG"/>
+                        <br/> 
+                        Hello! Thanks for checking my portfolio.
+                        I'm a full stack developer who enjoys the puzzle of a well run application and am actively looking for a 
+                        development opportunity that will allow me to collaborate and help solve some of your company's problems.
+                        Currently, I am consulting on a software trade secrets litigation & about to start as a Teaching Assistant 
+                        at Northwestern University Coding Bootcamp.  
                 </div>
                 <div className="about_skills">
                     

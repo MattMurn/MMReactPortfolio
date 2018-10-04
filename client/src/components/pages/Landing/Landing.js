@@ -11,6 +11,8 @@ import Name from '../../Name'
 import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
+import axios from 'axios';
+import moment from 'moment';
 
 class Landing extends Component {
     constructor(props){
@@ -23,12 +25,39 @@ class Landing extends Component {
     }
     componentWillMount = () => {
         this.setState({projects: projects});
+        this.getIp();
     }   
     showName = () => {
         this.setState({nameHide: false})
     }
     hideName = () => {
         this.setState({nameHide: true})
+    }
+    getIp = () => {
+        console.log('LINKED')
+        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
+        .then(data => {
+        console.log(data.data);
+        let ip = data.data.geobytesipaddress
+        axios.get(`http://api.ipstack.com/${ip}?access_key=e3af7c52287a4cc971a2caa31e54fb6b`)
+        .then(data => {
+            console.log(data.data);
+            let i = data.data;
+            let userIp = {
+                ip: i.ip,
+                country_name: i.country_name,
+                region_name: i.region_name,
+                city: i.city,
+                zip: i.zip,
+                lat: i.latitude,
+                long: i.longitude,
+                time: moment().format('MMMM Do YYYY, h:mm:ss a')
+            }
+            // hits.push(userIp);
+            // (hits.indexOf(ip) !== -1) ? null : hits.push(userIp);
+            console.log(userIp);
+        })
+        })
     }
     render() {
         return(
