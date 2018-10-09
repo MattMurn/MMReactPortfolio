@@ -11,12 +11,12 @@ class Chat extends Component {
         }
     }
     componentDidMount = () => {
-        socket.connect();
+        // socket.connect();
         // console.log('connected')
         // socket.on('message', this.handleMessage);
     }
     componentWillUnmount = () => {
-        socket.disconnect();
+        // socket.disconnect();
         // console.log("Chat unmounted")
         //close socket connection on the client side.
     }

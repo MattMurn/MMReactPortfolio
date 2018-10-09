@@ -3,7 +3,7 @@ import './Connect.css'
 import Skills from '../../Skills'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 import IoSocialLinkedin from 'react-icons/lib/io/social-linkedin';
- import axios from 'axios'
+import axios from 'axios'
 
 class Connect  extends Component{
     constructor(props){
@@ -15,18 +15,15 @@ class Connect  extends Component{
             placeholderName: "Name",
             placeholderEmail: "Email",
             placeholderMessage: "Message"
-
         }
     }
-
     getConnectData = event =>  {
         const { name, value} = event.target;
 
         this.setState({
             [name]: value
         });
-    }
-
+    };
     sendConnectEmail = event => {
         event.preventDefault();
         if ( 1> this.state.name.length > 30 ){
@@ -57,12 +54,10 @@ class Connect  extends Component{
                 })            
             )
         }
-    }   ;
+    };
     render() {
         const { placeholderName, placeholderEmail, placeholderMessage, name, email, message } = this.state;
-        
             return(
-
             <div className={this.props.connectClass}>
                 <div className="connection">
                     <div className="socialLinks">
@@ -76,18 +71,10 @@ class Connect  extends Component{
                     <div className="connect_email">
                         <input type="email" id="inq_email" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
                     </div>
-                    
-                    
                         <textarea id="inq_subject" name="message" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
                         <button type="submit" className="submit" onClick={this.sendConnectEmail}>Send</button>
-                   
                 </div>
-                
-
-
             </div>
-
-
         )
     }
 }
