@@ -16,10 +16,10 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 require("./microservices/IpLookUp/IpFn.js")(app);
 require("./microservices/emailer/nodeMailer.js")(app);
 // require("./microservices/chat/chat.js")(app);
-
+//dynamoDB
 db.sequelize.sync()
 .then(() => {
   app.listen(PORT, () =>{
     console.log(`🌎 ==> Server now on port ${PORT}!`);
   });
-})
+}) 
