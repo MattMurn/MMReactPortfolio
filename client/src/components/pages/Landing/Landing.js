@@ -11,6 +11,7 @@ import Name from '../../Name'
 import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
+import { Document, Page } from 'react-pdf';
 import axios from 'axios';
 
 class Landing extends Component {
@@ -20,11 +21,15 @@ class Landing extends Component {
             projects: [],
             class: false,
             nameHide: false,
+            numPages:null,
+            pageNumber: 1,
+            resume: null
         }
     }
     componentWillMount = () => {
         this.setState({projects: projects});
         this.getIp();
+        this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
     }   
     showName = () => {
         this.setState({nameHide: false})
@@ -39,6 +44,9 @@ class Landing extends Component {
             localStorage.setItem('ipAddress', ipA);
             axios.post('/ipInfo', {ip: ipA});
         })
+    }
+    onDocumentLoad = ({numPages}) => {
+        this.setState({numPages})
     }
     render() {
         return(
@@ -56,21 +64,21 @@ class Landing extends Component {
                                         clickHandler={this.showName}
                                 />
                             </Link>
-                        </Blurb>     
-                            <Route  path="/about" 
-                                render={ () =>  
-                                    <Panel>
-                                        <About aboutClass = "panel_show"/>
-                                    </Panel>
-                                } 
-                            />
-                            <Route  path="/connect" 
-                                render={ () => 
-                                    <Panel>
-                                        <Connect connectClass = "panel_show"/>
-                                    </Panel>
-                                }
-                            />     
+                        </Blurb>   
+                        <Route  path="/about" 
+                            render={ () =>  
+                                <Panel>
+                                    <About aboutClass = "panel_show"/>
+                                </Panel>
+                            } 
+                        />
+                        <Route  path="/connect" 
+                            render={ () => 
+                                <Panel>
+                                    <Connect connectClass = "panel_show"/>
+                                </Panel>
+                            }
+                        />     
                         <Route exact path="/project" render={() =>  
                             <Panel className= 'panel_show'> 
                                 {projects.map((proj, i)=> (                     
@@ -86,6 +94,26 @@ class Landing extends Component {
                                 ))}
                             </Panel>    
                         }/>
+                           <Route path="/resume"
+                            render={ ()=> 
+                            
+                                <Panel className= 'panel_show'>
+                                <Document
+                                    className="resume"
+                                    file={this.state.resume}
+                                    onLoadSuccess={this.onDocumentLoad}
+                                    >
+                                    <Page pageNumber={this.state.pageNumber} />
+                                    <br></br>
+                                </Document><Document
+                                    className="resume"
+                                    file="./assets/img/Murnighan_Resume.pdf"
+                                    onLoadSuccess={this.onDocumentLoad}
+                                    >
+                                    <Page pageNumber={this.state.pageNumber+1} />
+                                </Document>
+                                </Panel>
+                            }/>
                         {/* <Route  path="/chat" 
                             render={ () => 
                                 <Panel className='panel_show'>
