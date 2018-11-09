@@ -96,22 +96,31 @@ class Landing extends Component {
                         }/>
                            <Route path="/resume"
                             render={ ()=> 
-                            
-                                <Panel className= 'panel_show'>
+                               
+                                <Panel className='panel_resume'>
+                                 <a href="./assets/img/Murnighan_Resume.pdf" title="Download Murnighan_Resume" download="Murnighan_Resume">
                                 <Document
                                     className="resume"
                                     file={this.state.resume}
                                     onLoadSuccess={this.onDocumentLoad}
                                     >
+                                    
                                     <Page pageNumber={this.state.pageNumber} />
-                                    <br></br>
-                                </Document><Document
+                                    
+                                </Document>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <Document
                                     className="resume"
                                     file="./assets/img/Murnighan_Resume.pdf"
                                     onLoadSuccess={this.onDocumentLoad}
                                     >
                                     <Page pageNumber={this.state.pageNumber+1} />
                                 </Document>
+                                </a>
                                 </Panel>
                             }/>
                         {/* <Route  path="/chat" 

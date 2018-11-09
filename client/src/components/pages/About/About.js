@@ -18,15 +18,20 @@ const About = ({aboutClass, photo}) => (
                 <div className="about_body">
                         <img height="200" width="200" alt='chaio' src="./assets/img/MJM.JPG"/>
                         <br/> 
-                        Hello! Thanks for checking my portfolio.
-                        I'm a full stack developer who enjoys the puzzle of a well run application and am actively looking for a 
-                        development opportunity that will allow me to collaborate and help solve some of your company's problems.
-                        Currently, I am consulting on a software trade secrets litigation & about to start as a Teaching Assistant 
-                        at Northwestern University Coding Bootcamp.  
+                        <br/> 
+                        Thanks for checking my portfolio.
+                        <br/>
+                        I'm a developer who enjoys the puzzle of a well run application and am actively looking for a 
+                        development opportunities that will allow me to collaborate and help solve some of your company's problems.
+                        Currently, I am consulting on a software trade secrets litigation building a native UI application that 
+                        allow our team access trial exhibits in various doucment formats, along with topic specific summary charts
+                        I am also a Teaching Assistant at Northwestern University Coding Bootcamp. Being a part of the instructional staff 
+                        allows me to help students stay motivated, engaged & focused, while maintaining best practices and continuing to learn 
+                        about immerging technologies.
                 </div>
-                <div className="about_skills">
+                {/* <div className="about_skills">
                     
-                        {/* <ul className="skill_title">Proficient in the following</ul> */}
+                        <ul className="skill_title">Proficient in the following</ul>
                         <Skills techLogo={<IoSocialJavascript size={22}/>}
                                 name="Javascript"/>
                         <Skills techLogo={<IoSocialHtml5 size={22}/>}
@@ -46,9 +51,7 @@ const About = ({aboutClass, photo}) => (
                             
                         <Skills techLogo={<FaServer size={22}/>} 
                                 name="Express.js"/>                           
-
-
-                </div>
+                </div> */}
             </div>
         )
     

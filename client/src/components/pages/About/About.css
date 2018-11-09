@@ -14,7 +14,7 @@
 .about_body {
     position: absolute;
     bottom: 25px;
-    width: 60%;
+    width: 90%;
     display: inline-block;
     font-size: 14px;
     text-align: left;
@@ -25,6 +25,7 @@
     margin-top: 0px;
 }
 .about_skills {
+    float: left;
     display: inline-block;
     font-family: inherit;
     position: absolute;

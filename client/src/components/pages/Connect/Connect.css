@@ -111,7 +111,7 @@
         right: 0px;
     }
     #inq_subject {
-        width: 260px;
+        max-width: 100%;
     }
 }
 

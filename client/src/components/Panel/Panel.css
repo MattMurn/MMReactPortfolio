@@ -1,7 +1,7 @@
 .panel_show {
     position: absolute;
     right: 50px;
-    width: 42%;
+    max-width: 70%;
     height: 100%;
     color: white;
     background: inherit;
@@ -11,6 +11,19 @@
     background: #F4EADE;
     animation: panel .1s;
     
+}
+.panel_resume {
+    position: absolute;
+    right: 50px;
+    width: 42%;
+    height: 100%;
+    color: white;
+    background: inherit;
+    top: 0px;
+    float: left;
+    left: 115px;
+    background: inherit;
+    animation: panel .1s;
 }
 .panel_hide {
     animation: panel 3s;
@@ -36,6 +49,7 @@
 
 
 }
+
 
 /* 
 @media only screen and (max-width: 600px) {
