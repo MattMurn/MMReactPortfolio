@@ -12,7 +12,7 @@ import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 import { Document, Page } from 'react-pdf';
-import axios from 'axios';
+// import axios from 'axios';
 
 class Landing extends Component {
     constructor(props){
@@ -30,6 +30,13 @@ class Landing extends Component {
         this.setState({projects: projects});
         this.getIp();
         this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
+        fetch('/ipInfo',{
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(data => console.log(data));
     }   
     showName = () => {
         this.setState({nameHide: false})
@@ -38,12 +45,22 @@ class Landing extends Component {
         this.setState({nameHide: true})
     }
     getIp = () => {
-        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
-        .then(response => {
-            let ipA = response.data.geobytesipaddress;
-            localStorage.setItem('ipAddress', ipA);
-            axios.post('/ipInfo', {ip: ipA});
+        fetch('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=', {
+          method: 'GET',
+          mode: 'cors',
+          hearder: {
+            'Content-Type': 'application/json'
+          }
+        }).then(response => {
+            console.log(response)
+            // let ipA = response.data.geobytesipaddress;
+            // localStorage.setItem('ipAddress', ipA);
+            // axios.post('/ipInfo', {ip: ipA});
         })
+        // axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
+        // .then(response => {
+
+        // })
     }
     onDocumentLoad = ({numPages}) => {
         this.setState({numPages})
@@ -98,9 +115,10 @@ class Landing extends Component {
                             render={ ()=> 
                                
                                 <Panel className='panel_resume'>
-                                 <a href="./assets/img/Murnighan_Resume.pdf" title="Download Murnighan_Resume" download="Murnighan_Resume">
+                                 <a href="./assets/img/Murnighan_Resume.pdf" title="Download My Resume" download="Murnighan_Resume">
                                 <Document
                                     className="resume"
+                                    loading=""
                                     file={this.state.resume}
                                     onLoadSuccess={this.onDocumentLoad}
                                     >
@@ -115,6 +133,7 @@ class Landing extends Component {
                                 <br/>
                                 <Document
                                     className="resume"
+                                    loading=""
                                     file="./assets/img/Murnighan_Resume.pdf"
                                     onLoadSuccess={this.onDocumentLoad}
                                     >

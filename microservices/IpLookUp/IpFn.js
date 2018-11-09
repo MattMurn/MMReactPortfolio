@@ -21,6 +21,7 @@ module.exports = function(app)  {
                 }
                 console.log(userIp);
                 //make db post here.
+                res.send(userIp.city);
             })
         })
     }
