@@ -12,7 +12,7 @@ import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 import { Document, Page } from 'react-pdf';
-// import axios from 'axios';
+import axios from 'axios';
 
 class Landing extends Component {
     constructor(props){
@@ -45,22 +45,14 @@ class Landing extends Component {
         this.setState({nameHide: true})
     }
     getIp = () => {
-        fetch('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=', {
-          method: 'GET',
-          mode: 'cors',
-          hearder: {
-            'Content-Type': 'application/json'
-          }
-        }).then(response => {
-            console.log(response)
-            // let ipA = response.data.geobytesipaddress;
-            // localStorage.setItem('ipAddress', ipA);
-            // axios.post('/ipInfo', {ip: ipA});
-        })
-        // axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
-        // .then(response => {
 
-        // })
+        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
+        .then(response => {
+
+            let ipA = response.data.geobytesipaddress;
+            localStorage.setItem('ipAddress', ipA);
+            axios.post('/ipInfo', {ip: ipA});
+        })
     }
     onDocumentLoad = ({numPages}) => {
         this.setState({numPages})
