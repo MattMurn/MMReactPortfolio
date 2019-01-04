@@ -1,5 +1,5 @@
 const axios = require('axios');
-const moment = require('moment');
+// const moment = require('moment');
 const db = require('../../models')
 
 module.exports = function(app)  {
@@ -17,10 +17,11 @@ module.exports = function(app)  {
                     zip: i.zip,
                     lat: i.latitude,
                     long: i.longitude,
-                    time: moment().format('MMMM Do YYYY, h:mm:ss a')
+                    time: JSON.stringify(new Date())
                 }
-                console.log(userIp);
+                console.log(`IP USER INFORMATION IS: ${userIp.city}`);
                 //make db post here.
+                db.ipInfo.create(userIp).then(data => console.log(data));
                 res.send(userIp.city);
             })
         })

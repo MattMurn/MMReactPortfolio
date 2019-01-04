@@ -6,6 +6,19 @@
     bottom: 10px;
     left: 20px;
 }
+.blurb_one {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background: black;
+    background-image: "https://avatars3.githubusercontent.com/u/31973722?s=460&v=4";
+}
+.blurb_two {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background: white;
+}
 .blurb_name {
     position: relative;
     margin: 0px;

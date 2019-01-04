@@ -12,7 +12,18 @@ import Connect from '../../pages/Connect'
 import projects from '../../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 import { Document, Page } from 'react-pdf';
-// import axios from 'axios';
+import axios from 'axios';
+/* 
+things that are an immediate fix for this. get stacked containers that can take in
+data without serious performance consequences. 
+Then reformat the navbar to show the containers onClick. 
+add a footer with the year, your information.
+research a new colorway. Think dark with a bit of bright. 
+Find a way to incorporate your projects in a fun way. so so sluething on
+others that you like.
+Get IPLocator to work correctly.
+
+*/
 
 class Landing extends Component {
     constructor(props){
@@ -30,13 +41,13 @@ class Landing extends Component {
         this.setState({projects: projects});
         this.getIp();
         this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
-        fetch('/ipInfo',{
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(data => console.log(data));
+    //     fetch('/ipInfo',{
+    //         method: 'POST',
+    //         mode: 'cors',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     }).then(data => console.log(data));
     }   
     showName = () => {
         this.setState({nameHide: false})
@@ -45,23 +56,25 @@ class Landing extends Component {
         this.setState({nameHide: true})
     }
     getIp = () => {
-        fetch('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=', {
-          method: 'GET',
-          mode: 'cors',
-          hearder: {
-            'Content-Type': 'application/json'
-          }
-        }).then(response => {
-            console.log(response)
-            // let ipA = response.data.geobytesipaddress;
-            // localStorage.setItem('ipAddress', ipA);
-            // axios.post('/ipInfo', {ip: ipA});
-        })
-        // axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
-        // .then(response => {
+        // fetch('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=', {
+        //   method: 'GET',
+        //   mode: 'cors',
+        //   hearder: {
+        //     'Content-Type': 'application/json'
+        //   }
+        // }).then(response => {
 
         // })
-    }
+        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=',{ headers: {
+            'Access-Control-Allow-Origin': '*'
+          }})
+        .then(response => {
+            console.log(response)
+            let ipA = response.data.geobytesipaddress;
+            localStorage.setItem('ipAddress', ipA);
+            axios.post('/ipInfo', {ip: ipA});
+        })
+    }   
     onDocumentLoad = ({numPages}) => {
         this.setState({numPages})
     }
@@ -70,25 +83,23 @@ class Landing extends Component {
             <Router>
                 <div> 
                     <Navbar clickHandler={this.hideName}/> 
-                        <Blurb>
-                            <Link to="/">
-                                <Name   wrapper="first_name_wrapper"
+                    {/* <Blurb className="blurb_one">
+                    <Name   wrapper="first_name_wrapper"
                                         name_s={this.state.nameHide ? 'hide' : 'name_s' }
-                                        first="M"
-                                        first_s="atthew"
-                                        last="M"
-                                        last_s="urnighan"
+                                        first="Matthew"
+                                        last="Murnighan"
                                         clickHandler={this.showName}
                                 />
-                            </Link>
-                        </Blurb>   
-                        <Route  path="/about" 
-                            render={ () =>  
-                                <Panel>
-                                    <About aboutClass = "panel_show"/>
-                                </Panel>
-                            } 
-                        />
+                    </Blurb> */}
+                    <Blurb className="blurb_two">
+                        <About aboutClass = "panel_show"/>
+                    </Blurb>
+                        {/* <Blurb> */}
+                            {/* <Link to="/">
+                                
+                            </Link> */}
+                        {/* </Blurb>    */}
+                        {/* 
                         <Route  path="/connect" 
                             render={ () => 
                                 <Panel>
@@ -140,8 +151,8 @@ class Landing extends Component {
                                     <Page pageNumber={this.state.pageNumber+1} />
                                 </Document>
                                 </a>
-                                </Panel>
-                            }/>
+                                </Panel> */}
+                            {/* }/> */}
                         {/* <Route  path="/chat" 
                             render={ () => 
                                 <Panel className='panel_show'>

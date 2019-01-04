@@ -1,10 +1,10 @@
 import React from 'react'
 import './Blurb.css'
 
-  const Blurb = ({ nameClass, children}) => (
+  const Blurb = (props) => (
   
-    <div className="blurb">
-        {children}
+    <div className={props.className}>
+        {props.children}
     </div>
   
 )

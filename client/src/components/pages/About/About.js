@@ -1,14 +1,14 @@
 import React from 'react'
 import './About.css'
-// import Skills from '../../Skills'
-// import IoSocialJavascript from 'react-icons/lib/io/social-javascript';
-// import IoSocialNodejs from 'react-icons/lib/io/social-nodejs';
-// import IoSocialPython from 'react-icons/lib/io/social-python';
-// import IoSocialHtml5 from 'react-icons/lib/io/social-html5';
-// import FaCss3 from 'react-icons/lib/fa/css3';
-// import FaDatabase from 'react-icons/lib/fa/database';
-// import FaGit from 'react-icons/lib/fa/git';
-// import FaServer from 'react-icons/lib/fa/server';
+import Skills from '../../Skills'
+import IoSocialJavascript from 'react-icons/lib/io/social-javascript';
+import IoSocialNodejs from 'react-icons/lib/io/social-nodejs';
+import IoSocialPython from 'react-icons/lib/io/social-python';
+import IoSocialHtml5 from 'react-icons/lib/io/social-html5';
+import FaCss3 from 'react-icons/lib/fa/css3';
+import FaDatabase from 'react-icons/lib/fa/database';
+import FaGit from 'react-icons/lib/fa/git';
+import FaServer from 'react-icons/lib/fa/server';
 
 const About = ({aboutClass}) => (
             <div className={aboutClass}>
@@ -26,7 +26,7 @@ const About = ({aboutClass}) => (
                         allows me to help students stay motivated, engaged & focused, while maintaining best practices and continuing to learn 
                         about immerging technologies. 
                 </div>
-                {/* <div className="about_skills">
+                <div className="about_skills">
                     
                         <ul className="skill_title">Proficient in the following</ul>
                         <Skills techLogo={<IoSocialJavascript size={22}/>}
@@ -48,7 +48,7 @@ const About = ({aboutClass}) => (
                             
                         <Skills techLogo={<FaServer size={22}/>} 
                                 name="Express.js"/>                           
-                </div> */}
+                </div>
             </div>
         )
 
