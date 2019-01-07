@@ -46,12 +46,21 @@ class Landing extends Component {
     }
     getIp = () => {
 
-        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
+        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=',{
+            method: "GET", 
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+              }
+        })
         .then(response => {
 
             let ipA = response.data.geobytesipaddress;
             localStorage.setItem('ipAddress', ipA);
             axios.post('/ipInfo', {ip: ipA});
+        })
+        .catch(response => {
+            console.log(response);
         })
     }
     onDocumentLoad = ({numPages}) => {
@@ -81,7 +90,7 @@ class Landing extends Component {
                                 </Panel>
                             } 
                         />
-                        <Route  path="/connect" 
+                        <Route  path="/connect"        
                             render={ () => 
                                 <Panel>
                                     <Connect connectClass = "panel_show"/>
