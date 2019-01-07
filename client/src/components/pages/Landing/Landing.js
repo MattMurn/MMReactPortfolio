@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link, HashRouter} from 'react-router-dom'
 import './Landing.css'
 import Navbar from '../../Navbar'
 import Panel from '../../Panel'
@@ -79,21 +79,41 @@ class Landing extends Component {
         this.setState({numPages})
     }
     render() {
+       const { projects } = this.state;
         return(
             <Router>
-                <div> 
-                    <Navbar clickHandler={this.hideName}/> 
-                    {/* <Blurb className="blurb_one">
+                <div>
+                <Navbar clickHandler={this.hideName}/>  
+
+                    <Blurb className="blurb_one">
                     <Name   wrapper="first_name_wrapper"
                                         name_s={this.state.nameHide ? 'hide' : 'name_s' }
                                         first="Matthew"
                                         last="Murnighan"
                                         clickHandler={this.showName}
                                 />
-                    </Blurb> */}
-                    <Blurb className="blurb_two">
-                        <About aboutClass = "panel_show"/>
                     </Blurb>
+                    {/* <Blurb className="blurb_two">
+                    <Project 
+                                        id={projects[0].id}
+                                        key={projects[0].id}
+                                        src={projects[0].src}
+                                        deployment={projects[0].deployment}
+                                        description={projects[0].title}
+                                        github={projects[0].gitHub}
+                                        logo={<IoSocialGithub size={25}/>} 
+                                    />
+                    </Blurb>
+                    <Blurb className="blurb_one">
+                    
+                    </Blurb>
+                    <Blurb className="blurb_two">
+                    
+                    </Blurb> */}
+
+                    {/* <Blurb className="blurb_two">
+                        <About aboutClass = "panel_show"/>
+                    </Blurb> */}
                         {/* <Blurb> */}
                             {/* <Link to="/">
                                 

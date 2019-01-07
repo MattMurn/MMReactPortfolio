@@ -5,14 +5,16 @@ import './Project.css'
 const Project = (props) => (
     
     <div className="wrapper">
-        <a href={props.deployment} target="_blank">
-            <img className="projectOuter"
-                id={props.id}
-                src={props.src} 
-                alt=""
-                >    
-            </img>
-        </a>  
+        <div className="imgContainer">
+            <a href={props.deployment} target="_blank">
+                <img className="projectOuter"
+                    id={props.id}
+                    src={props.src} 
+                    alt=""
+                    >    
+                </img>
+            </a>  
+        </div>
         <div className="infoContainer">
             <a className="description" href={props.deployment} target="_blank"> {props.description} </a>
             <a href={props.github} target="_blank" rel="noopener noreferrer" className="github"> {props.logo}</a>

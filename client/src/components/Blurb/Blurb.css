@@ -6,12 +6,15 @@
     bottom: 10px;
     left: 20px;
 }
+
 .blurb_one {
     position: relative;
     height: 500px;
     width: 100%;
-    background: black;
-    background-image: "https://avatars3.githubusercontent.com/u/31973722?s=460&v=4";
+    background-image: url("../pages/Landing/MJM.JPG");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+
 }
 .blurb_two {
     position: relative;
