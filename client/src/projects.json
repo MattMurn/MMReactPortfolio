@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Crypto Widget", 
         "gitHub": "https://github.com/MattMurn/Widget",
-        "description": "",
+        "description": " This was a project I worked on for a coding challenge at a Crypto Exchange. This is a test json object that is going to be called",
         "deployment": "https://cryptowidget.herokuapp.com/",
         "src": "./assets/img/cryptoTest.png"
     },

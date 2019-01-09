@@ -21,8 +21,9 @@
     color: inherit;
 }
 .icon {
-    font-size: 45px;
-    margin-left: 5px;
+    font-size: 40px;
+    margin-left: 10px;
+    color: white;
 }
 .about_tech {
     border-top: 2px solid #F4EADE;

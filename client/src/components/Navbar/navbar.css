@@ -50,10 +50,24 @@
     font-family: 'Open Sans', sans-serif;
 }
 .nav_name {
-    position: relative;
+    position: absolute;
+    display: block;
     font-size: 110px;
-    top: 0px;
+    top: 170px;
     height: 100%;
+    margin: 0px;
+    width: 110px;
+    font-family: 'Anton', sans-serif;
+    z-index: 10;
+}
+.nav_name_two {
+    position: relative;
+    display: block;
+    font-size: 110px;
+    top: 185px;
+    height: 100%;
+    margin: 0px;
+    width: 110px;
     font-family: 'Anton', sans-serif;
     z-index: 10;
 }

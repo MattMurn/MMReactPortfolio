@@ -2,45 +2,26 @@ import React from 'react'
 
 import './Project.css'
 // having issue with the logo
-const projectLeft = (props) => (
+export const Project = (props) => (
     
     <div className="wrapper">
-        <div className="imgContainer">
+        <div className="img_container">
             <a href={props.deployment} target="_blank">
-                <img className="projectOuter"
+                <img className="project_outer"
                     id={props.id}
                     src={props.src} 
-                    alt=""
+                    alt="blank"
                     >    
                 </img>
-            </a>  
+            </a>
         </div>
-        <div className="infoContainer">
-            <a className="description" href={props.deployment} target="_blank"> {props.description} </a>
+        <p className="description">{props.description}</p>
+        <div className="info_container">
+            <a className="title" href={props.deployment} target="_blank"> {props.title} </a>
             <a href={props.github} target="_blank" rel="noopener noreferrer" className="github"> {props.logo}</a>
         </div>
     </div>
 )
 
-export const ProjectRight = (props) => (
-    
-    <div className="wrapper">
-        <div className="imgContainer">
-            <a href={props.deployment} target="_blank">
-                <img className="projectOuter"
-                    id={props.id}
-                    src={props.src} 
-                    alt=""
-                    >    
-                </img>
-            </a>  
-        </div>
-        <div className="infoContainer">
-            <a className="description" href={props.deployment} target="_blank"> {props.description} </a>
-            <a href={props.github} target="_blank" rel="noopener noreferrer" className="github"> {props.logo}</a>
-        </div>
-    </div>
-)
 
-export const ProjectLeft = projectLeft;
-// export const ProjectRight = projectRight;
+

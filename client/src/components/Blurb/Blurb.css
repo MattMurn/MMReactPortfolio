@@ -50,3 +50,11 @@
     position: sticky;
     height: 125px;
 }
+.dark {
+    color: #F4EADE;
+    background: #2C3539;
+}
+.light {
+    color: #2C3539;
+    background: #F4EADE;
+}

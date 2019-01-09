@@ -19,9 +19,9 @@ const About = ({aboutClass}) => (
                         <i className=" icon devicon-bootstrap-plain-wordmark colored"></i>
                         <i className=" icon devicon-css3-plain-wordmark colored"></i>
                         <i className=" icon devicon-express-original-wordmark"></i>
-                        <i className=" icon devicon-git-plain colored"></i>
+                        <i className=" devicon-git-plain colored icon"></i>
                         {/* <i className=" icon devicon-git-plain-wordmark colored"></i> */}
-                        <i className=" icon devicon-html5-plain colored"></i>
+                        <i className=" devicon-html5-plain colored icon"></i>
                         <i className=" icon devicon-heroku-original-wordmark colored"></i>
                         <i className=" icon devicon-jquery-plain-wordmark colored"></i>
                         <i className=" icon devicon-mongodb-plain-wordmark colored"></i>
