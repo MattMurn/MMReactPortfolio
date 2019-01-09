@@ -1,0 +1,44 @@
+
+.about_body {
+    max-width: 750px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    color: #F4EADE;
+    margin: auto;
+    /* margin-top: 10px; */
+}
+.about_skills {
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+.skill_icon {
+    height: 21px;
+    width: 21px;
+    color: inherit;
+}
+.icon {
+    font-size: 45px;
+    margin-left: 5px;
+}
+.about_tech {
+    border-top: 2px solid #F4EADE;
+    border-bottom: 2px solid #F4EADE;
+    width: 180px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.about_title {
+    max-width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 45px;
+    border-top: 5px solid #F4EADE;
+    border-bottom: 5px solid #F4EADE;
+
+}

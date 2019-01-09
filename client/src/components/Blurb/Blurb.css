@@ -1,19 +1,16 @@
 .blurb {
-    display: inline-block;
-    width: 740px;
-    height: 257px;
-    position: fixed;
-    bottom: 10px;
-    left: 20px;
-}
-
-.blurb_one {
     position: relative;
     height: 500px;
     width: 100%;
-    background-image: url("../pages/Landing/MJM.JPG");
-    background-size: 100% 200%;
+    z-index: 10;
+}
+
+.blurb_title {
+    height: 800px;
+    background-image: url("../Landing/MJM.JPG");
+    background-size: 100% 175%;
     background-repeat: no-repeat;
+    z-index: 20;
 
 }
 .blurb_two {
@@ -21,6 +18,11 @@
     height: 500px;
     width: 100%;
     background: white;
+    z-index: 10;
+}
+.blurb_connect {
+    background: #F4EADE;
+    
 }
 .blurb_name {
     position: relative;
@@ -36,35 +38,15 @@
     top: 0px;
     opacity: 1;
 }
-#name_suffix {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 280px;
-    left: 0;
-    color: inherit;
-
+.blurb_project {
+    height: 500px;
 }
-
-#name_suffix_hide {
-    animation: name_suffix 3s;    
+.blurb_resume {
+    height: 100%;
+    width: 100%;
+    z-index: 200;
 }
-
-@keyframes name_suffix_hide {
-    
-        0% { opacity: 0}
-        100% { opacity: 1}
-    
+.blurb_footer {
+    position: sticky;
+    height: 125px;
 }
-
-@keyframes blurb_1 {
-    from { left: -600px}
-    
-  }
-
-  
-
-  @keyframes blurb_3 {
-    from { bottom: -1000px}
-    /* to { left: 0px} */
-  }

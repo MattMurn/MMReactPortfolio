@@ -5,9 +5,7 @@ import './Blurb.css'
   
     <div className={props.className}>
         {props.children}
-    </div>
-  
-)
-
-export default Blurb
+    </div>   
+);
+export default Blurb;
 

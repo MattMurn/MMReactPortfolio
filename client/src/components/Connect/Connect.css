@@ -1,17 +1,17 @@
-.connection {
+.connect_main {
     position: absolute;
     display: inline-block;
-    height: 250px;
-    width: 100%;
-    bottom: 0px;
+    width: 90%;
+    margin: auto;
+    margin-left: 50px;
+    top: 70px;
     font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
     background: inherit;
 }
 
 #inq_name, #inq_email {
     position: relative;
-    display: inherit;
+    /* display: inherit; */
     text-indent: 5px;
     left: 40px;
     width: 50%;
@@ -20,11 +20,13 @@
     font-family: inherit;
     margin-top: 10px;
     font-size: inherit;
-    color: #FFEC5C;
-    background: #2f496e;
     padding: 0px;
 }
-
+#connect_scroll {
+    /* scroll-behavior: smooth; */
+    transition: 500ms;
+    -webkit-transition-delay: 1000ms;
+}
 #inq_subject {
     position: relative;
     display: inline-block;
@@ -33,36 +35,30 @@
     margin-top: 10px;
     margin-right: 0px;
     border: none;
-    height: 100px;
+    height: 250px;
     width: 50%;
     color: inherit;
+    font-family: inherit;
     font-size: inherit;
-    font-family: 'Open Sans', sans-serif;
-    color: #FFEC5C;
-    background: #2f496e;
     padding: 0px;
 }
 
 .submit {
-    text-indent: 5px;
+
     position: relative;
     display: inherit;
     left: 40px;
-    border: none;
-    color: inherit;
     margin-top: 5px;
-    margin-left: 0px;
-    padding: 0px;
+    border: none;
     width: 50px;
-    text-align: left;
+    text-align: center;
     font-size: inherit;
     font-family: 'Open Sans', sans-serif;
-    color: #2f496e;
-    background: #FFEC5C;
 }
 
 ::placeholder {
-    color: #FFEC5C;
+    color: inherit;
+    font-family: inherit;
     font-size: 14px;
 }
 
@@ -85,24 +81,6 @@
     display: inline-block;
     left: 37px;
     top: 0px;
-}
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #FFEC5C; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #2f496e; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
 }
 @media only screen and (max-width: 600px) {
     .connect_show{

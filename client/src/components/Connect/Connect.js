@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import './Connect.css'
-import Skills from '../../Skills'
-import IoSocialGithub from 'react-icons/lib/io/social-github';
-import IoSocialLinkedin from 'react-icons/lib/io/social-linkedin';
 import axios from 'axios'
 
 class Connect  extends Component{
@@ -58,23 +55,21 @@ class Connect  extends Component{
     render() {
         const { placeholderName, placeholderEmail, placeholderMessage, name, email, message } = this.state;
             return(
-            <div className={this.props.connectClass}>
-                <div className="connection">
-                    <div className="socialLinks">
-                        <a className="connectATag" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank" rel="noopener noreferrer"><Skills techLogo={<IoSocialLinkedin size={32} color={"#2f496e"}/>}/></a>
-                        <a className="connectATag" href="https://github.com/MattMurn" target="_blank" rel="noopener noreferrer"><Skills techLogo={<IoSocialGithub size={32} color={"#2f496e"}/>}/></a>
-                    </div>
+                <div className="connect_main" id="connect_scroll">
+                    {/* <div className="socialLinks">
+                        <a className="connectATag icon theme_color" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank" rel="noopener noreferrer"></a>
+                        <a className="connectATag icon theme_color" href="https://github.com/MattMurn" target="_blank" rel="noopener noreferrer"><i class="devicon-github-plain colored"></i></a>
+                    </div> */}
                     <div className="connect_name">
-                        <input type="text" id="inq_name" name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
+                        <input type="text" id="inq_name" className="theme_background theme_color theme_text_family" name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
                     </div>
                     
                     <div className="connect_email">
-                        <input type="email" id="inq_email" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
+                        <input type="email" id="inq_email" className="theme_background theme_color theme_text_family" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
                     </div>
-                        <textarea id="inq_subject" name="message" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
-                        <button type="submit" className="submit" onClick={this.sendConnectEmail}>Send</button>
+                        <textarea id="inq_subject" name="message" className="theme_background theme_color theme_text_family" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
+                        <button type="submit" className="submit theme_background theme_color theme_text_family" onClick={this.sendConnectEmail}>Send</button>
                 </div>
-            </div>
         )
     }
 }
