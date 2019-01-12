@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Link, HashRouter} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './Landing.css'
 import Navbar from '../Navbar'
 import Blurb from '../Blurb'
@@ -8,8 +8,8 @@ import About from '../About'
 import { Project } from "../Project/Project" 
 // import Chat from './Chat'
 import Footer from '../Footer';
-import Name from '../Name'
-import Connect from '../Connect'
+import { Name , Initials} from '../Name/Name'
+import {Connect, InfoLink} from '../Connect/Connect'
 import projects from '../../projects.json'
 import IoSocialGithub from 'react-icons/lib/io/social-github';
 import { Document, Page } from 'react-pdf';
@@ -24,7 +24,9 @@ class Landing extends Component {
             nameHide: false,
             numPages:null,
             pageNumber: 1,
-            resume: null
+            resume: null,
+            burger_toggle: 'dark',
+            connect_class: ''
         }
         this.myRef = React.createRef();
     }
@@ -63,67 +65,68 @@ class Landing extends Component {
     onDocumentLoad = ({numPages}) => {
         this.setState({numPages})
     }
+    componentDidMount = () => {
+        const { burger_toggle } = this.state;
+        (burger_toggle !== 'light') ? this.setState({burger_toggle: 'light'}) : this.setState({burger_toggle: 'dark'});
+        // this.setState({burger_toggle})
+    }
     render() {
        const { projects } = this.state;
         return(
             <Router>
-                <div>
-                <Navbar clickHandler={this.clickEvent}/> 
+                <div className="">
+                <Navbar clickHandler={this.clickEvent} className={`nav_dropdown_inner + ${this.state.burger_toggle}`}/> 
                 {/* what you want to happen here is:
-                    when navbar link is hit, render resume above page like a modal....
+                    when navbar link is hit, render resume above page like a modal.... 
                 */}
                  <Route exact path="/resume"
-                            render={ ()=>  
-                               
-                                <Blurb className='blurb_resume'>
-                                 <a href="./assets/img/Murnighan_Resume.pdf" title="Download My Resume" download="Murnighan_Resume">
-                                <Document
-                                    className="resume"
-                                    id="resume_scroll"
-                                    loading=""
-                                    file={this.state.resume}
-                                    onLoadSuccess={this.onDocumentLoad}
-                                    >
-                                    
-                                    <Page pageNumber={this.state.pageNumber} />
-                                    
-                                </Document>
-                                <br/>
-                                <br/>
-                                <br/>
+                    render={ ()=>  
+                        
+                        <Blurb className='blurb_resume'>
 
-                                <Document
-                                    className="resume"
-                                    loading=""
-                                    file="./assets/img/Murnighan_Resume.pdf"
-                                    onLoadSuccess={this.onDocumentLoad}
-                                    >
-                                    <Page pageNumber={this.state.pageNumber+1} />
-                                </Document>
-                                </a>
-                                </Blurb> 
-                             }/> 
-                    <Blurb className=" blurb blurb_title">
-                    <div className="nav_name">M</div>
-                    <div className="nav_name_two">M</div>
+                        <Document
+                            className="resume"
+                            id="resume_scroll"
+                            loading=""
+                            file={this.state.resume}
+                            onLoadSuccess={this.onDocumentLoad}
+                >
+                            
+                            <Page pageNumber={this.state.pageNumber} />
+                            
+                        </Document>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <Document
+                            className="resume"
+                            loading=""
+                            file="./assets/img/Murnighan_Resume.pdf"
+                            onLoadSuccess={this.onDocumentLoad}
+                            >
+                            <Page pageNumber={this.state.pageNumber+1} />
+                        </Document>
+                        </Blurb> 
+                    }/> 
+                    <Initials/>
+                    <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
                     <Name   wrapper="first_name_wrapper"
-                                        name_s={this.state.nameHide ? 'hide' : 'name_s' }
                                         first="Matthew"
                                         last="Murnighan"
-                                        clickHandler={this.showName}
-                                />
+                    />
                     </Blurb>
-                    <Blurb className="blurb">
-                        <About/>
+                    <Blurb className="blurb" >
+                        <About onMouseEnter={this.mouseEnter}/>
                     </Blurb>
                     <Route path="/projects">
                         <div>
                             {projects.map((proj, i)=> (
                                 (i % 2 === 0) ? (     
-                                    <Blurb className="blurb light">                   
+                                    <Blurb className="blurb dark project">   
+                                    {/* <i className="fa fa-btc" aria-hidden="true"></i>                 */}
                                         <Project                                        
                                             id={projects[i].id}
-                                            key={projects[i].id}
+                                            key={i}
                                             src={projects[i].src}
                                             description={projects[i].description}
                                             deployment={projects[i].deployment}
@@ -134,7 +137,7 @@ class Landing extends Component {
                                     </Blurb>
                                 ) : 
                                 (
-                                    <Blurb className="blurb dark">
+                                    <Blurb className="blurb dark project">
                                         <Project
                                             id={projects[i].id}
                                             key={projects[i].id}
@@ -150,11 +153,15 @@ class Landing extends Component {
                             ))}
                             </div>
                     </Route>
-                    <Route path="/connect">
-                            <Blurb className="blurb blurb_connect">
-                            <Connect/>
-                        </Blurb>                                  
-                    </Route>
+                    <Blurb className="blurb dark">
+                        <InfoLink/>
+                    </Blurb>
+                <Route path="/connect"
+                render={() => 
+                    <Blurb className="blurb blurb_connect">
+                    <Connect/>
+                </Blurb>     
+                }/>
                     <Blurb className="blurb blurb_footer">
                         <Footer/>
                     </Blurb>

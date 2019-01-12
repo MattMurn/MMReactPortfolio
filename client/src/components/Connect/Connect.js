@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './Connect.css'
 import axios from 'axios'
 
-class Connect  extends Component{
+export class Connect  extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -55,23 +56,46 @@ class Connect  extends Component{
     render() {
         const { placeholderName, placeholderEmail, placeholderMessage, name, email, message } = this.state;
             return(
-                <div className="connect_main" id="connect_scroll">
-                    {/* <div className="socialLinks">
-                        <a className="connectATag icon theme_color" href="https://www.linkedin.com/in/matthew-murnighan/" target="_blank" rel="noopener noreferrer"></a>
-                        <a className="connectATag icon theme_color" href="https://github.com/MattMurn" target="_blank" rel="noopener noreferrer"><i class="devicon-github-plain colored"></i></a>
-                    </div> */}
+                <div className="connect_main theme_background">
                     <div className="connect_name">
-                        <input type="text" id="inq_name" className="theme_background theme_color theme_text_family" name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
+                        <input type="text" id="inq_name" className="theme_background theme_color theme_text_family"
+                         name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
                     </div>
                     
                     <div className="connect_email">
-                        <input type="email" id="inq_email" className="theme_background theme_color theme_text_family" name="email"  placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
+                        <input type="email" id="inq_email" className="theme_background theme_color theme_text_family" 
+                        name="email" placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
                     </div>
-                        <textarea id="inq_subject" name="message" className="theme_background theme_color theme_text_family" placeholder={placeholderMessage} value={message} onChange={this.getConnectData}></textarea>
-                        <button type="submit" className="submit theme_background theme_color theme_text_family" onClick={this.sendConnectEmail}>Send</button>
+                    <textarea id="inq_subject" name="message" className="theme_background theme_color theme_text_family"
+                        placeholder={placeholderMessage} value={message} onChange={this.getConnectData}>
+                    </textarea>
+                    <br/>
+                    <Link to={'/'} onClick={this.sendConnectEmail} className="submit theme_background theme_color theme_text_family">
+                        {/* <button type="submit" className="submit theme_background theme_color theme_text_family" > */}
+                            Send
+                        {/* </button> */}
+                    </Link>
                 </div>
         )
     }
 }
 
-export default Connect;
+export const InfoLink = props => {
+    return (
+        <div className="info_getaway">
+                            <div className="info_blurb">
+                            Thanks for checking my portfolio!
+                            Please feel free to connect with an email and check out my resume 
+                            for a more in depth breakdown of my professional background.
+                            </div>
+                            <div className="info_button_container">
+                                <a href="./assets/img/Murnighan_Resume.pdf" title="Download My Resume" download="Murnighan_Resume">
+                                    <button className="info_button resume_button">Downlaod Resume</button>
+                                </a>
+                                <Link to="/connect" className="info_button_container">
+                                <button className="info_button connect_button">Connect</button>
+                                </Link>
+                            </div>
+                        </div>
+    )
+}

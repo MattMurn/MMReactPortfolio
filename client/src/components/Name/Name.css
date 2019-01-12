@@ -23,10 +23,17 @@
     text-align: justify;
 }
 .first_name {
-    animation: first_name 4s;
+    animation: first_name 1s;
 }
 .last_name {
-    animation: last_name 5s;
+    animation: last_name 2s;
+}
+.initials_container {
+    position: fixed;
+    display: block;
+    top: 185px;
+    z-index: 20;
+    animation: initials 2s;
 }
 
 @keyframes first_name {
@@ -58,3 +65,11 @@
         right: 0px;
     }   
 }
+@keyframes initials {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+} 

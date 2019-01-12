@@ -1,5 +1,5 @@
-.connect_main {
-    position: absolute;
+/* .connect_main {
+    position: relative;
     display: inline-block;
     width: 90%;
     margin: auto;
@@ -7,7 +7,7 @@
     top: 70px;
     font-size: 14px;
     background: inherit;
-}
+} */
 
 #inq_name, #inq_email {
     position: relative;
@@ -22,11 +22,7 @@
     font-size: inherit;
     padding: 0px;
 }
-#connect_scroll {
-    /* scroll-behavior: smooth; */
-    transition: 500ms;
-    -webkit-transition-delay: 1000ms;
-}
+
 #inq_subject {
     position: relative;
     display: inline-block;
@@ -67,6 +63,46 @@
     position: relative;
     width: 50%;
     font-family: 'Open Sans', sans-serif;
+}
+.info_button_container {
+    position: relative;
+    display: block;
+    /* width:300px; */
+}
+.info_button {
+    display: block;
+    border: none;
+    color: inherit;
+    height: 40px;
+    margin: 0;
+    width: 260px;
+    margin-top: 10px;
+    font-size: 30px;
+    background: inherit;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+.resume_button {
+    height: 75px;
+}
+
+.info_getaway {
+    max-width: 800px;
+    height: 300px;
+    position: relative;
+    background: inherit;
+    margin: auto;
+    /* margin-left: 85px; */
+    top: 200px;
+    display: block;
+}
+.info_blurb {
+    color: #2f496e;
+    /* height: 100%; */
+    max-width: 300px;
+    position: relative;
+    display: block;
+    float: left;
 }
 
 .connectATag {

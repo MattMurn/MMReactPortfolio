@@ -19,12 +19,11 @@ class Navbar extends Component {
     render() {    
         return(    
             <div className="header_home">
-                <div className="nav_name">M</div>
-                <div className="nav_name">M</div>
+
                 <div className="nav_dropdown_outer" onMouseEnter={this.dropIt} onMouseLeave={this.dropIt}>
-                    <div className="nav_dropdown_inner"></div>
-                    <div className="nav_dropdown_inner"></div>
-                    <div className="nav_dropdown_inner"></div>
+                    <div className={this.props.className}></div>
+                    <div className={this.props.className}></div>
+                    <div className={this.props.className}></div>
                     <ul className={this.state.class ? 'show' : 'hide'}>
                         <NavLink activeClassName="active" to="/about"><p className="dropdown_list" id="801" onClick={this.props.clickHandler} > ABOUT </p> </NavLink>
                         <NavLink activeClassName="active" to="/connect"> <p className="dropdown_list" id="1600" onClick={this.props.clickHandler} > CONNECT </p> </NavLink> 

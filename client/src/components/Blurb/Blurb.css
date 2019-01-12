@@ -6,6 +6,7 @@
 }
 
 .blurb_title {
+    opacity: .3;
     height: 800px;
     background-image: url("../Landing/MJM.JPG");
     background-size: 100% 175%;
@@ -21,8 +22,11 @@
     z-index: 10;
 }
 .blurb_connect {
-    background: #F4EADE;
+    background:#2C3539;
     
+}
+.project {
+    height: 300px;
 }
 .blurb_name {
     position: relative;

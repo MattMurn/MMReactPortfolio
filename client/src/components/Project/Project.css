@@ -1,20 +1,21 @@
 .project_outer {
     position: relative;
-    height: 465px;
+    height: 100%;
     width: 100%;
     font: inherit;
     color: inherit;
     font-size: 13px;
-    margin: 0px;
 }
 .wrapper {
     position: relative;
     text-align: center;
     height: 100%;
-    width: 100%;
-    margin-right: 10px;
+    margin-left: 85px;
+    /* width: 100%;
+    margin-right: 10px; */
 }
-.img_container {display: inline-block;
+.img_container {
+    display: inline-block;
     max-width: 600px;
     height: 100%;
     float: left;
@@ -25,11 +26,11 @@
     text-align: center;
     height: 35px;
     width: 100%;
-    /* color: #F4EADE;
-    background:#2C3539; */
+    background: #F4EADE;
+    color:#2C3539;
     opacity: 1;
     transition: .5s;
-    margin: 0px;
+    /* left: 100px; */
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -38,15 +39,16 @@
     float: left;
     text-indent: 5px;
     text-align: left;
-    width: 200px;
+    width: 200px;   
     margin-left: 85px;
 }
 .description {
-    font-size: 20px;
-    color: black;
-    max-width: 800px;
-    height: 700pc;
     position: relative;
+    font-size: 20px;
+    color: inherit;
+    max-width: 800px;
+    height: 400px;
+
 }
 .github {
     float: right;

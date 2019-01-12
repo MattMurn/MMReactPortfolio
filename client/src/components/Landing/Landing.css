@@ -5,11 +5,11 @@ body {
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Anton', sans-serif;
 }
-.theme_background {
-    background: #2C3539;
-}
 .theme_color {
-    color: #F4EADE;
+    color: #2C3539;
+}
+.theme_background {
+    background: #F4EADE;
 }
 .theme_family {
     font-family: 'Anton', sans-serif;
@@ -36,6 +36,19 @@ a:link, a:hover, a:visited, a:active {
     transition: 1s ease-in all;
 }
 
+.name_duplicate {
+    position: relative; 
+    font-size: 110px;
+    display: block;
+    height: 130px;
+}
+.dark {
+    background: black;
+    height: 100px;
+}
+.light {
+    background: white;
+}
 .resume {
     margin-right: 45px;
     background: #F4EADE;
@@ -44,4 +57,15 @@ a:link, a:hover, a:visited, a:active {
     top: 0px;
     max-width: 100%;
     margin: 0%
+}
+
+.info_container {
+    max-width: 80%;
+    height: 226px;
+    position: relative;
+    background: #F4EADE;
+    margin: auto;
+    margin-left: 85px;
+    top: 200px;
+    display: block;
 }

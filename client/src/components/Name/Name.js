@@ -1,7 +1,7 @@
 import React from 'react';
 import './Name.css';
 
-const Name = (props) => (
+export const Name = (props) => (
     <div className="name_wrapper">
         <div className="name_container" onClick={props.clickHandler}>
             <div className="first_name"> {props.first}</div>
@@ -13,5 +13,12 @@ const Name = (props) => (
         </div>
     </div>
 )
-
-export default Name;
+export const Initials = () => {
+    
+    return (
+        <div className="initials_container">
+            <div className="name_duplicate">M</div>
+            <div className="name_duplicate">M</div>
+        </div>
+    )
+}

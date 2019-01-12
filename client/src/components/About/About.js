@@ -5,7 +5,7 @@ const About = ({aboutClass}) => (
             <div className={aboutClass} id="about_scroll"> 
             <div className="about_title theme_family">Fullstack Web Developer</div>
                 <p className="about_body theme_family">
-                        Thanks for checking my portfolio.
+
                         I'm a developer who enjoys the puzzle of a well run application and am looking for a 
                         development opportunities that will allow me to collaborate and help solve some of your company's problems.
                         Currently, I am consulting on a software trade secrets litigation building a native UI application that 

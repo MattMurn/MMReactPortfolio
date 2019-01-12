@@ -1,6 +1,6 @@
 .header_home {
     position: fixed;
-    height: 110px;
+    height: 60px;
     width: 100%;
     z-index: 20;
 }
@@ -49,7 +49,7 @@
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
 }
-.nav_name {
+/* .nav_name {
     position: absolute;
     display: block;
     font-size: 110px;
@@ -59,8 +59,8 @@
     width: 110px;
     font-family: 'Anton', sans-serif;
     z-index: 10;
-}
-.nav_name_two {
+} */
+/* .nav_name_two {
     position: relative;
     display: block;
     font-size: 110px;
@@ -70,7 +70,7 @@
     width: 110px;
     font-family: 'Anton', sans-serif;
     z-index: 10;
-}
+} */
 @media only screen and (max-width: 600px) {
 
     .dropdown_list{
