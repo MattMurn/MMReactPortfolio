@@ -1,18 +1,19 @@
 import React from 'react'
 import './About.css'
 
-const About = ({aboutClass}) => (
-            <div className={aboutClass} id="about_scroll"> 
+const About = props => (
+            <div className={props.className}> 
             <div className="about_title theme_family">Fullstack Web Developer</div>
                 <p className="about_body theme_family">
 
-                        I'm a developer who enjoys the puzzle of a well run application and am looking for a 
-                        development opportunities that will allow me to collaborate and help solve some of your company's problems.
-                        Currently, I am consulting on a software trade secrets litigation building a native UI application that 
-                        allow our team access trial exhibits in various doucment formats, along with topic specific summary charts.
+                        I'm a developer who enjoys the puzzle of a well-run application and am looking for a 
+                        development opportunities that will allow me to collaborate and help solve some of your company's problems. 
+                        Previously I developed, tested and deployed automated trading strategies in several derivative markets.
+                        Currently, I am winding down a consulting contract on a software trade secrets litigation matter building a native UI application that 
+                        allows our team access to trial exhibits in various doucment formats, along with topic specific summary charts.
                         I am also a Teaching Assistant at Northwestern University Coding Bootcamp. Being a part of the instructional staff 
                         allows me to help students stay motivated, engaged & focused, while maintaining best practices and continuing to learn 
-                        about immerging technologies. 
+                        emerging technologies. 
                 </p>
                 <div className="about_skills theme_family">
                         <div className="about_tech"> Technologies & Skills </div>

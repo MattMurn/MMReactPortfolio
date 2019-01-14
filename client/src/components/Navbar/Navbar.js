@@ -7,7 +7,9 @@ class Navbar extends Component {
     constructor(props){
         super(props)
         this.state = {
-            class: false
+            class: false,
+            show_nav: true,
+            nav_class: 'hide'
         };
     }
     // dropdown action with toggle behavior
@@ -15,11 +17,20 @@ class Navbar extends Component {
         //this needs to NavLink with components 
          this.setState(previous => ({class: !previous.class }));   
     }
-
-    render() {    
+    componentDidMount = () => {
+        document.addEventListener('scroll', () => {
+          const show_nav = window.scrollY < 800; //boolean as you scroll
+          if (show_nav !== this.state.show_nav) {
+            this.onScroll(show_nav); // if state & windo position are !== update state
+          }
+        });
+      }
+    onScroll = show_nav => {
+        this.setState({ show_nav });
+    }
+    render = () => {    
         return(    
-            <div className="header_home">
-
+            <div className={(this.state.show_nav) ? "hide" : "header_home"}>
                 <div className="nav_dropdown_outer" onMouseEnter={this.dropIt} onMouseLeave={this.dropIt}>
                     <div className={this.props.className}></div>
                     <div className={this.props.className}></div>

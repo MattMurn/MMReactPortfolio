@@ -1,7 +1,7 @@
 .project_outer {
     position: relative;
     height: 100%;
-    width: 100%;
+    max-width: 300px;
     font: inherit;
     color: inherit;
     font-size: 13px;
@@ -40,7 +40,7 @@
     text-indent: 5px;
     text-align: left;
     width: 200px;   
-    margin-left: 85px;
+    margin-left: 5px;
 }
 .description {
     position: relative;
@@ -53,6 +53,10 @@
 .github {
     float: right;
     text-indent: -5px;
+}
+.cc_simulator {
+    height: 250px;
+    max-width: 300px;
 }
 /* .a {
     height: 50px;

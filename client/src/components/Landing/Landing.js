@@ -21,9 +21,6 @@ class Landing extends Component {
         this.state = {
             projects: [],
             class: false,
-            nameHide: false,
-            numPages:null,
-            pageNumber: 1,
             resume: null,
             burger_toggle: 'dark',
             connect_class: ''
@@ -35,9 +32,17 @@ class Landing extends Component {
         this.getIp();
         this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
     }   
-    showName = () => {
-        this.setState({nameHide: false})
-    }
+    // componentDidMount() {
+    //     document.addEventListener('scroll', () => {
+    //       const isTop = window.scrollY < 100;
+    //       if (isTop !== this.state.isTop) {
+    //           this.setState({ isTop })
+    //       }
+    //     });
+    //   }
+    // showName = () => {
+    //     this.setState({nameHide: false})
+    // }
     clickEvent = event => {
         console.log(event.target.id);
         
@@ -75,39 +80,10 @@ class Landing extends Component {
         return(
             <Router>
                 <div className="">
-                <Navbar clickHandler={this.clickEvent} className={`nav_dropdown_inner + ${this.state.burger_toggle}`}/> 
                 {/* what you want to happen here is:
                     when navbar link is hit, render resume above page like a modal.... 
                 */}
-                 <Route exact path="/resume"
-                    render={ ()=>  
-                        
-                        <Blurb className='blurb_resume'>
-
-                        <Document
-                            className="resume"
-                            id="resume_scroll"
-                            loading=""
-                            file={this.state.resume}
-                            onLoadSuccess={this.onDocumentLoad}
-                >
-                            
-                            <Page pageNumber={this.state.pageNumber} />
-                            
-                        </Document>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <Document
-                            className="resume"
-                            loading=""
-                            file="./assets/img/Murnighan_Resume.pdf"
-                            onLoadSuccess={this.onDocumentLoad}
-                            >
-                            <Page pageNumber={this.state.pageNumber+1} />
-                        </Document>
-                        </Blurb> 
-                    }/> 
+                    <Navbar clickHandler={this.clickEvent} className={`nav_dropdown_inner + ${this.state.burger_toggle}`}/> 
                     <Initials/>
                     <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
                     <Name   wrapper="first_name_wrapper"
@@ -115,13 +91,12 @@ class Landing extends Component {
                                         last="Murnighan"
                     />
                     </Blurb>
-                    <Blurb className="blurb" >
+                    <Blurb className="blurb blurb_about" >
                         <About onMouseEnter={this.mouseEnter}/>
                     </Blurb>
                     <Route path="/projects">
                         <div>
-                            {projects.map((proj, i)=> (
-                                (i % 2 === 0) ? (     
+                            {projects.map((proj, i)=> ( 
                                     <Blurb className="blurb dark project">   
                                     {/* <i className="fa fa-btc" aria-hidden="true"></i>                 */}
                                         <Project                                        
@@ -133,32 +108,21 @@ class Landing extends Component {
                                             title={projects[i].title}
                                             github={projects[i].gitHub}
                                             logo={<IoSocialGithub size={25}/>}
+                                            img_class={(projects[i].css_class) ?
+                                            `project_outer ${projects[i].css_class}` : 
+                                            'project_outer'}
                                             />
                                     </Blurb>
-                                ) : 
-                                (
-                                    <Blurb className="blurb dark project">
-                                        <Project
-                                            id={projects[i].id}
-                                            key={projects[i].id}
-                                            src={projects[i].src}
-                                            description={projects[i].description}                                            
-                                            deployment={projects[i].deployment}
-                                            title={projects[i].title}
-                                            github={projects[i].gitHub}
-                                            logo={<IoSocialGithub size={25}/>} 
-                                            />
-                                    </Blurb>
-                                )
+                                
                             ))}
                             </div>
                     </Route>
-                    <Blurb className="blurb dark">
+                    <Blurb className="blurb blurb_connect">
                         <InfoLink/>
                     </Blurb>
                 <Route path="/connect"
                 render={() => 
-                    <Blurb className="blurb blurb_connect">
+                    <Blurb className="blurb blurb_inq">
                     <Connect/>
                 </Blurb>     
                 }/>
@@ -235,5 +199,33 @@ export default Landing
                                 </Panel>
                             }
                         />  
+                 <Route exact path="/resume"
+                    render={ ()=>  
+                        
+                        <Blurb className='blurb_resume'>
 
+                        <Document
+                            className="resume"
+                            id="resume_scroll"
+                            loading=""
+                            file={this.state.resume}
+                            onLoadSuccess={this.onDocumentLoad}
+                >
+                            
+                            <Page pageNumber={this.state.pageNumber} />
+                            
+                        </Document>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <Document
+                            className="resume"
+                            loading=""
+                            file="./assets/img/Murnighan_Resume.pdf"
+                            onLoadSuccess={this.onDocumentLoad}
+                            >
+                            <Page pageNumber={this.state.pageNumber+1} />
+                        </Document>
+                        </Blurb> 
+                    }/> 
                         */

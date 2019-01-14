@@ -7,7 +7,7 @@ export const Project = (props) => (
     <div className="wrapper">
         <div className="img_container">
             <a href={props.deployment} target="_blank">
-                <img className="project_outer"
+                <img className={props.img_class}
                     id={props.id}
                     src={props.src} 
                     alt="blank"

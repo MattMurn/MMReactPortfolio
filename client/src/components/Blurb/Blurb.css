@@ -22,12 +22,16 @@
     z-index: 10;
 }
 .blurb_connect {
+    height: 250px;
+}
+.blurb_inq {
     background:#2C3539;
-    
+
 }
 .project {
     height: 300px;
 }
+
 .blurb_name {
     position: relative;
     margin: 0px;
@@ -42,13 +46,17 @@
     top: 0px;
     opacity: 1;
 }
+.blurb_about {
+    position: relative;
+    height: 650px;
+}
 .blurb_project {
     height: 500px;
 }
 .blurb_resume {
     height: 100%;
     width: 100%;
-    z-index: 200;
+    z-index: 20;
 }
 .blurb_footer {
     position: sticky;
@@ -61,4 +69,11 @@
 .light {
     color: #2C3539;
     background: #F4EADE;
+}
+
+@media only screen and (max-width: 750px) {
+    .blurb_about {
+        z-index: 40; 
+        background: #2C3539;
+    }
 }

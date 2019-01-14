@@ -5,11 +5,17 @@ body {
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Anton', sans-serif;
 }
-.theme_color {
+.theme_color_dark {
     color: #2C3539;
 }
-.theme_background {
+.theme_color_light {
+    color: #F4EADE;    
+}
+.theme_background_light {
     background: #F4EADE;
+}
+.theme_background_dark {
+    background: #2C3539;
 }
 .theme_family {
     font-family: 'Anton', sans-serif;
@@ -57,15 +63,4 @@ a:link, a:hover, a:visited, a:active {
     top: 0px;
     max-width: 100%;
     margin: 0%
-}
-
-.info_container {
-    max-width: 80%;
-    height: 226px;
-    position: relative;
-    background: #F4EADE;
-    margin: auto;
-    margin-left: 85px;
-    top: 200px;
-    display: block;
 }

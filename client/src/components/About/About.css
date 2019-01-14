@@ -20,6 +20,7 @@
     height: 21px;
     width: 21px;
     color: inherit;
+    float: left;
 }
 .icon {
     font-size: 40px;
@@ -42,5 +43,15 @@
     font-size: 45px;
     border-top: 5px solid #F4EADE;
     border-bottom: 5px solid #F4EADE;
+
+}
+
+@media only screen and (max-width: 700px){
+.icon {
+    font-size: 18px;
+}
+.about_body {
+    text-align: center;
+}
 
 }

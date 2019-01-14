@@ -33,7 +33,6 @@ export class Connect  extends Component{
         }
         else if (1 > this.state.message > 5000 ) {
             this.setState({ 
-
                 message: "",
                 placeholderMessage: "Hey. I'd really like to know more about you."
             });
@@ -55,27 +54,22 @@ export class Connect  extends Component{
     };
     render() {
         const { placeholderName, placeholderEmail, placeholderMessage, name, email, message } = this.state;
-            return(
-                <div className="connect_main theme_background">
-                    <div className="connect_name">
-                        <input type="text" id="inq_name" className="theme_background theme_color theme_text_family"
-                         name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
-                    </div>
-                    
-                    <div className="connect_email">
-                        <input type="email" id="inq_email" className="theme_background theme_color theme_text_family" 
-                        name="email" placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
-                    </div>
-                    <textarea id="inq_subject" name="message" className="theme_background theme_color theme_text_family"
-                        placeholder={placeholderMessage} value={message} onChange={this.getConnectData}>
-                    </textarea>
-                    <br/>
-                    <Link to={'/'} onClick={this.sendConnectEmail} className="submit theme_background theme_color theme_text_family">
-                        {/* <button type="submit" className="submit theme_background theme_color theme_text_family" > */}
-                            Send
-                        {/* </button> */}
-                    </Link>
-                </div>
+        return(
+            <div className="blurb connect_main">
+            <div className='inq_info_container'>
+                <input type="text" className='inq_info' name="name" placeholder={placeholderName} value={name} onChange={this.getConnectData}/>
+                <input type="email" className='inq_info' name="email" placeholder={placeholderEmail} value={email} onChange={this.getConnectData}/>
+            </div>
+                <textarea className="inq_subject" name="message"
+                    placeholder={placeholderMessage} value={message} onChange={this.getConnectData}>
+                </textarea>
+                <br/>
+                <Link to={'/'} onClick={this.sendConnectEmail} className="submit theme_background theme_color theme_text_family">
+                    <button type="submit" className="submit theme_background theme_color theme_text_family" >
+                        Send
+                    </button>
+                </Link>
+            </div>
         )
     }
 }
@@ -83,19 +77,14 @@ export class Connect  extends Component{
 export const InfoLink = props => {
     return (
         <div className="info_getaway">
-                            <div className="info_blurb">
-                            Thanks for checking my portfolio!
-                            Please feel free to connect with an email and check out my resume 
-                            for a more in depth breakdown of my professional background.
-                            </div>
-                            <div className="info_button_container">
-                                <a href="./assets/img/Murnighan_Resume.pdf" title="Download My Resume" download="Murnighan_Resume">
-                                    <button className="info_button resume_button">Downlaod Resume</button>
-                                </a>
-                                <Link to="/connect" className="info_button_container">
-                                <button className="info_button connect_button">Connect</button>
-                                </Link>
-                            </div>
-                        </div>
+            <div className="info_button_container">
+                <a href="./assets/img/Murnighan_Resume.pdf" title="Download My Resume" download="Murnighan_Resume">
+                    <button className="info_button resume_button">Downlaod Resume</button>
+                </a>
+                <Link to="/connect" className="info_button_container">
+                <button className="info_button connect_button">Connect</button>
+                </Link>
+            </div>
+        </div>
     )
 }
