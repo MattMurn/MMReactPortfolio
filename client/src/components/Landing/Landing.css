@@ -41,13 +41,6 @@ a:link, a:hover, a:visited, a:active {
     left: 0;
     transition: 1s ease-in all;
 }
-
-.name_duplicate {
-    position: relative; 
-    font-size: 110px;
-    display: block;
-    height: 130px;
-}
 .dark {
     background: black;
     height: 100px;
