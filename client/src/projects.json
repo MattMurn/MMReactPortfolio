@@ -1,14 +1,23 @@
 [
     {
-        "id": 1,
-        "title": "Crypto Widget", 
-        "gitHub": "https://github.com/MattMurn/Widget",
-        "description": "",
-        "deployment": "https://cryptowidget.herokuapp.com/",
-        "src": "./assets/img/cryptoTest.png"
+        "id": 6,
+        "title": "Credit Card Simulator", 
+        "gitHub": "https://github.com/MattMurn/murnighan_challenge",
+        "description": "This is a project I worked on for a finTech firm. The challenge was to create an credit card manager that kept track of charges & payments for each user's card, and calculate interest given certain parameters",
+        "deployment": "https://github.com/MattMurn/murnighan_challenge",
+        "src": "./assets/img/cc_icon.png",
+        "css_class": "cc_simulator"
     },
     {
-        "id": 2,
+        "id": 5,
+        "title": "Crypto Widget", 
+        "gitHub": "https://github.com/MattMurn/Widget",
+        "description": " ",
+        "deployment": "https://cryptowidget.herokuapp.com/",
+        "src": "./assets/img/updated_crypto.png"
+    },
+    {
+        "id": 4,
         "title": "Mentor Match", 
         "gitHub": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
         "description": "",
@@ -17,14 +26,14 @@
     },
     {
         "id": 3, 
-        "title": "MongoFullstack App", 
+        "title": "MongoFullstack", 
         "gitHub": "https://github.com/MattMurn/mongoNews",
         "description": "",
         "deployment": "https://mongonewsapp.herokuapp.com/",
         "src": "./assets/img/bringer.png"
     },
     {
-        "id": 4,
+        "id": 2,
         "title": " Node | Sql App", 
         "gitHub": "https://github.com/MattMurn/BamazonNodeApp",
         "description": "",
@@ -32,7 +41,7 @@
         "src": "./assets/img/bamazon.png"
     },
     {
-        "id": 5,
+        "id": 1,
         "title": "Link-Up!", 
         "gitHub": "https://github.com/MattMurn/Link-Up",
         "description": "",

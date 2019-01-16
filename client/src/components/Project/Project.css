@@ -1,45 +1,62 @@
-.projectOuter {
+.project_outer {
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 300px;
     font: inherit;
     color: inherit;
     font-size: 13px;
-
-    float: right;
-    margin: 0px;
 }
 .wrapper {
     position: relative;
     text-align: center;
-    height: 24.37%;
-    width: 100%;
-    margin-right: 10px;
-    border-bottom: 6px solid #2F496E;
+    height: 100%;
+    margin-left: 85px;
+    /* width: 100%;
+    margin-right: 10px; */
 }
-.infoContainer {
+.img_container {
+    display: inline-block;
+    max-width: 600px;
+    height: 100%;
+    float: left;
+}
+.info_container {
     position: absolute;
     bottom: 0px;
     text-align: center;
     height: 35px;
     width: 100%;
-    color: #2F496E;
-    background-color: #FFEC5C;
+    background: #F4EADE;
+    color:#2C3539;
     opacity: 1;
     transition: .5s;
-    margin: 0px;
+    /* left: 100px; */
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
 }
-.description {
+
+.title {
     float: left;
     text-indent: 5px;
     text-align: left;
-    width: 200px;
+    width: 300px;   
+    margin-left: 5px;
+}
+.description {
+    position: relative;
+    font-size: 20px;
+    color: inherit;
+    max-width: 800px;
+    height: 400px;
+
 }
 .github {
     float: right;
     text-indent: -5px;
+}
+.cc_simulator {
+    height: 250px;
+    max-width: 300px;
 }
 /* .a {
     height: 50px;
@@ -48,5 +65,14 @@
     left: 0px;
 } */
   
- 
-
+@media only screen and (max-width: 750px){
+    .project_outer {
+        width: 275px;
+    }
+    .title {
+        width: 230px;
+    }
+    .wrapper {
+        margin-left: 70px;
+    }
+}

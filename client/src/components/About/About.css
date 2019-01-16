@@ -1,0 +1,59 @@
+
+.about_body {
+    max-width: 750px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    color: #F4EADE;
+    margin: auto;
+    /* margin-top: 10px; */
+}
+.about_skills {
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+
+}
+.skill_icon {
+    height: 21px;
+    width: 21px;
+    color: inherit;
+    float: left;
+}
+.icon {
+    font-size: 40px;
+    margin-left: 10px;
+    color: white;
+}
+.about_tech {
+    border-top: 2px solid #F4EADE;
+    border-bottom: 2px solid #F4EADE;
+    width: 180px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+.about_title {
+    max-width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 45px;
+    border-top: 5px solid #F4EADE;
+    border-bottom: 5px solid #F4EADE;
+
+}
+
+@media only screen and (max-width: 700px){
+.icon {
+    font-size: 22px;
+    margin-left: 2px;
+}
+.about_body {
+    text-align: left;
+    padding-left: 20px;
+}
+
+}

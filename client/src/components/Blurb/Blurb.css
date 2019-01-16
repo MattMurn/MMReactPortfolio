@@ -1,11 +1,37 @@
 .blurb {
-    display: inline-block;
-    width: 740px;
-    height: 257px;
-    position: fixed;
-    bottom: 10px;
-    left: 20px;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    z-index: 10;
 }
+
+.blurb_title {
+    opacity: .3;
+    height: 800px;
+    background-image: url("../Landing/MJM.JPG");
+    background-size: 100% 175%;
+    background-repeat: no-repeat;
+    z-index: 20;
+
+}
+.blurb_two {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background: white;
+    z-index: 10;
+}
+.blurb_connect {
+    height: 250px;
+}
+.blurb_inq {
+    background:#2C3539;
+
+}
+.project {
+    height: 300px;
+}
+
 .blurb_name {
     position: relative;
     margin: 0px;
@@ -20,35 +46,40 @@
     top: 0px;
     opacity: 1;
 }
-#name_suffix {
+.blurb_about {
     position: relative;
-    margin: 0;
-    padding: 0;
-    width: 280px;
-    left: 0;
-    color: inherit;
-
+    height: 650px;
+}
+.blurb_project {
+    height: 500px;
+}
+.blurb_resume {
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+}
+.blurb_footer {
+    position: sticky;
+    height: 125px;
+}
+.dark {
+    color: #F4EADE;
+    background: #2C3539;
+}
+.light {
+    color: #2C3539;
+    background: #F4EADE;
 }
 
-#name_suffix_hide {
-    animation: name_suffix 3s;    
+@media only screen and (max-width: 750px) {
+    .blurb_about {
+        z-index: 40; 
+        background: #2C3539;
+        height: 900px;
+    }
 }
-
-@keyframes name_suffix_hide {
-    
-        0% { opacity: 0}
-        100% { opacity: 1}
-    
+@media only screen and (max-width: 600px){
+    .blurb_about {
+        height: 1000px;
+    }
 }
-
-@keyframes blurb_1 {
-    from { left: -600px}
-    
-  }
-
-  
-
-  @keyframes blurb_3 {
-    from { bottom: -1000px}
-    /* to { left: 0px} */
-  }

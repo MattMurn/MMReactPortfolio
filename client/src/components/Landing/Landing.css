@@ -1,9 +1,27 @@
 
 body {
     color: #F4EADE;
-    background: #2f496e;
+    background:#2C3539;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Anton', sans-serif;
+}
+.theme_color_dark {
+    color: #2C3539;
+}
+.theme_color_light {
+    color: #F4EADE;    
+}
+.theme_background_light {
+    background: #F4EADE;
+}
+.theme_background_dark {
+    background: #2C3539;
+}
+.theme_family {
+    font-family: 'Anton', sans-serif;
+}
+.theme_text_family {
     font-family: 'Open Sans', sans-serif;
-    /* font-family: 'Anton', sans-serif; */
 }
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
@@ -23,7 +41,13 @@ a:link, a:hover, a:visited, a:active {
     left: 0;
     transition: 1s ease-in all;
 }
-
+.dark {
+    background: black;
+    height: 100px;
+}
+.light {
+    background: white;
+}
 .resume {
     margin-right: 45px;
     background: #F4EADE;
