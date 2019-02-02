@@ -4,7 +4,7 @@ import './About.css'
 const About = props => (
         
         <div className={props.className}> 
-            <div className="about_title theme_family">Fullstack Web Developer</div>
+            <div className="about_title theme_family"> Web Developer</div>
                 <p className="about_body theme_family">
                         I'm a developer who enjoys the puzzle of a well-run application and am looking for a 
                         development opportunities that will allow me to collaborate and help solve some of your company's problems. 
