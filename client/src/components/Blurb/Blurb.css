@@ -3,12 +3,15 @@
     height: 500px;
     width: 100%;
     z-index: 10;
+    overflow-y: hidden;
+	transition-property: all;
+	transition-duration: .5s;
+    transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .blurb_title {
     opacity: .3;
-    height: 800px;
-    background-image: url("../Landing/MJM.JPG");
+    /* background-image: url("../Landing/MJM.JPG"); */
     background-size: 100% 175%;
     background-repeat: no-repeat;
     z-index: 20;
@@ -58,10 +61,6 @@
     width: 100%;
     z-index: 20;
 }
-.blurb_footer {
-    position: sticky;
-    height: 125px;
-}
 .dark {
     color: #F4EADE;
     background: #2C3539;
@@ -71,15 +70,15 @@
     background: #F4EADE;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 850px) {
     .blurb_about {
-        z-index: 40; 
+        z-index: 35; 
         background: #2C3539;
-        height: 900px;
+        height: 590px;
     }
 }
 @media only screen and (max-width: 600px){
     .blurb_about {
-        height: 1000px;
+        height: 100%;
     }
 }

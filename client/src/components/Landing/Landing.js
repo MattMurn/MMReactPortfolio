@@ -1,31 +1,39 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import './Landing.css'
-import Navbar from '../Navbar'
-import Blurb from '../Blurb'
-import About from '../About'
-import { Project } from "../Project/Project" 
-// import Chat from './Chat'
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './Landing.css';
+import Navbar from '../Navbar';
+import Blurb from '../Blurb';
+import About from '../stateless/About';
+import { Project } from '../Project/Project';
 import Footer from '../Footer';
-import { Name , Initials} from '../Name/Name'
-import {Connect, InfoLink} from '../Connect/Connect'
-import projects from '../../projects.json'
+import { Name , Initials} from '../Name/Name';
+import {Connect, InfoLink} from '../Connect/Connect';
+import projects from '../../projects.json';
 import IoSocialGithub from 'react-icons/lib/io/social-github';
-// import { Document, Page } from 'react-pdf';
+import { Modal } from '../Modal/Modal';
 import axios from 'axios';
-
+/*
+overhaul points of interest
+    file structure app level === landing
+    stateless components can be in 1 file
+    create scss / sass file and integrate with react
+    update routing 
+    change projects container and animation.
+*/
 class Landing extends Component {
+    
     constructor(props){
         super(props);   
         this.state = {
             projects: [],
             class: false,
             resume: null,
-            connect_class: ''
+            connect_class: '',
         }
         this.myRef = React.createRef();
     }
+
     componentWillMount = () => {
 
         this.setState({projects: projects});
@@ -47,9 +55,14 @@ class Landing extends Component {
         .then(response => {
 
             let ipA = response.data.geobytesipaddress;
-            localStorage.setItem('ipAddress', ipA);
+            // localStorage.setItem('ipAddress', ipA);
             axios.post('/ipInfo', {ip: ipA});
         })
+    }
+    modalRender = () => {
+        console.log('modal render clicked')
+        this.setState({modal_class: 'show'})
+        console.log(this.state);
     }
     render() {
         
@@ -57,23 +70,50 @@ class Landing extends Component {
         return(
             <Router>
                 <div className="">
-                {/* what you want to happen here is:
-                    when navbar link is hit, render resume above page like a modal.... 
-                */}
-                    <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_light'/> 
-                    <Initials/>
-                    <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
-                    <Name   
-                        wrapper="first_name_wrapper"
-                        first="Matthew"
-                        last="Murnighan"
-                    />
-                    </Blurb>
-                    <Blurb className="blurb blurb_about" >
-                        <About onMouseEnter={this.mouseEnter}/>
-                    </Blurb>
-                    <Route path="/projects">
-                        <div>
+                <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_light'/> 
+                <Route path='/' 
+                    render={() => {
+                        return (
+                            <div>
+
+                            <Link to="/">
+                                <Initials/>                            
+                            </Link>
+                            </div>
+                        )
+                    }}/>
+                <Route exact path='/' 
+                    render={() => {
+                        return (
+                            <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
+                            <Name   
+                                wrapper="first_name_wrapper"
+                                first="Matthew"
+                                last="Murnighan"
+                            />
+                            </Blurb>
+                        )
+                    }}/>
+                <Route path='/about'
+                    render= {() => {
+                       return (
+                           <div>
+                            <Blurb className="blurb blurb_about" >
+                                <About osnMouseEnter={this.mouseEnter}/>
+                            </Blurb> 
+                            <Blurb className="blurb blurb_footer">
+                                <Footer/>
+                            </Blurb>
+                           </div>
+                       )
+
+                    }}
+                >
+
+                </Route>
+                    {/* <Route path="/projects" */}
+                        {/* render ={() =>  */}
+                            {/* <div>
                             {projects.map((proj, i)=> ( 
                                 <Blurb className="blurb dark project">   
                                     <Project                                        
@@ -91,20 +131,18 @@ class Landing extends Component {
                                         />
                                 </Blurb>
                             ))}
-                        </div>
-                    </Route>
-                    <Blurb className="blurb blurb_connect">
-                        <InfoLink/>
-                    </Blurb>
-                    <Route path="/connect"
+                        </div> */}
+                        {/* }/> */}
+                    
+                    {/* <Blurb className="blurb blurb_connect">
+                        <InfoLink connectClick={this.modalRender}/>
+                    </Blurb> */}
+                    {/* <Route exact path="/connect"
                         render={() => 
-                            <Blurb className="blurb blurb_inq">
+                            <Modal>
                                 <Connect/>
-                            </Blurb>     
-                        }/>
-                    <Blurb className="blurb blurb_footer">
-                        <Footer/>
-                    </Blurb>
+                            </Modal>     
+                        }/> */}
                 </div>
             </Router>
         )

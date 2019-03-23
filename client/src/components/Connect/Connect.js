@@ -25,6 +25,7 @@ export class Connect  extends Component{
     sendConnectEmail = event => {
 
         event.preventDefault();
+
         if ( 1> this.state.name.length > 30 ){
             this.setState({ 
                 name:"",
@@ -69,7 +70,7 @@ export class Connect  extends Component{
                     placeholder={placeholderMessage} value={message} onChange={this.getConnectData}>
                 </textarea>
                 <br/>
-                <Link to={'/'} onClick={this.sendConnectEmail} className="submit theme_background theme_color theme_text_family">
+                <Link to='/' onClick={this.sendConnectEmail} className="submit theme_background theme_color theme_text_family">
                     <button type="submit" className="submit theme_background theme_color theme_text_family" >
                         Send
                     </button>
@@ -88,7 +89,7 @@ export const InfoLink = props => {
                     <button className="info_button resume_button">Downlaod Resume</button>
                 </a>
                 <Link to="/connect" className="info_button_container">
-                    <button className="info_button connect_button">Connect</button>
+                    <button className="info_button connect_button" onClick={props.connectClick}>Connect</button>
                 </Link>
             </div>
         </div>

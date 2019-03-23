@@ -1,4 +1,16 @@
-
+.about_title {
+    max-width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 45px;
+    /* border-top: 5px solid #F4EADE; */
+    /* border-bottom: 5px solid #F4EADE; */
+}
+.word_about {
+    padding-left: 20px;
+}
 .about_body {
     max-width: 750px;
     font-size: 18px;
@@ -6,6 +18,9 @@
     font-family: 'Open Sans', sans-serif;
     color: #F4EADE;
     margin: auto;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     /* margin-top: 10px; */
 }
 .about_skills {
@@ -34,26 +49,15 @@
     margin: auto;
     margin-bottom: 25px;
 }
-.about_title {
-    max-width: 550px;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 45px;
-    border-top: 5px solid #F4EADE;
-    border-bottom: 5px solid #F4EADE;
 
-}
 
-@media only screen and (max-width: 700px){
+@media only screen and (min-width: 700px){
 .icon {
     font-size: 22px;
     margin-left: 2px;
 }
 .about_body {
-    text-align: left;
-    padding-left: 20px;
+    font-size: 40px;
 }
 
 }
