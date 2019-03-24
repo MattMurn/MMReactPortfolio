@@ -94,9 +94,14 @@
     }
     .inq_info {
         margin: auto;
+        margin-bottom: 10px;
+        max-width: 260px;
     }
     .info_getaway {
         margin-left: 85px;
+    }
+    .connect_main {
+        max-width: 260px;
     }
 
 }

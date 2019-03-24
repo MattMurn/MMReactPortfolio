@@ -56,10 +56,7 @@ class Landing extends Component {
        const { projects } = this.state;
         return(
             <Router>
-                <div className="">
-                {/* what you want to happen here is:
-                    when navbar link is hit, render resume above page like a modal.... 
-                */}
+                <div>
                     <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_light'/> 
                     <Initials/>
                     <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
@@ -102,9 +99,7 @@ class Landing extends Component {
                                 <Connect/>
                             </Blurb>     
                         }/>
-                    <Blurb className="blurb blurb_footer">
                         <Footer/>
-                    </Blurb>
                 </div>
             </Router>
         )

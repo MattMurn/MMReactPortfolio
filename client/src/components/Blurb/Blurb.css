@@ -8,7 +8,7 @@
 .blurb_title {
     opacity: .3;
     height: 800px;
-    background-image: url("../Landing/MJM.JPG");
+    /* background-image: url("../Landing/MJM.JPG"); */
     background-size: 100% 175%;
     background-repeat: no-repeat;
     z-index: 20;
