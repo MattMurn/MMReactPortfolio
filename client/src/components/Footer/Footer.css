@@ -1,18 +1,15 @@
 .footer {
-    position: relative;
+    position: fixed;
+    display: inline;
     margin: auto;
     text-align: center;
     font-size: 18px;
     /* top: 50px; */
+    height: 100px;
     bottom: 0px;
 }
-.blurb_footer {
-    position: sticky;
-    height: 50px;
-    
-}
 .offset {
-    position: absolute;
+    position: relative;
     right: 0px;
     padding-right: 20px;
 }

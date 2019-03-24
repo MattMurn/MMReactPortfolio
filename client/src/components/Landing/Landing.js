@@ -14,6 +14,7 @@ import IoSocialGithub from 'react-icons/lib/io/social-github';
 import { Modal } from '../Modal/Modal';
 import axios from 'axios';
 /*
+
 overhaul points of interest
     file structure app level === landing
     stateless components can be in 1 file
@@ -47,7 +48,7 @@ class Landing extends Component {
             behavior: "smooth"
         })
     }
-    getIp = () => {
+    getIp = () => { 
 
         axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=',{ headers: {
             'Access-Control-Allow-Origin': '*'
@@ -79,6 +80,7 @@ class Landing extends Component {
                             <Link to="/">
                                 <Initials/>                            
                             </Link>
+                            <Footer/>
                             </div>
                         )
                     }}/>
@@ -101,15 +103,15 @@ class Landing extends Component {
                             <Blurb className="blurb blurb_about" >
                                 <About osnMouseEnter={this.mouseEnter}/>
                             </Blurb> 
-                            <Blurb className="blurb blurb_footer">
-                                <Footer/>
-                            </Blurb>
+                            {/* <Blurb className="blurb blurb_footer"> */}
+                                
+                            {/* </Blurb> */}
                            </div>
                        )
 
                     }}
                 >
-
+                    
                 </Route>
                     {/* <Route path="/projects" */}
                         {/* render ={() =>  */}
