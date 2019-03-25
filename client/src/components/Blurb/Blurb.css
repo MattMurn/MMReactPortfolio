@@ -1,12 +1,10 @@
 .blurb {
     position: absolute;
-    background-image: url("./white_background.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 100%;
+    display: inline;
+    height: 600px;
     width: 100%;
     z-index: 10;
-    overflow-y: hidden;
+    /* overflow-y: scroll; */
 }
 
 .blurb_title {
@@ -47,8 +45,13 @@
     opacity: 1;
 }
 .blurb_about {
+    top: 350px;
+    float: left;
+    background: black;
     position: relative;
-    height: 650px;
+    height: 450px;
+    animation: blurb_about 1s;
+
 }
 .blurb_project {
     height: 500px;
@@ -66,7 +69,33 @@
     color: #2C3539;
     background: #F4EADE;
 }
-
+@media only screen and (min-width: 750px){
+    .blurb_about {
+        top: 800px;
+    }
+}
+@keyframes blurb_about {
+    0% {
+        bottom: -1500px;
+        opacity: .2;
+    }
+    25%{
+        bottom: 25px;
+        opacity: .4;
+    }
+    50% {
+        bottom: 200px;
+        opacity: .6;
+    }
+    75% {
+        bottom: 500px;
+        opacity: .8;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+  }
 /* @media only screen and (max-width: 850px) {
     .blurb_about {
         z-index: 35; 

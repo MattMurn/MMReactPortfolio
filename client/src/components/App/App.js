@@ -71,32 +71,46 @@ class App extends Component {
         return(
             <Router>
                 <div className="">
-                <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_light'/> 
-                <Route path='/' 
+                <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_dark'/> 
+                <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
+                        <Name   
+                            wrapper="first_name_wrapper"
+                            first="Matthew"
+                            last="Murnighan"
+                        >
+                        <Link to="/">
+                            <Initials/>                            
+                        </Link>
+                    </Name>
+                </Blurb>
+
+
+                {/* <Route path='/' 
                     render={() => {
                         return (
                             <div>
-
-
-                            {/* <Footer/> */}
+    
+                            <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_dark'/> 
+                            <Footer/>
                             </div>
                         )
                     }}/>
-                <Route exact path='/' 
+                <Route path='/' 
                     render={() => {
                         return (
                             <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
-                            <Link to="/">
-                                <Initials/>                            
-                            </Link>
                             <Name   
                                 wrapper="first_name_wrapper"
                                 first="Matthew"
                                 last="Murnighan"
-                            />
+                            >
+                            <Link to="/">
+                                <Initials/>                            
+                            </Link>
+                            </Name>
                             </Blurb>
                         )
-                    }}/>
+                    }}/> */}
                 <Route path='/about'
                     render= {() => {
                        return (
@@ -104,16 +118,13 @@ class App extends Component {
                             <Blurb className="blurb blurb_about" >
                                 <About osnMouseEnter={this.mouseEnter}/>
                             </Blurb> 
-                            {/* <Blurb className="blurb blurb_footer"> */}
-                                
-                            {/* </Blurb> */}
                            </div>
                        )
-
                     }}
                 >
                     
                 </Route>
+                <Footer/>
                     {/* <Route path="/projects" */}
                         {/* render ={() =>  */}
                             {/* <div>

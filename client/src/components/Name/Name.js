@@ -4,6 +4,7 @@ import './Name.css';
 export const Name = props => (
 
     <div className="name_wrapper">
+        {props.children}
         <div className="name_container" onClick={props.clickHandler}>
             <div className="first_name"> {props.first}</div>
             {/* <div className={props.name_s}>{props.first_s} </div> */}
@@ -18,8 +19,8 @@ export const Initials = () => {
     
     return (
         <div className="initials_container">
-            <div className="name_duplicate">M</div>
-            <div className="name_duplicate">M</div>
+            <div className="first_name name_duplicate">M</div>
+            <div className="last_name name_duplicate">M</div>
         </div>
     )
 }

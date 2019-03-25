@@ -6,7 +6,7 @@ const Footer = props => {
     let date = new Date();
     return(
         <footer className="footer">
-            <div className="theme_color_light offset">© {date.getFullYear().toString()} M | M</div>
+            <div className="theme_color_dark offset">© {date.getFullYear().toString()} M | M</div>
         </footer>
     );
 }
