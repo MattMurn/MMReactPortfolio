@@ -1,19 +1,16 @@
 .blurb {
-    position: relative;
-    height: 500px;
+    position: absolute;
+    background-image: url("./white_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
     width: 100%;
     z-index: 10;
     overflow-y: hidden;
-	transition-property: all;
-	transition-duration: .5s;
-    transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .blurb_title {
-    opacity: .3;
-    /* background-image: url("../Landing/MJM.JPG"); */
-    background-size: 100% 175%;
-    background-repeat: no-repeat;
+    opacity: 1;
     z-index: 20;
 
 }
@@ -70,7 +67,7 @@
     background: #F4EADE;
 }
 
-@media only screen and (max-width: 850px) {
+/* @media only screen and (max-width: 850px) {
     .blurb_about {
         z-index: 35; 
         background: #2C3539;
@@ -81,4 +78,4 @@
     .blurb_about {
         height: 100%;
     }
-}
+} */
