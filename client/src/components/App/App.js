@@ -42,7 +42,7 @@ class App extends Component {
         this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
     }   
     clickEvent = event => {        
-
+        
         window.scrollTo({
             top: parseInt(event.target.id), 
             behavior: "smooth"
@@ -70,35 +70,9 @@ class App extends Component {
        const { projects } = this.state;
         return(
             <Router>
-                <div className="">
-                <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_dark'/> 
-                <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
-                        <Name   
-                            wrapper="first_name_wrapper"
-                            first="Matthew"
-                            last="Murnighan"
-                        >
-                        <Link to="/">
-                            <Initials/>                            
-                        </Link>
-                    </Name>
-                </Blurb>
-
-
-                {/* <Route path='/' 
-                    render={() => {
-                        return (
-                            <div>
-    
-                            <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_dark'/> 
-                            <Footer/>
-                            </div>
-                        )
-                    }}/>
-                <Route path='/' 
-                    render={() => {
-                        return (
-                            <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
+                <div>
+                    <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_dark'/> 
+                    <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
                             <Name   
                                 wrapper="first_name_wrapper"
                                 first="Matthew"
@@ -107,24 +81,31 @@ class App extends Component {
                             <Link to="/">
                                 <Initials/>                            
                             </Link>
-                            </Name>
-                            </Blurb>
+                        </Name>
+                    </Blurb>
+                    <Route path='/about'
+                        render= {() => {
+                        return (
+                            <div className="about_blurb">
+                                {/* <Blurb className="blurb blurb_about theme_background_dark" > */}
+                                    <About osnMouseEnter={this.mouseEnter}/>
+                                {/* </Blurb>  */}
+                            </div>
                         )
-                    }}/> */}
-                <Route path='/about'
-                    render= {() => {
-                       return (
-                           <div>
-                            <Blurb className="blurb blurb_about" >
-                                <About osnMouseEnter={this.mouseEnter}/>
-                            </Blurb> 
-                           </div>
-                       )
-                    }}
-                >
-                    
-                </Route>
-                <Footer/>
+                        }}
+                    >
+                        
+                    </Route>
+                    <Footer/>
+                </div>
+            </Router>
+        )
+    }
+}
+
+
+export default App;
+
                     {/* <Route path="/projects" */}
                         {/* render ={() =>  */}
                             {/* <div>
@@ -157,11 +138,30 @@ class App extends Component {
                                 <Connect/>
                             </Modal>     
                         }/> */}
-                </div>
-            </Router>
-        )
-    }
-}
 
-
-export default App;
+                                        {/* <Route path='/' 
+                    render={() => {
+                        return (
+                            <div>
+    
+                            <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_dark'/> 
+                            <Footer/>
+                            </div>
+                        )
+                    }}/>
+                <Route path='/' 
+                    render={() => {
+                        return (
+                            <Blurb className=" blurb blurb_title" onMouseEnter={this.mouseEnter}>
+                            <Name   
+                                wrapper="first_name_wrapper"
+                                first="Matthew"
+                                last="Murnighan"
+                            >
+                            <Link to="/">
+                                <Initials/>                            
+                            </Link>
+                            </Name>
+                            </Blurb>
+                        )
+                    }}/> */}

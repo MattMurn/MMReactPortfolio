@@ -13,7 +13,7 @@
     top: 34px;
     right: 10px;
     font-size: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Anton', sans-serif;
     margin-top: 5px;
     color: inherit;
 }
@@ -36,11 +36,11 @@
     margin: 5px 0;
 }
 .dropdown_list {
-    font-size: 12px;
+    font-size: 18px;
     text-align: right;
     margin: 1px;
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 sss
 /* .nav_name {

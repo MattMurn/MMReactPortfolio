@@ -46,11 +46,12 @@
     color: #2C3539;
     z-index: 100;
 }
+
 @media only screen and (min-width: 750px){
     .name_wrapper {
-        top: 250px;
+        top: 245px;
         font-size: 150px;
-        margin-left: 80px;
+        margin-left: 10px;
         letter-spacing: 10px;
     }
     .name_duplicate {
@@ -60,7 +61,12 @@
     .name_container {
         height: 150px;
     }
+}
+@media only screen and (min-width: 950px){
+    .name_wrapper {
+        margin-left: 50px;
     }
+}
 @keyframes first_name {
     0% {
         right: -1500px;

@@ -1,6 +1,6 @@
 
 body, html {
-  background: #F4EADE;
+  /* background: #F4EADE; */
   color:#2C3539;
   background-image: url("./white_background.jpg");
   background-size: 100% 100%;
@@ -12,10 +12,10 @@ body, html {
   color: #2C3539;
 }
 .theme_color_light {
-  color: #F4EADE;    
+  color: #F8F8FF;    
 }
 .theme_background_light {
-  background: #F4EADE;
+  background: #F8F8FF;
 }
 .theme_background_dark {
   background: #2C3539;
