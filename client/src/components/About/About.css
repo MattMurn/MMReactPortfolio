@@ -9,14 +9,14 @@
     /* border-bottom: 5px solid #F4EADE; */
 }
 .about_blurb {
-    top: 700px;
+    top: 665px;
     display: flex;
     position: absolute;
-    padding-left: 100px;
+    padding: 0 85px 0 65px;
     background: blue;
     float: left;
     position: relative;
-    height: 450px;
+    height: 550px;
     animation: blurb_about 1s;
 
 }
@@ -26,8 +26,8 @@
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     margin: auto;
-    margin-bottom: 10px;
-    padding-right: 20px;
+    margin: 0 0 28px;
+    
     /* margin-top: 10px; */
 }
 .about_skills {
@@ -68,9 +68,10 @@
 
     }
     .about_blurb {
-        padding-left: 135px;
-        top: 601px;
+        padding-left: 200px;
+        top: 624px;
         height: 750px;
+        width: 100%;
     
     }
     

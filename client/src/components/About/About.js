@@ -1,7 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './About.css'
 
-const About = props => (
+class About extends Component {
+        constructor(props){
+                super(props);
+                this.myRef = React.createRef();
+        }
+        componentDidMount = () => {
+                this.myRef = window.scrollTo(0,675);
+        }
+        render() {
+                return (
+                        <div className={this.props.className} ref={this.myRef}> 
+                        {/* <div className="about_title theme_family theme_color_light"> Web Developer</div> */}
+                            <h3 className="word_about theme_color_light"> In a Few Words...</h3>
+                            <p className="about_body theme_family theme_color_light">
+                                    I'm a developer who enjoys the puzzle of a well-run application 
+                                    {/* and am looking for a 
+                                    development opportunities that will allow me to collaborate and help solve some of your company's problems.  */}
+                            </p>
+                            <p className="about_body theme_family theme_color_light">Currently, I am a technical consultant in a Federal litigation involving software trade secrets and a part-time T.A. at Northwestern University Coding Bootcamp
+                                    {/* Being a part of the instructional staff allows me to help students stay motivated, engaged & focused, while maintaining best practices and continuing to learn 
+                                    emerging technologies. */}
+                            </p>
+                            <p className="about_body theme_family theme_color_light"> This site is a fullstack application in React, Node.js, MySQL, Express stack. </p>
+                    </div>    
+                )
+        }
+}
+const Test = props => (
         
         <div className={props.className}> 
             {/* <div className="about_title theme_family theme_color_light"> Web Developer</div> */}

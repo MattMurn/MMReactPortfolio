@@ -26,6 +26,7 @@ class App extends Component {
     
     constructor(props){
         super(props);   
+        this.myRef = React.createRef();
         this.state = {
             projects: [],
             class: false,
@@ -34,13 +35,16 @@ class App extends Component {
         }
         this.myRef = React.createRef();
     }
-
     componentWillMount = () => {
-
-        this.setState({projects: projects});
-        this.getIp();
-        this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
+        //fix getIp config
+        // this.setState({projects: projects});
+        // this.getIp();
+        // this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
     }   
+    componentDidMount = () => {
+        // always go to top of page on mount.
+        this.myRef = window.scrollTo(0,0);
+    }
     clickEvent = event => {        
         
         window.scrollTo({
@@ -48,18 +52,16 @@ class App extends Component {
             behavior: "smooth"
         })
     }
-    getIp = () => { 
+    // getIp = () => { 
 
-        axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=',{ headers: {
-            'Access-Control-Allow-Origin': '*'
-          }})
-        .then(response => {
-
-            let ipA = response.data.geobytesipaddress;
-            // localStorage.setItem('ipAddress', ipA);
-            axios.post('/ipInfo', {ip: ipA});
-        })
-    }
+    //     axios.get('http://getcitydetails.geobytes.com/GetCityDetails?fqcn=')
+    //     .then(response => {
+    //         let ipA = response.data.geobytesipaddress;
+    //         // localStorage.setItem('ipAddress', ipA);
+    //         console.log(ipA);
+    //         axios.post('/ipInfo', {ip: ipA});
+    //     })
+    // }
     modalRender = () => {
         console.log('modal render clicked')
         this.setState({modal_class: 'show'})
