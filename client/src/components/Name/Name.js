@@ -1,12 +1,26 @@
 import React from 'react';
 import './Name.css';
 
-const Name = (props) => (
-    <div className={props.wrapper}>
+export const Name = props => (
 
-        <div className={props.classPrefix}> {props.prefix}</div>
-        <div className={props.classSuffix}>{props.suffix}</div>
+    <div className="name_wrapper">
+        {props.children}
+        <div className="name_container" onClick={props.clickHandler}>
+            <div className="first_name"> {props.first}</div>
+            {/* <div className={props.name_s}>{props.first_s} </div> */}
+        </div>
+        <div className="name_container">
+            <div className="last_name">{props.last} </div>
+            {/* <div className={props.name_s}>{props.last_s} </div> */}
+        </div>
     </div>
 )
-
-export default Name;
+export const Initials = () => {
+    
+    return (
+        <div className="initials_container">
+            <div className="first_name name_duplicate">M</div>
+            <div className="last_name name_duplicate">M</div>
+        </div>
+    )
+}

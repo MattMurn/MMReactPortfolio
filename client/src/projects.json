@@ -1,35 +1,52 @@
 [
     {
+        "id": 6,
+        "title": "Credit Card Simulator", 
+        "gitHub": "https://github.com/MattMurn/murnighan_challenge",
+        "description": "This is a project I worked on for a finTech firm. The challenge was to create an credit card manager that kept track of charges & payments for each user's card, and calculate interest given certain parameters",
+        "deployment": "https://github.com/MattMurn/murnighan_challenge",
+        "src": "./assets/img/cc_icon.png",
+        "css_class": "cc_simulator"
+    },
+    {
+        "id": 5,
+        "title": "Crypto Widget", 
+        "gitHub": "https://github.com/MattMurn/Widget",
+        "description": " ",
+        "deployment": "https://cryptowidget.herokuapp.com/",
+        "src": "./assets/img/updated_crypto.png"
+    },
+    {
         "id": 4,
+        "title": "Mentor Match", 
+        "gitHub": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
+        "description": "",
+        "deployment": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
+        "src": "./assets/img/mentor2.png"
+    },
+    {
+        "id": 3, 
+        "title": "MongoFullstack", 
+        "gitHub": "https://github.com/MattMurn/mongoNews",
+        "description": "",
+        "deployment": "https://mongonewsapp.herokuapp.com/",
+        "src": "./assets/img/bringer.png"
+    },
+    {
+        "id": 2,
+        "title": " Node | Sql App", 
+        "gitHub": "https://github.com/MattMurn/BamazonNodeApp",
+        "description": "",
+        "deployment": "https://www.youtube.com/watch?v=kkrofqx5kvU",
+        "src": "./assets/img/bamazon.png"
+    },
+    {
+        "id": 1,
         "title": "Link-Up!", 
         "gitHub": "https://github.com/MattMurn/Link-Up",
         "description": "",
         "deployment": "https://linkupapp.herokuapp.com/",
-        "src": "./assets/img/LinkUp.jpg"
-    },
-    {
-        "id": 1,
-        "title": "Mentorize", 
-        "gitHub": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
-        "description": "",
-        "deployment": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
-        "src": "./assets/img/mentor.png"
-    },
-    {
-        "id": 2, 
-        "title": "MongoFullstack App", 
-        "gitHub": "https://github.com/MattMurn/mongoNews",
-        "description": "",
-        "deployment": "https://mongonewsapp.herokuapp.com/",
-        "src": "./assets/img/mongonews.png"
-    },
-    {
-        "id": 3,
-        "title": " Node | Sql App", 
-        "gitHub": "https://github.com/MattMurn/BamazonNodeApp",
-        "description": "",
-        "deployment": "https://www.youtube.com/watch?v=Y4r7S2tTYd0&feature=youtu.be",
-        "src": "./assets/img/nodeapp.gif"
+        "src": "./assets/img/addLink.png"
     }
     
 ]

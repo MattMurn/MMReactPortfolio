@@ -1,0 +1,84 @@
+
+body, html {
+  /* background: #F4EADE; */
+  color:#2C3539;
+  background-image: url("./white_background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: 'Anton', sans-serif;
+  height: 100%;
+}
+.theme_color_dark {
+  color: #2C3539;
+}
+.theme_color_light {
+  color: #F8F8FF;    
+}
+.theme_background_light {
+  background: #F8F8FF;
+}
+.theme_background_dark {
+  background: #2C3539;
+}
+.theme_family {
+  font-family: 'Anton', sans-serif;
+}
+.theme_text_family {
+  font-family: 'Open Sans', sans-serif;
+}
+a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+  
+}
+.page_wrapper {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.slide-enter {
+  left: 100px
+}
+.slide-enter-active {
+  left: 0;
+  transition: 1s ease-in all;
+}
+.dark {
+  background: black;
+  height: 100px;
+}
+.light {
+  background: white;
+}
+.resume {
+  margin-right: 45px;
+  background: #F4EADE;
+  display: inline;
+  position: relative;
+  top: 0px;
+  max-width: 100%;
+  margin: 0%
+}
+.App {
+  text-align: center;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+

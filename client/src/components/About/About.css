@@ -1,0 +1,78 @@
+.about_title {
+    max-width: 550px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 45px;
+    /* border-top: 5px solid #F4EADE; */
+    /* border-bottom: 5px solid #F4EADE; */
+}
+.about_blurb {
+    top: 665px;
+    display: flex;
+    position: absolute;
+    padding: 0 85px 0 65px;
+    background: blue;
+    float: left;
+    position: relative;
+    height: 550px;
+    animation: blurb_about 1s;
+
+}
+.about_body {
+    max-width: 750px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    margin: 0 0 28px;
+    
+    /* margin-top: 10px; */
+}
+.about_skills {
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+
+}
+.skill_icon {
+    height: 21px;
+    width: 21px;
+    color: inherit;
+    float: left;
+}
+.icon {
+    font-size: 40px;
+    margin-left: 10px;
+    color: white;
+}
+.about_tech {
+    border-top: 2px solid #F4EADE;
+    border-bottom: 2px solid #F4EADE;
+    width: 180px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+
+@media only screen and (min-width: 700px){
+    .icon {
+        font-size: 22px;
+        margin-left: 2px;
+    }
+    .about_body {
+        font-size: 40px;
+
+    }
+    .about_blurb {
+        padding-left: 200px;
+        top: 624px;
+        height: 750px;
+        width: 100%;
+    
+    }
+    
+}

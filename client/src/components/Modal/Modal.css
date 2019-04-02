@@ -1,0 +1,22 @@
+
+
+.modal_show {
+    display: inline-block;
+    margin: auto;
+    height: 100%;
+    background: white;
+    opacity: 1;
+    width: 100%;
+    z-index: 100;
+}
+.modal_inner {
+    background: black;
+    height: 500px;
+    width: 500px;
+}
+.modal_close {
+    margin-left: 10px;
+    border: none;
+    font-size: 30px;
+    background: inherit;
+}

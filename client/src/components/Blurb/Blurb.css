@@ -1,10 +1,35 @@
 .blurb {
-    display: inline-block;
-    width: 740px;
-    height: 300px;
-    position: relative;
-    top: 246px
+    position: absolute;
+    display: inline;
+    height: 600px;
+    width: 100%;
+    z-index: 10;
+    /* overflow-y: scroll; */
 }
+
+.blurb_title {
+    opacity: 1;
+    z-index: 20;
+
+}
+.blurb_two {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background: white;
+    z-index: 10;
+}
+.blurb_connect {
+    height: 250px;
+}
+.blurb_inq {
+    background:#2C3539;
+
+}
+.project {
+    height: 300px;
+}
+
 .blurb_name {
     position: relative;
     margin: 0px;
@@ -19,35 +44,33 @@
     top: 0px;
     opacity: 1;
 }
-#name_suffix {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 280px;
-    left: 0;
-    color: inherit;
 
+.blurb_project {
+    height: 500px;
+}
+.blurb_resume {
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+}
+.dark {
+    color: #F4EADE;
+    background: #2C3539;
+}
+.light {
+    color: #2C3539;
+    background: #F4EADE;
 }
 
-#name_suffix_hide {
-    animation: name_suffix 3s;    
+/* @media only screen and (max-width: 850px) {
+    .blurb_about {
+        z-index: 35; 
+        background: #2C3539;
+        height: 590px;
+    }
 }
-
-@keyframes name_suffix_hide {
-    
-        0% { opacity: 0}
-        100% { opacity: 1}
-    
-}
-
-@keyframes blurb_1 {
-    from { left: -600px}
-    
-  }
-
-  
-
-  @keyframes blurb_3 {
-    from { bottom: -1000px}
-    /* to { left: 0px} */
-  }
+@media only screen and (max-width: 600px){
+    .blurb_about {
+        height: 100%;
+    }
+} */
