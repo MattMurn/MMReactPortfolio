@@ -38,8 +38,8 @@ class Navbar extends Component {
                     <div className={this.props.className}></div>
                     <div className={this.props.className}></div>
                     <ul className={this.state.class ? 'show' : 'hide'}>
-                        <Link activeClassName="active" to="/about"><p className="dropdown_list" id="801" onClick={this.handleClick} > ABOUT </p> </Link>
-                        <Link activeClassName="active" to="/connect"> <p className="dropdown_list" id="5500" onClick={this.props.clickHandler} > CONNECT </p> </Link> 
+                        <Link to="/about"><p className="dropdown_list" id="801" onClick={this.handleClick} > ABOUT </p> </Link>
+                        <Link to="/connect"> <p className="dropdown_list" id="5500" onClick={this.props.clickHandler} > CONNECT </p> </Link> 
                         <Link to="/projects"> <p className="dropdown_list" id="1450" onClick={this.props.clickHandler} > PROJECTS </p> </Link>
                         <Link to="/resume"><p className="dropdown_list" id="3600" onClick={this.props.clickHandler}> RESUME</p></Link>
                         {/* <p className="dropdown_list" id="resume" ><a href="./assets/img/Murnighan_Resume.pdf" download="Murnighan_Resume">RESUME</a></p> */}

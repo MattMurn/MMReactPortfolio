@@ -1,5 +1,5 @@
 import React from 'react';
-import './Project.scss';
+import './Project.css';
 
 export const Project = props => {
     return (
@@ -17,11 +17,10 @@ export const ContentProject = props => {
         onMouseLeave={props.onMouseLeave}>
 
             <div className="img_container">
-            {/* img goes here. */}
-            "THIS IS THE CONTENT PROJECT"
+                {props.title}
+                <img src={props.src}/>
             </div>
-            {/* Think about changing this to anchor tag */}
-            <button className={props.className + " link_button"}>GITHUB</button>
+            <button name="github" className={props.className + " link_button"} onClick={props.onClick}>GITHUB</button>
         </div>
     )
 }
@@ -31,17 +30,7 @@ export const RevealProject = props => {
         <div className="inner_info">
             <div className={props.className}>
             {/* This needs to be replaced with {props.text} */}
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                "tell them about the sick project that you've been worrking on here."
-                
+                {props.description}
             </div>
         </div>
     )

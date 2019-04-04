@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';ss
 import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Navbar from '../Navbar';
@@ -11,17 +11,9 @@ import { Name , Initials} from '../Name/Name';
 import {Connect, InfoLink} from '../Connect/Connect';
 import projects from '../../projects.json';
 import IoSocialGithub from 'react-icons/lib/io/social-github';
-import { Modal } from '../Modal/Modal';
+// import { Modal } from '../Modal/Modal';
 import axios from 'axios';
 
-/*
-overhaul points of interest
-    file structure app level === landing
-    stateless components can be in 1 file
-    create scss / sass file and integrate with react
-    update routing 
-    change projects container and animation.
-*/
 class App extends Component {
     
     constructor(props){
@@ -36,10 +28,7 @@ class App extends Component {
         this.myRef = React.createRef();
     }
     componentWillMount = () => {
-        //fix getIp config
-        // this.setState({projects: projects});
-        // this.getIp();
-        // this.setState({resume: "./assets/img/Murnighan_Resume.pdf"})
+        this.setState({projects: projects});
     }   
     componentDidMount = () => {
         // always go to top of page on mount.
@@ -62,11 +51,6 @@ class App extends Component {
     //         axios.post('/ipInfo', {ip: ipA});
     //     })
     // }
-    modalRender = () => {
-        console.log('modal render clicked')
-        this.setState({modal_class: 'show'})
-        console.log(this.state);
-    }
     render() {
         
        const { projects } = this.state;
@@ -87,20 +71,29 @@ class App extends Component {
                     </Blurb>
                     <Route path='/about'
                         render= {() => {
-                        return (
-                            <div className="about_blurb">
-                                {/* <Blurb className="blurb blurb_about theme_background_dark" > */}
+                            return (
+                                <div className="about_blurb">
                                     <About osnMouseEnter={this.mouseEnter}/>
-                                {/* </Blurb>  */}
-                            </div>
-                        )
+                                </div>
+                            )
                         }}
                     >
                     </Route>
                     <Route path='/projects' 
                         render={
                             () => {
-                                <TotalProject/>
+                                return(
+                                    <div>
+                                        {
+                                            projects.map((proj, i) => (
+                                                <TotalProject
+                                                    title={proj.title}
+                                                    src={proj.src}
+                                                    description={proj.description}/>
+                                            ))
+                                        }
+                                    </div>
+                                )
                             }
                         }/>
                     <Footer/>
@@ -112,28 +105,28 @@ class App extends Component {
 
 export default App;
 
-                    {/* <Route path="/projects" */}
-                        {/* render ={() =>  */}
-                            {/* <div>
-                            {projects.map((proj, i)=> ( 
-                                <Blurb className="blurb dark project">   
-                                    <Project                                        
-                                        id={projects[i].id}
-                                        key={i}
-                                        src={projects[i].src}
-                                        description={projects[i].description}
-                                        deployment={projects[i].deployment}
-                                        title={projects[i].title}
-                                        github={projects[i].gitHub}
-                                        logo={<IoSocialGithub size={25}/>}
-                                        img_class={(projects[i].css_class) ?
-                                        `project_outer ${projects[i].css_class}` : 
-                                        'project_outer'}
-                                        />
-                                </Blurb>
-                            ))}
-                        </div> */}
-                        {/* }/> */}
+                    // {/* <Route path="/projects" */}
+                    //     {/* render ={() =>  */}
+                    //         {/* <div>
+                    //         {projects.map((proj, i)=> ( 
+                    //             <Blurb className="blurb dark project">   
+                    //                 <Project                                        
+                    //                     id={projects[i].id}
+                    //                     key={i}
+                    //                     src={projects[i].src}
+                    //                     description={projects[i].description}
+                    //                     deployment={projects[i].deployment}
+                    //                     title={projects[i].title}
+                    //                     github={projects[i].gitHub}
+                    //                     logo={<IoSocialGithub size={25}/>}
+                    //                     img_class={(projects[i].css_class) ?
+                    //                     `project_outer ${projects[i].css_class}` : 
+                    //                     'project_outer'}
+                    //                     />
+                    //             </Blurb>
+                    //         ))}
+                    //     </div> */}
+                    //     {/* }/> */}
                     
                     {/* <Blurb className="blurb blurb_connect">
                         <InfoLink connectClick={this.modalRender}/>

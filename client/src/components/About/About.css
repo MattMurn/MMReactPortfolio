@@ -30,6 +30,12 @@
     
     /* margin-top: 10px; */
 }
+.small {
+    font-size: 24px;
+}
+.middle {
+    text-align: center;
+}
 .about_skills {
     position: relative;
     max-width: 750px;
@@ -65,7 +71,9 @@
     }
     .about_body {
         font-size: 40px;
-
+    }
+    .small {
+        font-size: 24px;
     }
     .about_blurb {
         padding-left: 200px;

@@ -13,7 +13,7 @@ About - working on updating the blurb about myself / styling and transform
 
 Projects - created new component w/ scss in projects/sassy
     need to add sass to this, map through projects, and update render funcitonality.
-
+    make mobile responsive`
 Connect - 
 
 Footer - is not bound to bottom of the page
