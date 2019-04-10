@@ -3,7 +3,7 @@
         "id": 6,
         "title": "Credit Card Simulator", 
         "gitHub": "https://github.com/MattMurn/murnighan_challenge",
-        "description": "This is a project I worked on for a finTech firm. The challenge was to create an credit card manager that kept track of charges & payments for each user's card, and calculate interest given certain parameters",
+        "description": "program that simulates credit card processing, from user, card, and transaction level. Interest is calculated per transaction and adjusted monthly. Built using MySql, Express, React, React-Datepicker, Recharts, and tests running through Jest & Enzyme",
         "deployment": "https://github.com/MattMurn/murnighan_challenge",
         "src": "./assets/img/cc_icon.png",
         "css_class": "cc_simulator"
@@ -12,7 +12,7 @@
         "id": 5,
         "title": "Crypto Widget", 
         "gitHub": "https://github.com/MattMurn/Widget",
-        "description": " ",
+        "description": "Market window with real time cryptocurrency prices via GDAX web socket connection. Built with Express, Socket IO, React, and tests running through Jest",
         "deployment": "https://cryptowidget.herokuapp.com/",
         "src": "./assets/img/updated_crypto.png"
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Project.css';
+import IoSocialGithub from 'react-icons/lib/io/social-github';
 
 export const Project = props => {
     return (
@@ -21,7 +22,11 @@ export const ContentProject = props => {
                 <img src={props.src}/>
             </div>
             {/* consider using an anchor with the github icon */}
-            <button name="github" className={props.className + " link_button"} onClick={props.onClick}>GITHUB</button>
+            <a name="github" className={props.className + " link_button"} 
+                // onClick={props.onClick} 
+                href={props.gitHub}
+                target="_blank"
+                ><IoSocialGithub size={25}/></a>
         </div>
     )
 }

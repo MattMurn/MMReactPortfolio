@@ -33,9 +33,10 @@ class TotalProject extends Component {
               <ContentProject 
                 onMouseEnter={this.mouseHover} 
                 onMouseLeave={this.mouseLeave} 
-                onClick={this.clickHandler}
+                // onClick={this.clickHandler}
                 className={this.state.buttonShow}
                 title={this.props.title}
+                gitHub={this.props.gitHub}
                 src={this.props.src}/>
               <RevealProject className={this.state.projectInfo} description={this.props.description}/>
             </Project>

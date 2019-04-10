@@ -10,7 +10,6 @@ import Footer from '../Footer';
 import { Name , Initials} from '../Name/Name';
 import {Connect, InfoLink} from '../Connect/Connect';
 import projects from '../../projects.json';
-import IoSocialGithub from 'react-icons/lib/io/social-github';
 // import { Modal } from '../Modal/Modal';
 import axios from 'axios';
 
@@ -89,7 +88,8 @@ class App extends Component {
                                                 <TotalProject
                                                     title={proj.title}
                                                     src={proj.src}
-                                                    description={proj.description}/>
+                                                    description={proj.description}
+                                                    gitHub={proj.gitHub}/>
                                             ))
                                         }
                                     </div>
@@ -118,7 +118,6 @@ export default App;
                     //                     deployment={projects[i].deployment}
                     //                     title={projects[i].title}
                     //                     github={projects[i].gitHub}
-                    //                     logo={<IoSocialGithub size={25}/>}
                     //                     img_class={(projects[i].css_class) ?
                     //                     `project_outer ${projects[i].css_class}` : 
                     //                     'project_outer'}
