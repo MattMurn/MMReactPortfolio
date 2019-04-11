@@ -20,7 +20,7 @@
         "id": 4,
         "title": "Mentor Match", 
         "gitHub": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
-        "description": "",
+        "description": "program that simulates credit card processing, from user, card, and transaction level. Interest is calculated per transaction and adjusted monthly. Built using MySql, Express, React, React-Datepicker, Recharts, and tests running through Jest & Enzyme", 
         "deployment": "https://github.com/elliechen321/Mentor_Matching_App/tree/developer",
         "src": "./assets/img/mentor2.png"
     },
@@ -28,7 +28,7 @@
         "id": 3, 
         "title": "MongoFullstack", 
         "gitHub": "https://github.com/MattMurn/mongoNews",
-        "description": "",
+        "description": "program that simulates credit card processing, from user, card, and transaction level. Interest is calculated per transaction and adjusted monthly. Built using MySql, Express, React, React-Datepicker, Recharts, and tests running through Jest & Enzyme",        
         "deployment": "https://mongonewsapp.herokuapp.com/",
         "src": "./assets/img/bringer.png"
     },
@@ -36,7 +36,7 @@
         "id": 2,
         "title": " Node | Sql App", 
         "gitHub": "https://github.com/MattMurn/BamazonNodeApp",
-        "description": "",
+        "description": "program that simulates credit card processing, from user, card, and transaction level. Interest is calculated per transaction and adjusted monthly. Built using MySql, Express, React, React-Datepicker, Recharts, and tests running through Jest & Enzyme",
         "deployment": "https://www.youtube.com/watch?v=kkrofqx5kvU",
         "src": "./assets/img/bamazon.png"
     },
@@ -44,7 +44,7 @@
         "id": 1,
         "title": "Link-Up!", 
         "gitHub": "https://github.com/MattMurn/Link-Up",
-        "description": "",
+        "description": "program that simulates credit card processing, from user, card, and transaction level. Interest is calculated per transaction and adjusted monthly. Built using MySql, Express, React, React-Datepicker, Recharts, and tests running through Jest & Enzyme",        
         "deployment": "https://linkupapp.herokuapp.com/",
         "src": "./assets/img/addLink.png"
     }

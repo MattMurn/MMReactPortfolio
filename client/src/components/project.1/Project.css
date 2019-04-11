@@ -9,7 +9,7 @@ $total_width: 800px; */
     display: grid;
     grid-template-columns: auto auto;
     height: 300px;
-    width: 700px;
+    width: 650px;
     background: gray;
     border: 5px;
     border-style: solid;
@@ -60,4 +60,15 @@ img {
     50% {opacity: .4;}
     75% {opacity: .7;}
     100% {opacity: 1;}
+  }
+
+  @media only screen and (min-width: 900px){
+    img {
+        height: 260px;
+        width: 240px;
+    }
+    .outer_project {
+        width: 500px;
+        margin-left: 10px;
+    }
   }

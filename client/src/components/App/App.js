@@ -82,7 +82,7 @@ class App extends Component {
                         render={
                             () => {
                                 return(
-                                    <div>
+                                    <div className="project_wrapper">
                                         {
                                             projects.map((proj, i) => (
                                                 <TotalProject
