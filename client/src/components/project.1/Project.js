@@ -18,7 +18,6 @@ export const ContentProject = props => {
             onMouseLeave={props.onMouseLeave}>
             <div className="img_container">
             {/* title over image or icon. Currently looks like shit */}
-                {props.title}
                 <img src={props.src}/>
             </div>
             {/* consider using an anchor with the github icon */}
@@ -26,7 +25,7 @@ export const ContentProject = props => {
                 // onClick={props.onClick} 
                 href={props.gitHub}
                 target="_blank"
-                ><IoSocialGithub size={25}/></a>
+                ><IoSocialGithub size={40}/></a>
         </div>
     )
 }
@@ -36,6 +35,7 @@ export const RevealProject = props => {
         <div className="inner_info">
             <div className={props.className}>
             {/* This needs to be replaced with {props.text} */}
+                <h2>{props.title}</h2>
                 {props.description}
             </div>
         </div>

@@ -7,13 +7,13 @@ $total_width: 800px; */
     float: left;
     position: relative;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 250px 250px;
     height: 300px;
     width: 650px;
-    background: gray;
+    background: white;
     border: 5px;
     border-style: solid;
-    border-color: bisque;
+    border-color: white;
     margin-bottom: 5px;
     top: 1000px;
 }
@@ -22,11 +22,11 @@ $total_width: 800px; */
 }
 .show_project {
     display: inherit;
-    height: 300px;
+    height: inherit;
+    padding: 0px 10px 0 10px;
     animation-name: information;
-    width: 100%;
     animation-duration: 1s;
-    background-color: yellow;
+    background-color: white;
 }
 .inner_container {
     background: white;
@@ -37,7 +37,7 @@ $total_width: 800px; */
     border: none;
     position: relative;
     bottom: 40px;
-    left: 20px;
+    left: 70px;
 }
 img {
     height: 100%;
@@ -45,14 +45,13 @@ img {
 }
 .img_container {
     height: 100%;
-    background: pink;
+    max-width: 250px;
+    background: white;
 }
 .inner_info {
-    height: 300px;
-    background-image: white;
-    padding: 0 50px 0 0;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
+    background: white;
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%); */
 }
 
 @keyframes information {

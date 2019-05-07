@@ -18,7 +18,7 @@ export const Project = (props) => (
         {/* <p className="description">{props.description}</p> */}
         <div className="info_container">
             <a className="title" href={props.deployment} target="_blank"> {props.title} </a>
-            <a href={props.github} target="_blank" rel="noopener noreferrer" className="github"> <IoSocialGithub size={25}/></a>
+            <a href={props.github} target="_blank" rel="noopener noreferrer" className="github"> {props.logo}</a>
         </div>
     </div>
 )

@@ -85,5 +85,8 @@ a:link, a:hover, a:visited, a:active {
   .project_wrapper {
     margin-left: 200px;
   }
+  .blurb {
+    height: 600px;
+  }
 }
 
