@@ -5,16 +5,15 @@
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     color: #F4EADE;
-    margin: auto;
-    /* margin-top: 10px; */
+    cursor: pointer !important;
 }
 .about_skills {
     position: relative;
     max-width: 750px;
     text-align: center;
-    margin: auto;
-    margin-top: 25px;
-
+}
+.icon__container {
+    margin: 50px 0 100px;
 }
 .skill_icon {
     height: 21px;
@@ -28,24 +27,27 @@
     color: white;
 }
 .about_tech {
-    border-top: 2px solid #F4EADE;
     border-bottom: 2px solid #F4EADE;
     width: 180px;
     margin: auto;
     margin-bottom: 25px;
 }
 .about_title {
-    max-width: 550px;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
     font-size: 45px;
-    border-top: 5px solid #F4EADE;
     border-bottom: 5px solid #F4EADE;
-
+    margin-bottom: 50px;
 }
-
+.about__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tst-link {
+    color: #00a25a !important;
+}
+.nu-link {
+    color: cornflowerblue !important;
+}
 @media only screen and (max-width: 700px){
 .icon {
     font-size: 22px;

@@ -41,14 +41,10 @@
     /* font-family: 'Fjalla One', sans-serif; */
     width: 80px;
     height: 110px;
-    color: inherit; 
+    color: inherit;
     float: left;
     top: 0px;
     opacity: 1;
-}
-.blurb_about {
-    position: relative;
-    height: 650px;
 }
 .blurb_project {
     height: 500px;
@@ -73,9 +69,8 @@
 
 @media only screen and (max-width: 750px) {
     .blurb_about {
-        z-index: 40; 
+        z-index: 40;
         background: #2C3539;
-        height: 900px;
     }
 }
 @media only screen and (max-width: 600px){
