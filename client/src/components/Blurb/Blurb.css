@@ -7,7 +7,6 @@
 
 .blurb_title {
     opacity: .3;
-    height: 800px;
     /* background-image: url("../Landing/MJM.JPG"); */
     background-size: 100% 175%;
     background-repeat: no-repeat;
@@ -65,6 +64,10 @@
 .light {
     color: #2C3539;
     background: #F4EADE;
+}
+.blurb_about {
+    margin-top: 500px;
+    height: 1000px;
 }
 
 @media only screen and (max-width: 750px) {

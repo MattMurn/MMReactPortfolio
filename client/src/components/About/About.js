@@ -1,10 +1,14 @@
 import React from 'react'
 import './About.css'
 
-const About = props => (
+const About = ({id}) => (
 
         <div className="blurb blurb_about about__flex">
+                <br/>
+                <br/>
+                <br/>
             <div className="about_title theme_family"> Web Developer</div>
+            <div id={id}/>
                 <div className="about_body theme_family">
                         I'm a developer who enjoys the puzzle of a well-run application.
                         Previously I developed, tested and deployed automated trading strategies in several derivative markets.

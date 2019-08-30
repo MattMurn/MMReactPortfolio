@@ -6,6 +6,7 @@ import Blurb from '../Blurb'
 import About from '../About'
 import { Name, Initials } from '../Name/Name'
 import Footer from '../Footer';
+import arrow from './download-arrow.svg';
 
 class Landing extends Component {
     constructor(props) {
@@ -30,7 +31,6 @@ class Landing extends Component {
         return (
             <Router>
                 <div>
-                    <Navbar clickHandler={this.clickEvent} className='nav_dropdown_inner theme_background_light' />
                     <Initials />
                     <Blurb className=" blurb blurb_title">
                         <Name
@@ -39,9 +39,17 @@ class Landing extends Component {
                             last="Murnighan"
                         />
                     </Blurb>
-                    <Blurb className="blurb blurb_about" >
-                        <About/>
+                    <div className="arrow-btn"><a href="#scrollToAbout"><img src={arrow} alt="arrow-btn"/></a></div>
+                    <Blurb className="blurb blurb_about" id="scrollToAbout">
+                        <About />
                     </Blurb>
+                    {/* <div className="project__grid__container">
+                        <div className="project-1">1</div>
+                        <div className="project-2">2</div>
+                        <div className="project-3">3</div>
+                        <div className="project-4">4</div>
+                        <div className="project-5">5</div>
+                    </div> */}
                     <Footer />
                 </div>
             </Router>

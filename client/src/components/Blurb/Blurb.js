@@ -1,10 +1,10 @@
 import React from 'react'
 import './Blurb.css'
 
-  const Blurb = (props) => (
+  const Blurb = ({className, children, id}) => (
   
-    <div className={props.className}>
-        {props.children}
+    <div className={className} id={id}>
+        {children}
     </div>   
 );
 export default Blurb;
