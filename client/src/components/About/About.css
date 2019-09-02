@@ -9,11 +9,29 @@
 }
 .about_skills {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0;
     max-width: 750px;
     text-align: center;
 }
-.icon__container {
-    margin: 50px 0 100px;
+.about__skills__title {
+    font-size: 24px;
+    border-bottom: #F4EADE solid 4px;
+}
+.about__skills__img {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+.icon__container--hide {
+    display: none;
+}
+.icon__container--show {
+    margin: 20px 0;
+    display: block;
 }
 .skill_icon {
     height: 21px;

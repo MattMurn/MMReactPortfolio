@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 
-const About = ({id}) => (
+const About = ({id, imgSrc, imgClick, skillsToggleClass}) => (
 
         <div className="blurb blurb_about about__flex">
                 <br/>
@@ -18,7 +18,11 @@ const About = ({id}) => (
                         emerging technologies. This site is a fullstack application in React, Node.js, MySQL, Express stack.
                 </div>
                 <div className="about_skills theme_family">
-                        <div className="icon__container">
+                        <div className="about__skills__title">Tech Skills </div>
+                        <img className="about__skills__img" src={imgSrc} onClick={imgClick} alt=""/>
+                </div>
+
+                        <div className={skillsToggleClass}>
                                 <i className=" icon devicon-bootstrap-plain-wordmark colored"></i>
                                 <i className=" icon devicon-css3-plain-wordmark colored"></i>
                                 <i className=" icon devicon-express-original-wordmark"></i>
@@ -32,7 +36,6 @@ const About = ({id}) => (
                                 <i className=" icon devicon-javascript-plain colored"></i>
                                 <i className=" icon devicon-html5-plain-wordmark colored"></i>
                         </div>
-                </div>
         </div>
 )
 

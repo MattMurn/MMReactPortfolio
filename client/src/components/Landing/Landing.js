@@ -15,6 +15,7 @@ class Landing extends Component {
             projects: [],
             class: false,
             resume: null,
+            skills: false,
             connect_class: ''
         }
         this.myRef = React.createRef();
@@ -26,8 +27,12 @@ class Landing extends Component {
             behavior: "smooth"
         })
     }
-    render() {
+    toggleSkills = () => {
+        this.setState({skills: !this.state.skills});
 
+    }
+    render() {
+        console.log(this.state);
         return (
             <Router>
                 <div>
@@ -41,14 +46,18 @@ class Landing extends Component {
                     </Blurb>
                     <div className="arrow-btn"><a href="#scrollToAbout"><img src={arrow} alt="arrow-btn"/></a></div>
                     <Blurb className="blurb blurb_about" id="scrollToAbout">
-                        <About />
+                        <About
+                        imgSrc={arrow}
+                        imgClick={this.toggleSkills}
+                        skillsToggleClass={(this.state.skills) ? 'icon__container--show' : 'icon__container--hide'}
+                        />
                     </Blurb>
                     {/* <div className="project__grid__container">
-                        <div className="project-1">1</div>
-                        <div className="project-2">2</div>
-                        <div className="project-3">3</div>
-                        <div className="project-4">4</div>
-                        <div className="project-5">5</div>
+                        <div className="project project-1">1</div>
+                        <div className="project project-2">2</div>
+                        <div className="project project-3">3</div>
+                        <div className="project project-4">4</div>
+                        <div className="project project-5">5</div>
                     </div> */}
                     <Footer />
                 </div>
