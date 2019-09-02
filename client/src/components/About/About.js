@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 
-const About = ({id, imgSrc, imgClick, skillsToggleClass}) => (
+const About = ({id, imgSrc, imgClick, skillsToggleClass, arrowToggleClass}) => (
 
         <div className="blurb blurb_about about__flex">
                 <br/>
@@ -19,7 +19,7 @@ const About = ({id, imgSrc, imgClick, skillsToggleClass}) => (
                 </div>
                 <div className="about_skills theme_family">
                         <div className="about__skills__title">Tech Skills </div>
-                        <img className="about__skills__img" src={imgSrc} onClick={imgClick} alt=""/>
+                        <img className={arrowToggleClass} src={imgSrc} onClick={imgClick} alt=""/>
                 </div>
 
                         <div className={skillsToggleClass}>

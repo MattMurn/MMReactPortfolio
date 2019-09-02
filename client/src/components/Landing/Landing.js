@@ -50,6 +50,7 @@ class Landing extends Component {
                         imgSrc={arrow}
                         imgClick={this.toggleSkills}
                         skillsToggleClass={(this.state.skills) ? 'icon__container--show' : 'icon__container--hide'}
+                        arrowToggleClass={(this.state.skills) ? 'about__skills__img about__skills__img--down' : 'about__skills__img about__skills__img--right'}
                         />
                     </Blurb>
                     {/* <div className="project__grid__container">

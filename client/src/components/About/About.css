@@ -1,79 +1,120 @@
-
 .about_body {
-    max-width: 750px;
-    font-size: 18px;
-    text-align: left;
-    font-family: 'Open Sans', sans-serif;
-    color: #F4EADE;
-    cursor: pointer !important;
+  max-width: 750px;
+  font-size: 18px;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  color: #f4eade;
+  cursor: pointer !important;
 }
+
 .about_skills {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin: 50px 0;
-    max-width: 750px;
-    text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 20px;
+  max-width: 750px;
+  text-align: center;
 }
+
 .about__skills__title {
-    font-size: 24px;
-    border-bottom: #F4EADE solid 4px;
+  font-size: 24px;
+  border-bottom: #f4eade solid 4px;
 }
+
 .about__skills__img {
-    height: 20px;
-    width: 20px;
-    margin: 10px;
-    transform: rotate(-90deg);
-    cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+  cursor: pointer;
 }
+
+.about__skills__img--right {
+  transform: rotate(-90deg);
+  transition-duration: 300ms;
+}
+
+.about__skills__img--down {
+  transform: rotate(0deg);
+  transition-duration: 300ms;
+}
+
 .icon__container--hide {
-    display: none;
+  animation: slide-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
 .icon__container--show {
-    margin: 20px 0;
-    display: block;
+  margin: 10px 0;
+  display: block;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+
 .skill_icon {
-    height: 21px;
-    width: 21px;
-    color: inherit;
-    float: left;
+  height: 21px;
+  width: 21px;
+  color: inherit;
+  float: left;
 }
+
 .icon {
-    font-size: 40px;
-    margin-left: 10px;
-    color: white;
+  font-size: 40px;
+  margin-left: 10px;
+  color: white;
 }
+
 .about_tech {
-    border-bottom: 2px solid #F4EADE;
-    width: 180px;
-    margin: auto;
-    margin-bottom: 25px;
+  border-bottom: 2px solid #f4eade;
+  width: 180px;
+  margin: auto;
+  margin-bottom: 25px;
 }
+
 .about_title {
-    font-size: 45px;
-    border-bottom: 5px solid #F4EADE;
-    margin-bottom: 50px;
+  font-size: 45px;
+  border-bottom: 5px solid #f4eade;
+  margin-bottom: 50px;
 }
+
 .about__flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .tst-link {
-    color: #00a25a !important;
+  color: #00a25a !important;
 }
+
 .nu-link {
-    color: cornflowerblue !important;
+  color: cornflowerblue !important;
 }
-@media only screen and (max-width: 700px){
-.icon {
+
+@media only screen and (max-width: 700px) {
+  .icon {
     font-size: 22px;
     margin-left: 2px;
-}
-.about_body {
+  }
+  .about_body {
     text-align: left;
     padding-left: 20px;
+  }
 }
 
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+    display: none;
+  }
 }
