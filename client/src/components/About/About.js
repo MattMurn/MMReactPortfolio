@@ -17,9 +17,9 @@ const About = ({id, imgSrc, imgClick, skillsToggleClass, arrowToggleClass}) => (
                         allows me to help students stay motivated, engaged & focused, while maintaining best practices and continuing to learn
                         emerging technologies. This site is a fullstack application in React, Node.js, MySQL, Express stack.
                 </div>
-                <div className="about_skills theme_family">
+                <div className="about_skills theme_family" onClick={imgClick}>
                         <div className="about__skills__title">Tech Skills </div>
-                        <img className={arrowToggleClass} src={imgSrc} onClick={imgClick} alt=""/>
+                        <img className={arrowToggleClass} src={imgSrc} alt=""/>
                 </div>
 
                         <div className={skillsToggleClass}>
