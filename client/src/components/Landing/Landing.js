@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './Landing.css'
-import Navbar from '../Navbar'
 import Blurb from '../Blurb'
 import About from '../About'
 import { Name, Initials } from '../Name/Name'
