@@ -4,6 +4,7 @@ import './Landing.css'
 import Blurb from '../Blurb'
 import About from '../About'
 import { Name, Initials } from '../Name/Name'
+import SCloud from '../SCloud/SCloud.js';
 import Footer from '../Footer';
 import arrow from './download-arrow.svg';
 
@@ -31,10 +32,10 @@ class Landing extends Component {
 
     }
     render() {
-        console.log(this.state);
         return (
             <Router>
                 <div>
+                    <SCloud/>
                     <Initials />
                     <Blurb className=" blurb blurb_title">
                         <Name
@@ -52,13 +53,6 @@ class Landing extends Component {
                         arrowToggleClass={(this.state.skills) ? 'about__skills__img about__skills__img--down' : 'about__skills__img about__skills__img--right'}
                         />
                     </Blurb>
-                    {/* <div className="project__grid__container">
-                        <div className="project project-1">1</div>
-                        <div className="project project-2">2</div>
-                        <div className="project project-3">3</div>
-                        <div className="project project-4">4</div>
-                        <div className="project project-5">5</div>
-                    </div> */}
                     <Footer />
                 </div>
             </Router>
