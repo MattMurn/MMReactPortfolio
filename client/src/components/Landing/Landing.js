@@ -4,7 +4,6 @@ import './Landing.css'
 import Blurb from '../Blurb'
 import About from '../About'
 import { Name, Initials } from '../Name/Name'
-import SCloud from '../SCloud/SCloud.js';
 import Footer from '../Footer';
 import arrow from './download-arrow.svg';
 
@@ -35,7 +34,6 @@ class Landing extends Component {
         return (
             <Router>
                 <div>
-                    <SCloud/>
                     <Initials />
                     <Blurb className=" blurb blurb_title">
                         <Name

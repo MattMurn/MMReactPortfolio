@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 3001;
 const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
-const db = require('./models');
 
 require('dotenv').config();
 
@@ -17,9 +16,7 @@ require("./microservices/IpLookUp/IpFn.js")(app);
 require("./microservices/emailer/nodeMailer.js")(app);
 // require("./microservices/chat/chat.js")(app);
 //dynamoDB
-db.sequelize.sync()
-.then(() => {
+
   app.listen(PORT, () =>{
     console.log(`🌎 ==> Server now on port ${PORT}!`);
   });
-})
